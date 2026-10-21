@@ -2,7 +2,7 @@ import {examples,matchDestinations,queryHasWeather} from './recommend.js';
 
 const root=document.querySelector('#app');
 const toast=document.querySelector('#toast');
-const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{}};
+const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{},ai:null,searching:false,aiError:null,requestVersion:0};
 const choices={scenery:[['beach','Beach'],['coast','Coastal'],['jungle','Jungle'],['mountains','Mountains'],['city','Cities'],['island','Islands']],vibe:[['relaxed','Relaxed'],['sociable','Sociable'],['romantic','Romantic'],['adventurous','Adventure'],['food-led','Foodie'],['nightlife','Nightlife'],['luxury','Luxury']]};
 const regions=['Europe','Asia','Africa','North America','South America','Oceania','Middle East'];
 function fromStore(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
@@ -40,7 +40,8 @@ function nav(){
 }
 function card(d){
  const saved=state.saved.has(d.id);
- return '<article class="trip-card">'+moodboard(d)+'<div class="card-body"><span class="card-country">'+escapeHTML(d.country)+' · '+escapeHTML(d.macroRegion)+'</span><div class="card-title-row"><h3 class="card-title">'+escapeHTML(d.name)+'</h3><button class="heart '+(saved?'saved':'')+'" data-action="save" data-id="'+escapeHTML(d.id)+'" aria-label="'+(saved?'Unsave ':'Save ')+escapeHTML(d.name)+'">'+(saved?'♥':'♡')+'</button></div><p class="card-desc">'+escapeHTML(d.summary)+'</p><div class="tags">'+pills(d)+'</div><div class="card-bottom"><span class="small-note">✦ Draft travel inspiration</span><button class="card-open" data-action="open" data-id="'+escapeHTML(d.id)+'">Explore trip →</button></div></div></article>';
+ const explanation=d.matchReason?'<p class="ai-reason"><strong>Why it fits:</strong> '+escapeHTML(d.matchReason)+'</p>':'';
+ return '<article class="trip-card">'+moodboard(d)+'<div class="card-body"><span class="card-country">'+escapeHTML(d.country)+' · '+escapeHTML(d.macroRegion)+'</span><div class="card-title-row"><h3 class="card-title">'+escapeHTML(d.name)+'</h3><button class="heart '+(saved?'saved':'')+'" data-action="save" data-id="'+escapeHTML(d.id)+'" aria-label="'+(saved?'Unsave ':'Save ')+escapeHTML(d.name)+'">'+(saved?'♥':'♡')+'</button></div><p class="card-desc">'+escapeHTML(d.summary)+'</p><div class="tags">'+pills(d)+'</div>'+explanation+'<div class="card-bottom"><span class="small-note">✦ Draft travel inspiration</span><button class="card-open" data-action="open" data-id="'+escapeHTML(d.id)+'">Explore trip →</button></div></div></article>';
 }
 function tagButtons(kind){
  return choices[kind].map(([value,label])=>'<button type="button" class="chip '+(state[kind].has(value)?'active':'')+'" aria-pressed="'+state[kind].has(value)+'" data-action="toggle" data-kind="'+kind+'" data-value="'+value+'">'+label+'</button>').join('');
@@ -55,18 +56,54 @@ function discover(){
  '<div style="margin-top:18px"><span class="filter-label">Landscape & scenery</span><div class="hint-row">'+tagButtons('scenery')+'</div></div>'+
  '<div style="margin-top:16px"><span class="filter-label">The vibe</span><div class="hint-row">'+tagButtons('vibe')+'</div></div></section>'+
  '<section class="main-section" id="resultsSection"><div id="results"></div></section>';
- document.querySelector('#searchForm').addEventListener('submit',event=>{event.preventDefault();state.q=document.querySelector('#query').value;results();document.querySelector('#resultsSection').scrollIntoView({behavior:'smooth'});});
- document.querySelector('#query').addEventListener('input',event=>{state.q=event.target.value;results();});
- document.querySelector('#region').addEventListener('change',event=>{state.region=event.target.value;results();});
+ document.querySelector('#searchForm').addEventListener('submit',event=>{event.preventDefault();state.q=document.querySelector('#query').value;runAiSearch();document.querySelector('#resultsSection').scrollIntoView({behavior:'smooth'});});
+ document.querySelector('#query').addEventListener('input',event=>{state.q=event.target.value;clearAi();results();});
+ document.querySelector('#region').addEventListener('change',event=>{state.region=event.target.value;clearAi();results();});
  results();
 }
+function clearAi(){
+ state.requestVersion++;
+ state.ai=null;state.aiError=null;state.searching=false;
+}
+function currentSearch(){
+ return {query:state.q.trim(),region:state.region,scenery:[...state.scenery],vibes:[...state.vibe]};
+}
+async function runAiSearch(){
+ const query=currentSearch();
+ if(!query.query){clearAi();results();notify('Describe your dream trip first.');return;}
+ const requestId=++state.requestVersion;
+ state.searching=true;state.ai=null;state.aiError=null;results();
+ try{
+  const response=await fetch('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(query)});
+  if(!response.ok){const error=await response.json().catch(()=>({}));throw new Error(error.error||'Search is unavailable');}
+  const result=await response.json();
+  if(requestId!==state.requestVersion)return;
+  if(!['ai','keyword'].includes(result.engine)||!Array.isArray(result.matches))throw new Error('Unexpected search response');
+  state.ai=result;
+ }catch(error){
+  if(requestId!==state.requestVersion)return;
+  state.aiError=error?.message||'Search failed';
+ }finally{
+  if(requestId===state.requestVersion){state.searching=false;results();}
+ }
+}
 function results(){
- const found=matchDestinations(state.all,{query:state.q,region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],limit:88});
+ const byId=new Map(state.all.map(d=>[d.id,d]));
+ const found=state.ai?.matches?state.ai.matches.map(m=>{
+  const d=byId.get(m.id);
+  return d?{...d,matchReason:typeof m.reason==='string'?m.reason:''}:null;
+ }).filter(Boolean):matchDestinations(state.all,{query:state.q,region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],limit:88});
  const area=document.querySelector('#results');if(!area)return;
+ const engine=state.searching?'✧ AI is interpreting your dream trip…':state.ai?.engine==='ai'?'✦ AI semantic matching':state.ai?.engine==='keyword'?'Tag-search fallback':'✧ Preview results · press Find my escape to run AI';
+ const interpretation=state.ai?.interpretation?'<p class="ai-interpretation"><strong>We understood:</strong> '+escapeHTML(state.ai.interpretation)+'</p>':'';
+ const warnings=Array.isArray(state.ai?.warnings)?state.ai.warnings.map(x=>'<p class="notice">'+escapeHTML(x)+'</p>').join(''):'';
+ const notice=state.ai?.notice?'<p class="search-mode">'+escapeHTML(state.ai.notice)+'</p>':'';
+ const err=state.aiError?'<p class="notice" role="alert">Search error: '+escapeHTML(state.aiError)+' — showing local preview results.</p>':'';
  area.innerHTML='<div class="section-heading"><div><span class="eyebrow" style="color:var(--accent)">FIND YOUR KIND OF SOMEWHERE</span><h2>'+((state.q||state.scenery.size||state.vibe.size)?'Matching escapes':'Explore everywhere')+'</h2><p>Feel inspired by destinations chosen for their atmosphere and experiences.</p></div><span class="count">'+found.length+' of '+state.all.length+' draft destinations</span></div>'+
- (found.length?'<div class="results">'+found.map(card).join('')+'</div>':'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
- (queryHasWeather(state.q)?'<div class="notice">☀ Weather and seasons are not connected yet. Results cannot guarantee sunshine or good conditions for your dates.</div>':'')+
- '<div class="notice">✧ Private prototype: profiles are editorial drafts, photos are illustrative, and results use an initial keyword/tag matcher rather than an AI search engine.</div>';
+ '<p class="search-mode" role="status">'+engine+'</p>'+interpretation+notice+err+
+ (state.searching?'<div class="loading-state">Comparing the feeling of your search with 88 destination profiles…</div>':found.length?'<div class="results">'+found.map(card).join('')+'</div>':'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
+ warnings+(!state.ai&&queryHasWeather(state.q)?'<p class="notice">☀ Weather and seasons are not connected yet. Results cannot guarantee sunshine for your dates.</p>':'')+
+ '<p class="notice">✧ Private prototype: destination descriptions and photos are unverified. AI matches meaning, not real-time weather, travel prices or booking availability.</p>';
 }
 function savedPage(){
  const matches=matchDestinations(state.all,{savedIds:state.saved,limit:88});
@@ -180,12 +217,12 @@ function edit(action,dayIndex,itemIndex){
 document.addEventListener('click',event=>{
  const target=event.target.closest('[data-action]');if(!target)return;
  const action=target.dataset.action;
- if(action==='preset'){state.q=target.dataset.value;document.querySelector('#query').value=state.q;results();return;}
+ if(action==='preset'){state.q=target.dataset.value;document.querySelector('#query').value=state.q;clearAi();results();return;}
  if(action==='toggle'){
   const set=state[target.dataset.kind];const value=target.dataset.value;
   set.has(value)?set.delete(value):set.add(value);
   target.classList.toggle('active',set.has(value));
-  target.setAttribute('aria-pressed',String(set.has(value)));results();return;
+  target.setAttribute('aria-pressed',String(set.has(value)));clearAi();results();return;
  }
  if(action==='duration'){state.days=Number(target.dataset.value);document.querySelectorAll('[data-action="duration"]').forEach(btn=>btn.classList.toggle('active',Number(btn.dataset.value)===state.days));notify('Trip preview set to '+state.days+' days');return;}
  if(action==='open'){open(target.dataset.id);return;}
@@ -198,7 +235,7 @@ document.addEventListener('click',event=>{
  }
  if(action==='back'){state.previous==='saved'?goSaved():goExplore();return;}
  if(action==='explore'){goExplore();return;}
- if(action==='clear'){state.q='';state.region='all';state.scenery.clear();state.vibe.clear();discover();return;}
+ if(action==='clear'){state.q='';state.region='all';state.scenery.clear();state.vibe.clear();clearAi();discover();return;}
  if(action==='video'){notify('Real activity videos will be added later.');return;}
  if(action==='reset'){
   if(confirm('Discard your edits and reset the example itinerary?')){delete state.plans[planKey()];toStore('wanderly-plans-v1',state.plans);detail();notify('Idea board reset.');}
