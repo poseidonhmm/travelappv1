@@ -6465,5 +6465,2356 @@
       "reviewedAt": null,
       "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
     }
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Neon-lined districts and traditional palaces sit beside design shops, barbecue restaurants and an energetic music scene.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "gardens"
+      ],
+      "vibe": [
+        "energetic",
+        "creative",
+        "food-led"
+      ],
+      "experiences": [
+        "shopping",
+        "music",
+        "history"
+      ],
+      "food": [
+        "street-food",
+        "casual-dining",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "busan",
+    "name": "Busan",
+    "country": "South Korea",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Hillside streets descend toward bustling harbours and beaches in a coastal city known for seafood markets and seafront walks.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "harbour",
+        "coast"
+      ],
+      "vibe": [
+        "food-led",
+        "sociable",
+        "relaxed"
+      ],
+      "experiences": [
+        "markets",
+        "beach-time",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "gyeongju",
+    "name": "Gyeongju",
+    "country": "South Korea",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Ancient royal tombs, temple sites and traditional rooftops lend this former capital a contemplative, history-rich character.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "gardens",
+        "hills"
+      ],
+      "vibe": [
+        "cultural",
+        "peaceful",
+        "romantic"
+      ],
+      "experiences": [
+        "history",
+        "temples",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "osaka",
+    "name": "Osaka",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Bold signs illuminate canals and eating streets where playful food culture meets a sociable, exuberant urban rhythm.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "food-led",
+        "energetic",
+        "sociable"
+      ],
+      "experiences": [
+        "food-tours",
+        "nightlife",
+        "shopping"
+      ],
+      "food": [
+        "street-food",
+        "ramen"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "kanazawa",
+    "name": "Kanazawa",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Landscaped gardens, preserved neighbourhoods and artisan workshops provide an elegant, traditional counterpoint to Japan's megacities.",
+    "tags": {
+      "scenery": [
+        "gardens",
+        "old-town",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "elegant",
+        "peaceful"
+      ],
+      "experiences": [
+        "design",
+        "museums",
+        "walking"
+      ],
+      "food": [
+        "tea",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "hokkaido",
+    "name": "Hokkaido",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Wide northern landscapes, volcanic mountains and snowy terrain suit outdoor adventures and seafood-focused journeys.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "snow",
+        "lakes"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "food-led"
+      ],
+      "experiences": [
+        "skiing",
+        "hiking",
+        "hot-springs"
+      ],
+      "food": [
+        "seafood",
+        "ramen"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "yakushima",
+    "name": "Yakushima",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Moss-coated ancient forests and granite mountain streams create an island where hiking feels quietly otherworldly.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "remote",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "okinawa",
+    "name": "Okinawa",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "archipelago",
+    "summary": "Subtropical islands, coral reefs and a distinctive Ryukyuan heritage invite beach days far from mainland Japan's pace.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "beach"
+      ],
+      "vibe": [
+        "relaxed",
+        "cultural",
+        "scenic"
+      ],
+      "experiences": [
+        "snorkelling",
+        "swimming",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "taipei",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Mountain-framed neighbourhoods and night markets give Taiwan's capital a delicious street-food energy balanced by teahouses.",
+    "tags": {
+      "scenery": [
+        "city",
+        "mountains",
+        "hills"
+      ],
+      "vibe": [
+        "food-led",
+        "sociable",
+        "cultural"
+      ],
+      "experiences": [
+        "markets",
+        "hot-springs",
+        "hiking"
+      ],
+      "food": [
+        "street-food",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "tainan",
+    "name": "Tainan",
+    "country": "Taiwan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Historic temples and low-rise backstreets make this southern Taiwanese city a satisfying destination for traditional snacks and slow wandering.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "gardens"
+      ],
+      "vibe": [
+        "food-led",
+        "cultural",
+        "local"
+      ],
+      "experiences": [
+        "temples",
+        "food-tours",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A striking vertical harbour city where ferries, forested ridgelines, dim sum and buzzing markets coexist.",
+    "tags": {
+      "scenery": [
+        "harbour",
+        "city",
+        "mountains"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "shopping",
+        "food-tours"
+      ],
+      "food": [
+        "hawker-food",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "shanghai",
+    "name": "Shanghai",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Riverside towers, historic neighbourhoods and creative galleries shape a fast-moving metropolis with sophisticated restaurant culture.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "elegant",
+        "creative"
+      ],
+      "experiences": [
+        "design",
+        "museums",
+        "food-tours"
+      ],
+      "food": [
+        "modern-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "yangshuo",
+    "name": "Yangshuo",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Steep limestone peaks rise from farmland and winding rivers, making cycling and slow boat trips especially memorable.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "river",
+        "fields"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "adventurous"
+      ],
+      "experiences": [
+        "cycling",
+        "boat-trips",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "chengdu",
+    "name": "Chengdu",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Teahouses, chilli-scented kitchens and panda conservation sites give this southwestern city a relaxed everyday rhythm.",
+    "tags": {
+      "scenery": [
+        "city",
+        "gardens",
+        "river"
+      ],
+      "vibe": [
+        "food-led",
+        "relaxed",
+        "cultural"
+      ],
+      "experiences": [
+        "tea-culture",
+        "food-tours",
+        "wildlife"
+      ],
+      "food": [
+        "spices",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "yunnan",
+    "name": "Yunnan",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Terraced valleys, mountain towns and varied cultures make this southwestern province a rewarding slow-travel region.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys",
+        "rice-terraces"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "markets",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "zhangjiajie",
+    "name": "Zhangjiajie",
+    "country": "China",
+    "macroRegion": "Asia",
+    "kind": "natural_area",
+    "summary": "Tall sandstone columns loom above misty forests, creating dramatic ridge walks and vertiginous viewpoints.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "remote"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "walking"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Sky gardens and inventive architecture sit alongside hawker centres, tropical greenery and easy city exploration.",
+    "tags": {
+      "scenery": [
+        "city",
+        "gardens",
+        "harbour"
+      ],
+      "vibe": [
+        "food-led",
+        "elegant",
+        "creative"
+      ],
+      "experiences": [
+        "food-tours",
+        "design",
+        "gardens"
+      ],
+      "food": [
+        "hawker-food",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "melaka",
+    "name": "Melaka",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Colourful heritage shophouses, river walks and Peranakan cooking lend this small Malaysian city a rich cultural mix.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "relaxed"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "food-tours"
+      ],
+      "food": [
+        "street-food",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "langkawi",
+    "name": "Langkawi",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "archipelago",
+    "summary": "Forested hills, quiet beaches and mangrove waterways make these Malaysian islands appealing for gentle nature and water days.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "forest"
+      ],
+      "vibe": [
+        "relaxed",
+        "peaceful",
+        "scenic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "sabah",
+    "name": "Sabah",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Rainforest reserves, island reefs and Mount Kinabalu create a wildlife-rich Bornean adventure.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "mountains",
+        "reefs"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "hiking",
+        "diving",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "cameron-highlands",
+    "name": "Cameron Highlands",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Tea-covered hills and upland villages offer plantation views, cloud forests and peaceful countryside walks.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "forest",
+        "valleys"
+      ],
+      "vibe": [
+        "peaceful",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "tea-culture",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "tea",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "yogyakarta",
+    "name": "Yogyakarta",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Royal heritage and arts workshops sit near a bustling street-food scene and spectacular historic temples.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "hills"
+      ],
+      "vibe": [
+        "creative",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "temples",
+        "design",
+        "food-tours"
+      ],
+      "food": [
+        "street-food",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "raja-ampat",
+    "name": "Raja Ampat",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "archipelago",
+    "summary": "Jungle-covered limestone islets ring clear lagoons and marine habitats in a remote diving region.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "lagoon"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "gili-air",
+    "name": "Gili Air",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Car-free island paths, shallow reef water and beach cafés set a gentle rhythm for snorkelling and slow evenings.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "reefs"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "romantic"
+      ],
+      "experiences": [
+        "snorkelling",
+        "swimming",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "flores",
+    "name": "Flores",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Volcanic landscapes, traditional villages and winding roads make this eastern Indonesian island rewarding beyond its coastal gateways.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "mountains",
+        "coast"
+      ],
+      "vibe": [
+        "adventurous",
+        "cultural",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "hiking",
+        "culture"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "mount-bromo",
+    "name": "Mount Bromo",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "natural_area",
+    "summary": "A steaming volcanic cone rises above a stark ash plain, surrounded by cinematic viewpoints.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "road-trips"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "bukit-lawang",
+    "name": "Bukit Lawang",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "A small Sumatran rainforest gateway where riverside guesthouses and guided forest walks bring wildlife into focus.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "river",
+        "jungle"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "peaceful"
+      ],
+      "experiences": [
+        "wildlife",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "phuket",
+    "name": "Phuket",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "A large Thai island combining busy beach towns, colourful old streets and boat access to limestone-framed bays.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "sociable",
+        "nightlife",
+        "relaxed"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "koh-lanta",
+    "name": "Koh Lanta",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Long beaches, mangrove shores and a gentler island pace make a comfortable base for sunset walks and quiet exploration.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "forest"
+      ],
+      "vibe": [
+        "relaxed",
+        "peaceful",
+        "sociable"
+      ],
+      "experiences": [
+        "swimming",
+        "boat-trips",
+        "cycling"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "koh-phangan",
+    "name": "Koh Phangan",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Jungle hills and turquoise bays frame an island where party beaches coexist with wellness retreats and secluded coves.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "jungle"
+      ],
+      "vibe": [
+        "nightlife",
+        "wellness",
+        "sociable"
+      ],
+      "experiences": [
+        "beach-time",
+        "nightlife",
+        "wellness"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "pai",
+    "name": "Pai",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "A laid-back northern valley town surrounded by green hills, hot springs and motorbike loops between viewpoints.",
+    "tags": {
+      "scenery": [
+        "valleys",
+        "hills",
+        "river"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "adventurous"
+      ],
+      "experiences": [
+        "hot-springs",
+        "road-trips",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "chiang-rai",
+    "name": "Chiang Rai",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A slower northern Thai city with striking temples, riverside life and access to tea-growing hills.",
+    "tags": {
+      "scenery": [
+        "river",
+        "hills",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "peaceful",
+        "local"
+      ],
+      "experiences": [
+        "temples",
+        "markets",
+        "road-trips"
+      ],
+      "food": [
+        "street-food",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "da-nang",
+    "name": "Da Nang",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A long urban beachfront, river bridges and neighbouring mountain passes give this Vietnamese city an active modern feel.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "river"
+      ],
+      "vibe": [
+        "relaxed",
+        "energetic",
+        "food-led"
+      ],
+      "experiences": [
+        "beach-time",
+        "cycling",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "ninh-binh",
+    "name": "Ninh Binh",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Limestone towers emerge from rice paddies and river channels, making cycling and small-boat exploration magical.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "rice-terraces",
+        "river"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "romantic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "cycling",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "phong-nha",
+    "name": "Phong Nha",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "natural_area",
+    "summary": "Immense cave systems lie beneath jungle-covered limestone hills, drawing travellers into a landscape made for guided adventure.",
+    "tags": {
+      "scenery": [
+        "caves",
+        "jungle",
+        "rock-formations"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "adventure-sports",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "ho-chi-minh-city",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A high-energy metropolis of scooters, street food and rooftop evenings animated by markets and contemporary culture.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "nightlife"
+      ],
+      "experiences": [
+        "food-tours",
+        "nightlife",
+        "markets"
+      ],
+      "food": [
+        "street-food",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "da-lat",
+    "name": "Da Lat",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Pine-covered uplands, flower gardens and lakeside cafés give this hill town a romantic highland personality.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "lakes",
+        "gardens"
+      ],
+      "vibe": [
+        "romantic",
+        "peaceful",
+        "creative"
+      ],
+      "experiences": [
+        "coffee-culture",
+        "cycling",
+        "walking"
+      ],
+      "food": [
+        "coffee",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "sa-pa",
+    "name": "Sa Pa",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Steep northern rice terraces and mountain communities surround a trekking base known for misty valleys and rural stays.",
+    "tags": {
+      "scenery": [
+        "rice-terraces",
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "cultural"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "culture"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "mekong-delta",
+    "name": "Mekong Delta",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Broad waterways, orchard islands and riverside markets reveal a fertile lowland world best explored slowly by boat.",
+    "tags": {
+      "scenery": [
+        "river",
+        "waterfront",
+        "gardens"
+      ],
+      "vibe": [
+        "local",
+        "peaceful",
+        "food-led"
+      ],
+      "experiences": [
+        "boat-trips",
+        "markets",
+        "cycling"
+      ],
+      "food": [
+        "tropical-produce",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "siem-reap",
+    "name": "Siem Reap",
+    "country": "Cambodia",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A lively gateway to Angkor's temples with atmospheric cafés, creative small hotels and animated evening markets.",
+    "tags": {
+      "scenery": [
+        "temples",
+        "architecture",
+        "old-town"
+      ],
+      "vibe": [
+        "cultural",
+        "sociable",
+        "food-led"
+      ],
+      "experiences": [
+        "temples",
+        "history",
+        "markets"
+      ],
+      "food": [
+        "street-food",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "kampot",
+    "name": "Kampot",
+    "country": "Cambodia",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "A sleepy riverside town near hills and pepper farms where kayaking, café-hopping and countryside rides set the pace.",
+    "tags": {
+      "scenery": [
+        "river",
+        "hills",
+        "forest"
+      ],
+      "vibe": [
+        "relaxed",
+        "local",
+        "peaceful"
+      ],
+      "experiences": [
+        "cycling",
+        "boat-trips",
+        "markets"
+      ],
+      "food": [
+        "spices",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "vang-vieng",
+    "name": "Vang Vieng",
+    "country": "Laos",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Limestone peaks tower over a winding river and rice fields, offering kayaking, cave outings and a traveller scene.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "river",
+        "valleys"
+      ],
+      "vibe": [
+        "adventurous",
+        "sociable",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "adventure-sports",
+        "walking"
+      ],
+      "food": [
+        "local-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "bohol",
+    "name": "Bohol",
+    "country": "Philippines",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Rounded green hills, forest rivers and reef-fringed coasts offer wildlife outings alongside easy beach days.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "forest",
+        "reefs"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "adventurous"
+      ],
+      "experiences": [
+        "wildlife",
+        "diving",
+        "road-trips"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "banaue-rice-terraces",
+    "name": "Banaue Rice Terraces",
+    "country": "Philippines",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Mountain slopes shaped into stepped rice paddies form vivid highland scenery explored on village and trail walks.",
+    "tags": {
+      "scenery": [
+        "rice-terraces",
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "culture"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "ella",
+    "name": "Ella",
+    "country": "Sri Lanka",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Tea-covered hills, railway viaducts and misty viewpoints make this small highland town a walking-focused escape.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "forest",
+        "valleys"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "romantic"
+      ],
+      "experiences": [
+        "hiking",
+        "rail-trips",
+        "tea-culture"
+      ],
+      "food": [
+        "tea",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "sigiriya",
+    "name": "Sigiriya",
+    "country": "Sri Lanka",
+    "macroRegion": "Asia",
+    "kind": "natural_area",
+    "summary": "An immense rock citadel towers above green plains, combining panoramic climbs with archaeological history.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "forest",
+        "gardens"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "photography"
+      ],
+      "food": [
+        "curry",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "udaipur",
+    "name": "Udaipur",
+    "country": "India",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Palaces, lake views and carved old streets give this Rajasthani city an intimate setting for heritage visits and dining.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "old-town",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "elegant",
+        "cultural"
+      ],
+      "experiences": [
+        "boat-trips",
+        "history",
+        "walking"
+      ],
+      "food": [
+        "curry",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "ladakh",
+    "name": "Ladakh",
+    "country": "India",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "High desert valleys and Buddhist monasteries sit beneath Himalayan ridges, creating a remote and demanding mountain journey.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "desert",
+        "valleys"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "cultural"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "culture"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "samarkand",
+    "name": "Samarkand",
+    "country": "Uzbekistan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Blue-tiled monuments and animated bazaars evoke Silk Road history in a walkable Central Asian city.",
+    "tags": {
+      "scenery": [
+        "architecture",
+        "old-town",
+        "gardens"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
+  },
+  {
+    "id": "jaipur",
+    "name": "Jaipur",
+    "country": "India",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Rose-coloured palace façades and busy bazaars create a vibrant Rajasthani city break full of craft traditions and rich food.",
+    "tags": {
+      "scenery": [
+        "architecture",
+        "old-town",
+        "city"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "shopping",
+        "markets"
+      ],
+      "food": [
+        "curry",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
+    }
   }
 ]
