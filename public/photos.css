@@ -1,0 +1,22 @@
+/* Destination photos: unique Commons file per distinct place, verified later */
+.photo-slot{display:grid;place-items:center;min-width:0;min-height:0;overflow:hidden;background:linear-gradient(135deg,hsl(var(--photo-hue,155) 30% 69%),hsl(calc(var(--photo-hue,155) + 42) 26% 44%));font-size:10px;font-weight:700;color:#f8faf2;letter-spacing:.02em;text-align:center;padding:4px}
+.photo-slot:nth-child(2){filter:brightness(1.08)}
+.photo-slot:nth-child(3){filter:saturate(.7)}
+.photo-slot:nth-child(4){filter:brightness(.86)}
+.photo-slot.photo-loaded{padding:0;filter:none;background:none}
+.photo-slot.photo-loaded img{object-fit:cover;width:100%;height:100%}
+.photo-slot.photo-missing{opacity:.92}
+.photo-credits{background:#f3f5ef;border-bottom:1px solid #e1e6e0;padding:7px 13px;color:#65746a;font-size:10px;line-height:1.45}
+.photo-credits summary{cursor:pointer;font-weight:650;list-style:disclosure-closed}
+.photo-credits[open] summary{list-style:disclosure-open}
+.photo-credits ol{padding:0 0 0 17px;overflow-wrap:anywhere}
+.photo-credits li{margin:7px 0}
+.photo-credits a{color:#3e7867;text-decoration:underline}
+.detail-mosaic .photo-credits{border:0;border-radius:0 0 11px 11px}
+.photo-empty-note{font-size:10px;padding:6px 12px;background:#f3f4ec;color:#68786b;margin:0}
+.detail-hero{background:linear-gradient(105deg,#587c78,#b0b99a)}
+.hero-photo-fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:12px;color:#eef3ef}
+.detail-hero img{position:absolute;inset:0}
+.activity-thumb:not(:has(img[src])){background:linear-gradient(125deg,#607c70,#c1c8b2)}
+.activity-thumb img:not([src]){opacity:0}
+@media(max-width:700px){.photo-credits{font-size:9px;padding:7px 10px}}
