@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { createAiSearch,InputError,parseSearchRequest } from './lib/ai-search.mjs';
+import { createFeedbackStore,DEFAULT_FEEDBACK_PATH } from './lib/feedback.mjs';
 
 const files=new Map([
  ['/', ['public/index.html','text/html; charset=utf-8']],
@@ -51,12 +52,39 @@ function allowSearch(){
  if(requestTimes.length>=20)return false;
  requestTimes.push(now);return true;
 }
-export function createAppServer(){
+export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH}={}){
+ let feedbackStore=null;
+ async function getFeedback(){
+  if(!feedbackStore){
+   const profiles=JSON.parse(await readFile(new URL('data/destinations.json',import.meta.url),'utf8'));
+   feedbackStore=createFeedbackStore({filePath:feedbackPath,knownIds:new Set(profiles.map(d=>d.id))});
+  }
+  return feedbackStore;
+ }
  return http.createServer(async(request,response)=>{
   try{
    const url=new URL(request.url,'http://localhost');
+   // Reject cross-site form/API submissions (the local app never needs third-party origins).
+   if(request.method==='POST'&&request.headers.origin){
+    const origin=new URL(request.headers.origin);
+    const host=request.headers.host||'';
+    if(origin.host!==host||!['http:','https:'].includes(origin.protocol)){
+     json(response,403,{error:'Cross-origin requests are not allowed.'});return;
+    }
+   }
    if(url.pathname==='/api/status'&&['GET','HEAD'].includes(request.method)){
     json(response,200,{aiConfigured:!!(await getApiKey())},request.method);return;
+   }
+   if(url.pathname==='/api/feedback'){
+    const store=await getFeedback();
+    if(request.method==='GET'||request.method==='HEAD'){
+     json(response,200,{items:await store.list()},request.method);return;
+    }
+    if(request.method==='POST'){
+     const record=await store.save(await readRequest(request));
+     json(response,200,{saved:true,item:record});return;
+    }
+    response.writeHead(405,{'Allow':'GET, HEAD, POST'});response.end();return;
    }
    if(url.pathname==='/api/search'){
     if(request.method!=='POST'){response.writeHead(405,{'Allow':'POST'});response.end();return;}
@@ -72,7 +100,7 @@ export function createAppServer(){
    response.writeHead(200,{'Content-Type':entry[1],...headers});
    response.end(request.method==='HEAD'?undefined:body);
   }catch(error){
-   if(error instanceof InputError){json(response,400,{error:error.message});return;}
+   if(error instanceof InputError||error?.statusCode===400){json(response,400,{error:error.message});return;}
    console.error('Local server error:',error?.message||'unknown error');
    json(response,500,{error:'Unexpected server error.'});
   }
