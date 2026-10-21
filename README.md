@@ -1,6 +1,6 @@
 # Wanderly — travel discovery MVP
 
-A mobile-first, **private-prototype** travel discovery website using 88 editorial draft destination profiles. Includes a photo-rich 2×2-card browse UI, saved places, and editable demonstration itineraries.
+A mobile-first, **private-prototype** travel discovery website using 288 editorial draft destination profiles. Includes a photo-rich 2×2-card browse UI, saved places, and editable demonstration itineraries.
 
 ## Run locally
 
@@ -20,9 +20,9 @@ AI interprets unconventional travel requests and semantically compares them with
 
 ## What works
 
-- Search 88 draft destinations by natural-language meaning (when AI enabled) or prototype tags (without key).
+- Search 288 draft destinations by natural-language meaning (when AI enabled) or prototype tags (without key).
 - Region, scenery and vibe filters.
-- Instagram-style image quadrants (illustrative external photos).
+- Four-photo destination gallery cards, with automatically found Wikimedia Commons candidates, credit/source links and uniqueness checks that prevent the same file or identical-content hash being assigned to two places.
 - Open destinations, choose 5/7/10-day **generic idea boards**, add, remove, reorder and move ideas.
 - Save places and customisations to browser local storage (not synced).
 
@@ -30,11 +30,11 @@ AI interprets unconventional travel requests and semantically compares them with
 
 Rate destination cards with 👍 / 👎, add reasons to poor recommendations, then open **Feedback** in the top navigation to review or export your judgments. Ratings are stored locally in `data/feedback.local.json`, which is excluded from Git. They do **not** trigger OpenAI calls or automatically retrain the model. Repeating identical AI searches uses a temporary in-memory cache to avoid paying again during one server session.
 
-See [docs/feedback.md](docs/feedback.md) for details and backup instructions.
+See [docs/feedback.md](docs/feedback.md) for details and backup instructions. Also see [docs/photo-sourcing.md](docs/photo-sourcing.md) for unique-image sourcing, credits and cache backups.
 
 ## Known limitations
 
-All 88 destination profiles are editorial **drafts**. They have not been fact-checked. The images may not depict the named destinations. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
+All 88 destination profiles are editorial **drafts**. They have not been fact-checked. The photo candidates are automatically found by destination name and may not actually depict the destination; they must be reviewed for accuracy and licensing before publication. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
 
 This website has not been deployed. The GitHub repository itself is currently public. Never commit an API key to GitHub.
 
