@@ -1,0 +1,4211 @@
+[
+  {
+    "id": "san-sebastian",
+    "name": "San Sebastián",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A coastal city where afternoons drift from La Concha beach into lively pintxos bars, seafood counters and late dinners.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "city"
+      ],
+      "vibe": [
+        "food-led",
+        "elegant",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "food-tours",
+        "surfing",
+        "walking",
+        "culture"
+      ],
+      "food": [
+        "pintxos",
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Architecture, neighbourhood cafés, urban beaches and late-night energy give this Mediterranean city many different rhythms.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "creative",
+        "sociable",
+        "energetic"
+      ],
+      "experiences": [
+        "architecture",
+        "nightlife",
+        "food-tours",
+        "beach-time"
+      ],
+      "food": [
+        "tapas",
+        "markets",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "mallorca",
+    "name": "Mallorca",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Rocky coves, mountain villages and leisurely beach days combine with sophisticated restaurants and hidden coastal roads.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "mountains"
+      ],
+      "vibe": [
+        "relaxed",
+        "elegant",
+        "romantic"
+      ],
+      "experiences": [
+        "hiking",
+        "swimming",
+        "road-trips",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "ibiza",
+    "name": "Ibiza",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "An island of famous late nights but also pine-lined coves, quieter villages and long sunset meals.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "island"
+      ],
+      "vibe": [
+        "nightlife",
+        "sociable",
+        "relaxed"
+      ],
+      "experiences": [
+        "nightlife",
+        "beach-time",
+        "boat-trips",
+        "wellness"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "andalusia",
+    "name": "Andalusia",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "White villages, Moorish architecture, flamenco and slow evenings in sun-warmed plazas define a varied southern Spanish escape.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "mountains"
+      ],
+      "vibe": [
+        "cultural",
+        "romantic",
+        "relaxed"
+      ],
+      "experiences": [
+        "culture",
+        "road-trips",
+        "food-tours",
+        "hiking"
+      ],
+      "food": [
+        "tapas",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "amalfi-coast",
+    "name": "Amalfi Coast",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Colourful cliffside towns, steep sea views, lemon groves and unhurried waterfront meals create a cinematic coastal journey.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "beach"
+      ],
+      "vibe": [
+        "romantic",
+        "elegant",
+        "luxury"
+      ],
+      "experiences": [
+        "boat-trips",
+        "walking",
+        "food-tours",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "pasta",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "bologna",
+    "name": "Bologna",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Porticoed streets, generous trattorias and a deeply rooted food culture make this a rewarding city for leisurely wandering.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "food-led",
+        "local",
+        "relaxed"
+      ],
+      "experiences": [
+        "food-tours",
+        "culture",
+        "walking"
+      ],
+      "food": [
+        "pasta",
+        "local-markets",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "dolomites",
+    "name": "Dolomites",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "natural_area",
+    "summary": "Towering limestone peaks, alpine meadows and dramatic ridge trails reward travellers who want awe-inspiring mountain days.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes",
+        "forest"
+      ],
+      "vibe": [
+        "adventurous",
+        "peaceful",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "cycling",
+        "photography",
+        "road-trips"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "sicily",
+    "name": "Sicily",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Volcanic landscapes, lively markets, old stone towns and expressive regional food offer a rich island journey.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "coast",
+        "city"
+      ],
+      "vibe": [
+        "food-led",
+        "cultural",
+        "adventurous"
+      ],
+      "experiences": [
+        "food-tours",
+        "swimming",
+        "road-trips",
+        "history"
+      ],
+      "food": [
+        "street-food",
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Hilly streets, tiled buildings, miradouros and long evenings among restaurants and music venues.",
+    "tags": {
+      "scenery": [
+        "city",
+        "coast",
+        "architecture"
+      ],
+      "vibe": [
+        "creative",
+        "sociable",
+        "relaxed"
+      ],
+      "experiences": [
+        "nightlife",
+        "food-tours",
+        "walking",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "pastries",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "porto",
+    "name": "Porto",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "River views, tiled facades, wine cellars and intimate neighbourhoods suit a slow, atmospheric city escape.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "food-led",
+        "relaxed"
+      ],
+      "experiences": [
+        "wine-tasting",
+        "walking",
+        "culture",
+        "food-tours"
+      ],
+      "food": [
+        "local-cuisine",
+        "pastries"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "madeira",
+    "name": "Madeira",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Steep green mountains, ocean cliffs, levada walks and subtropical gardens make a nature-focused Atlantic escape.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "cliffs",
+        "forest"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "swimming",
+        "road-trips",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "algarve",
+    "name": "Algarve",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Golden cliffs, sheltered coves, fishing villages and seaside restaurants shape a sunny-feeling coastal holiday.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "relaxed",
+        "romantic",
+        "sociable"
+      ],
+      "experiences": [
+        "beach-time",
+        "boat-trips",
+        "swimming",
+        "surfing"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "cyclades",
+    "name": "Cyclades",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "archipelago",
+    "summary": "Whitewashed villages, blue harbours and island-hopping days lead into seaside dinners and late sunsets.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "romantic",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "beach-time",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "crete",
+    "name": "Crete",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Wild gorges, mountain villages, broad beaches and generous Cretan cooking reward a longer island trip.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "beach",
+        "gorges"
+      ],
+      "vibe": [
+        "adventurous",
+        "food-led",
+        "relaxed"
+      ],
+      "experiences": [
+        "hiking",
+        "beach-time",
+        "road-trips",
+        "food-tours"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "olive-oil",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "dalmatian-coast",
+    "name": "Dalmatian Coast",
+    "country": "Croatia",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Old stone towns, island ferries and transparent coves meet waterfront bars and summer social energy.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "island",
+        "beach"
+      ],
+      "vibe": [
+        "sociable",
+        "romantic",
+        "nightlife"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "nightlife",
+        "history"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "kotor",
+    "name": "Kotor",
+    "country": "Montenegro",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "A fortified old town sits beneath steep mountains beside a winding Adriatic bay, made for scenic wandering.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "coast",
+        "old-town"
+      ],
+      "vibe": [
+        "scenic",
+        "romantic",
+        "cultural"
+      ],
+      "experiences": [
+        "hiking",
+        "boat-trips",
+        "walking",
+        "history"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "ljubljana",
+    "name": "Ljubljana",
+    "country": "Slovenia",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A compact riverside capital of cafés, markets and leafy streets is a gentle base for nearby lakes and mountains.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "forest"
+      ],
+      "vibe": [
+        "relaxed",
+        "creative",
+        "local"
+      ],
+      "experiences": [
+        "walking",
+        "food-tours",
+        "cycling",
+        "culture"
+      ],
+      "food": [
+        "local-markets",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "swiss-alps",
+    "name": "Swiss Alps",
+    "country": "Switzerland",
+    "macroRegion": "Europe",
+    "kind": "natural_area",
+    "summary": "Lakes, cable cars and towering peaks create an alpine escape focused on hiking, village life and mountain panoramas.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes",
+        "snow"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "luxury"
+      ],
+      "experiences": [
+        "hiking",
+        "rail-trips",
+        "skiing",
+        "photography"
+      ],
+      "food": [
+        "mountain-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "iceland-south-coast",
+    "name": "Iceland South Coast",
+    "country": "Iceland",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Waterfalls, black-sand shores, glaciers and stark volcanic landscapes turn a road trip into an otherworldly adventure.",
+    "tags": {
+      "scenery": [
+        "waterfalls",
+        "volcanoes",
+        "glaciers"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "hiking",
+        "photography",
+        "hot-springs"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "vienna",
+    "name": "Vienna",
+    "country": "Austria",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Grand architecture, historic cafés and concert halls create an elegant, culture-rich city break.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "elegant",
+        "cultural",
+        "romantic"
+      ],
+      "experiences": [
+        "museums",
+        "coffee-culture",
+        "walking",
+        "music"
+      ],
+      "food": [
+        "cakes",
+        "coffee",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Neighbourhood bistros, art museums, river walks and ornate streets offer a classic urban escape.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "river"
+      ],
+      "vibe": [
+        "romantic",
+        "elegant",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "food-tours",
+        "walking",
+        "culture"
+      ],
+      "food": [
+        "bistros",
+        "pastries",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "copenhagen",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Harbour swimming, design-led cafés, bikes and inventive restaurants make for a stylish, easygoing short break.",
+    "tags": {
+      "scenery": [
+        "city",
+        "harbour",
+        "architecture"
+      ],
+      "vibe": [
+        "creative",
+        "elegant",
+        "relaxed"
+      ],
+      "experiences": [
+        "cycling",
+        "food-tours",
+        "design",
+        "walking"
+      ],
+      "food": [
+        "modern-cuisine",
+        "bakeries",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "edinburgh",
+    "name": "Edinburgh",
+    "country": "United Kingdom",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Steep closes, dramatic castle views, cosy pubs and surrounding hills lend a literary, atmospheric feel.",
+    "tags": {
+      "scenery": [
+        "city",
+        "hills",
+        "old-town"
+      ],
+      "vibe": [
+        "cultural",
+        "romantic",
+        "sociable"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "music",
+        "hiking"
+      ],
+      "food": [
+        "pub-food",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "country": "Türkiye",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Ferries cross the Bosphorus between monumental landmarks, neighbourhood food stalls and busy bazaars.",
+    "tags": {
+      "scenery": [
+        "city",
+        "waterfront",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "food-tours",
+        "boat-trips"
+      ],
+      "food": [
+        "street-food",
+        "bakeries",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "cappadocia",
+    "name": "Cappadocia",
+    "country": "Türkiye",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Surreal rock valleys, cave stays and broad dawn vistas create one of the world's most unusual landscapes.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "desert",
+        "valleys"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "ballooning",
+        "hiking",
+        "photography",
+        "history"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "marrakech",
+    "name": "Marrakech",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Courtyard riads, labyrinthine souks, hammams and fragrant food make a sensorial city break.",
+    "tags": {
+      "scenery": [
+        "city",
+        "old-town",
+        "gardens"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "romantic"
+      ],
+      "experiences": [
+        "markets",
+        "food-tours",
+        "wellness",
+        "history"
+      ],
+      "food": [
+        "tagines",
+        "street-food",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "essaouira",
+    "name": "Essaouira",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "An Atlantic medina with blue boats, breezy beaches, seafood grills and relaxed artistic energy.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "beach",
+        "old-town"
+      ],
+      "vibe": [
+        "creative",
+        "relaxed",
+        "local"
+      ],
+      "experiences": [
+        "surfing",
+        "walking",
+        "markets",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "taghazout",
+    "name": "Taghazout",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "Surf beaches, rooftop sunsets and low-key cafés make this village a sociable base for Atlantic days.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "sociable",
+        "relaxed",
+        "adventurous"
+      ],
+      "experiences": [
+        "surfing",
+        "wellness",
+        "beach-time",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "atlas-mountains",
+    "name": "Atlas Mountains",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "High mountain villages, terraced valleys and long walking routes offer a quieter, more rugged side of Morocco.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "adventurous",
+        "peaceful",
+        "local"
+      ],
+      "experiences": [
+        "hiking",
+        "culture",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "dakhla",
+    "name": "Dakhla",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "coast",
+    "summary": "A desert peninsula meets a vast lagoon, with steady coastal winds and a remote watersports atmosphere.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "lagoon",
+        "coast"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "peaceful"
+      ],
+      "experiences": [
+        "kitesurfing",
+        "photography",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "cape-town",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "A mountain-backed city of beaches, coastal drives, food markets and energetic bars with striking scenery.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "beach",
+        "city"
+      ],
+      "vibe": [
+        "sociable",
+        "scenic",
+        "food-led"
+      ],
+      "experiences": [
+        "hiking",
+        "nightlife",
+        "food-tours",
+        "road-trips"
+      ],
+      "food": [
+        "markets",
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "garden-route",
+    "name": "Garden Route",
+    "country": "South Africa",
+    "macroRegion": "Africa",
+    "kind": "region",
+    "summary": "A coastal road trip through forests, beaches, lookouts and small seaside towns rewards flexible travellers.",
+    "tags": {
+      "scenery": [
+        "forest",
+        "coast",
+        "beach"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "road-trips",
+        "hiking",
+        "wildlife",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "zanzibar",
+    "name": "Zanzibar",
+    "country": "Tanzania",
+    "macroRegion": "Africa",
+    "kind": "island",
+    "summary": "Warm-water beaches, spice history and the narrow streets of Stone Town create a layered Indian Ocean escape.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "island",
+        "old-town"
+      ],
+      "vibe": [
+        "romantic",
+        "relaxed",
+        "cultural"
+      ],
+      "experiences": [
+        "swimming",
+        "diving",
+        "history",
+        "food-tours"
+      ],
+      "food": [
+        "spices",
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "serengeti",
+    "name": "Serengeti",
+    "country": "Tanzania",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Open savanna, big skies and wildlife watching place nature at the centre of the journey.",
+    "tags": {
+      "scenery": [
+        "savanna",
+        "wildlife"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "luxury"
+      ],
+      "experiences": [
+        "safari",
+        "photography",
+        "wildlife"
+      ],
+      "food": [
+        "camp-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "sossusvlei",
+    "name": "Sossusvlei",
+    "country": "Namibia",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Immense red dunes, cracked clay pans and clear desert skies deliver high-drama landscape photography.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "dunes"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "photography",
+        "road-trips",
+        "hiking"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "seychelles",
+    "name": "Seychelles",
+    "country": "Seychelles",
+    "macroRegion": "Africa",
+    "kind": "archipelago",
+    "summary": "Granite boulders, palm-lined beaches and sheltered coves create an intimate tropical island atmosphere.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "island",
+        "jungle"
+      ],
+      "vibe": [
+        "romantic",
+        "peaceful",
+        "luxury"
+      ],
+      "experiences": [
+        "swimming",
+        "boat-trips",
+        "diving",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "bali",
+    "name": "Bali",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Surf beaches, temple ceremonies, rice terraces, creative cafés and inland jungle make for varied island days.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "jungle",
+        "rice-terraces"
+      ],
+      "vibe": [
+        "sociable",
+        "wellness",
+        "adventurous"
+      ],
+      "experiences": [
+        "surfing",
+        "wellness",
+        "waterfalls",
+        "food-tours"
+      ],
+      "food": [
+        "local-cuisine",
+        "coffee",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "lombok",
+    "name": "Lombok",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Sweeping bays, surf towns and volcanic highlands suit a quieter island adventure.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "volcanoes",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "relaxed",
+        "scenic"
+      ],
+      "experiences": [
+        "surfing",
+        "hiking",
+        "beach-time",
+        "road-trips"
+      ],
+      "food": [
+        "local-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "komodo-national-park",
+    "name": "Komodo National Park",
+    "country": "Indonesia",
+    "macroRegion": "Asia",
+    "kind": "natural_area",
+    "summary": "Island viewpoints, reef trips and unusual wildlife make this a spectacular boat-based adventure.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "wildlife"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "diving",
+        "wildlife",
+        "hiking"
+      ],
+      "food": [
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "chiang-mai",
+    "name": "Chiang Mai",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Temple lanes, night markets, northern Thai cooking and nearby forested mountains offer gentle urban exploration.",
+    "tags": {
+      "scenery": [
+        "city",
+        "mountains",
+        "forest"
+      ],
+      "vibe": [
+        "food-led",
+        "creative",
+        "relaxed"
+      ],
+      "experiences": [
+        "markets",
+        "food-tours",
+        "culture",
+        "hiking"
+      ],
+      "food": [
+        "street-food",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "krabi",
+    "name": "Krabi",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "coast",
+    "summary": "Limestone cliffs rise above warm bays, with long-tail boats, island days and lively coastal towns.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "beach",
+        "island"
+      ],
+      "vibe": [
+        "adventurous",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "boat-trips",
+        "rock-climbing",
+        "beach-time",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "koh-tao",
+    "name": "Koh Tao",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "A small diving-focused island mixing coral bays, viewpoints and an easygoing backpacker scene.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "island",
+        "reefs"
+      ],
+      "vibe": [
+        "sociable",
+        "adventurous",
+        "relaxed"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "hiking",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Street-food alleys, rooftop bars, river boats and busy neighbourhoods create a fast-moving food and culture trip.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "nightlife"
+      ],
+      "experiences": [
+        "food-tours",
+        "markets",
+        "nightlife",
+        "culture"
+      ],
+      "food": [
+        "street-food",
+        "markets",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "hanoi",
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Old-quarter streets, lakeside cafés, motorbike bustle and deeply varied food make an immersive city break.",
+    "tags": {
+      "scenery": [
+        "city",
+        "lakes",
+        "old-town"
+      ],
+      "vibe": [
+        "food-led",
+        "energetic",
+        "cultural"
+      ],
+      "experiences": [
+        "food-tours",
+        "coffee-culture",
+        "markets",
+        "history"
+      ],
+      "food": [
+        "street-food",
+        "coffee",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "hoi-an",
+    "name": "Hoi An",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Lantern-lit streets, tailoring shops, riverside meals and nearby beaches invite a slower pace.",
+    "tags": {
+      "scenery": [
+        "river",
+        "old-town",
+        "beach"
+      ],
+      "vibe": [
+        "romantic",
+        "relaxed",
+        "food-led"
+      ],
+      "experiences": [
+        "cycling",
+        "food-tours",
+        "beach-time",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "ha-giang",
+    "name": "Ha Giang",
+    "country": "Vietnam",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Winding mountain roads, sheer valleys and rural settlements create an adventurous northern journey.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "photography",
+        "hiking"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "luang-prabang",
+    "name": "Luang Prabang",
+    "country": "Laos",
+    "macroRegion": "Asia",
+    "kind": "town",
+    "summary": "Mekong sunsets, gilded temples, waterfalls and quiet cafés shape a slow-paced cultural escape.",
+    "tags": {
+      "scenery": [
+        "river",
+        "waterfalls",
+        "forest"
+      ],
+      "vibe": [
+        "peaceful",
+        "cultural",
+        "romantic"
+      ],
+      "experiences": [
+        "culture",
+        "waterfalls",
+        "boat-trips",
+        "markets"
+      ],
+      "food": [
+        "local-cuisine",
+        "markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "siargao",
+    "name": "Siargao",
+    "country": "Philippines",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Surf breaks, palm-lined roads, tidal pools and relaxed social evenings attract active beach travellers.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "island",
+        "jungle"
+      ],
+      "vibe": [
+        "sociable",
+        "adventurous",
+        "relaxed"
+      ],
+      "experiences": [
+        "surfing",
+        "boat-trips",
+        "cycling",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "palawan",
+    "name": "Palawan",
+    "country": "Philippines",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Towering limestone lagoons, bright water and island-hopping routes make the landscape the star.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "island",
+        "beach"
+      ],
+      "vibe": [
+        "scenic",
+        "romantic",
+        "adventurous"
+      ],
+      "experiences": [
+        "boat-trips",
+        "diving",
+        "swimming",
+        "photography"
+      ],
+      "food": [
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "penang",
+    "name": "Penang",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "George Town's hawker centres, heritage streets and multicultural kitchens invite exploration through food.",
+    "tags": {
+      "scenery": [
+        "city",
+        "old-town",
+        "coast"
+      ],
+      "vibe": [
+        "food-led",
+        "cultural",
+        "creative"
+      ],
+      "experiences": [
+        "food-tours",
+        "markets",
+        "walking",
+        "history"
+      ],
+      "food": [
+        "hawker-food",
+        "street-food",
+        "markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "An energetic skyline, bustling food districts and diverse neighbourhoods create a modern urban stop.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "food-tours",
+        "markets",
+        "nightlife",
+        "culture"
+      ],
+      "food": [
+        "hawker-food",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "kyoto",
+    "name": "Kyoto",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Temple gardens, traditional lanes, seasonal landscapes and thoughtful meals lend a contemplative urban feel.",
+    "tags": {
+      "scenery": [
+        "gardens",
+        "forest",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "peaceful",
+        "elegant"
+      ],
+      "experiences": [
+        "temples",
+        "walking",
+        "tea-culture",
+        "history"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "Vast neighbourhood variety, late-night food, design and culture reward travellers who love big-city discovery.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "creative",
+        "food-led"
+      ],
+      "experiences": [
+        "food-tours",
+        "design",
+        "nightlife",
+        "shopping"
+      ],
+      "food": [
+        "ramen",
+        "street-food",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "jeju",
+    "name": "Jeju",
+    "country": "South Korea",
+    "macroRegion": "Asia",
+    "kind": "island",
+    "summary": "Volcanic coastlines, forest paths and village seafood make a nature-centred Korean island trip.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "coast",
+        "forest"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "romantic"
+      ],
+      "experiences": [
+        "hiking",
+        "road-trips",
+        "beach-time",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "goa",
+    "name": "Goa",
+    "country": "India",
+    "macroRegion": "Asia",
+    "kind": "coast",
+    "summary": "Long beaches, Portuguese-influenced towns, markets and nightlife create a mix of slow days and busy evenings.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "sociable",
+        "nightlife",
+        "relaxed"
+      ],
+      "experiences": [
+        "beach-time",
+        "nightlife",
+        "markets",
+        "wellness"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "kerala-backwaters",
+    "name": "Kerala Backwaters",
+    "country": "India",
+    "macroRegion": "Asia",
+    "kind": "region",
+    "summary": "Palm-fringed canals, spice-growing hills and slow boat journeys invite an immersive, restful escape.",
+    "tags": {
+      "scenery": [
+        "river",
+        "jungle",
+        "lakes"
+      ],
+      "vibe": [
+        "peaceful",
+        "romantic",
+        "cultural"
+      ],
+      "experiences": [
+        "boat-trips",
+        "wellness",
+        "food-tours",
+        "culture"
+      ],
+      "food": [
+        "spices",
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "pokhara",
+    "name": "Pokhara",
+    "country": "Nepal",
+    "macroRegion": "Asia",
+    "kind": "city",
+    "summary": "A lakeside base beneath enormous Himalayan peaks, with cafés and mountain adventures close at hand.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "hiking",
+        "paragliding",
+        "photography",
+        "cycling"
+      ],
+      "food": [
+        "local-cuisine",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "sri-lanka-south-coast",
+    "name": "Sri Lanka South Coast",
+    "country": "Sri Lanka",
+    "macroRegion": "Asia",
+    "kind": "coast",
+    "summary": "Palm beaches, surf villages and railway journeys combine with curry cafés and laid-back ocean days.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "jungle"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "adventurous"
+      ],
+      "experiences": [
+        "surfing",
+        "rail-trips",
+        "beach-time",
+        "wildlife"
+      ],
+      "food": [
+        "curry",
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "la-fortuna",
+    "name": "La Fortuna",
+    "country": "Costa Rica",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "Rainforest hikes, volcanic views, hot springs and waterfalls make a compact base for nature activities.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "volcanoes",
+        "waterfalls"
+      ],
+      "vibe": [
+        "adventurous",
+        "wellness",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "hot-springs",
+        "wildlife",
+        "waterfalls"
+      ],
+      "food": [
+        "local-cuisine",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "costa-rica-pacific-coast",
+    "name": "Costa Rica Pacific Coast",
+    "country": "Costa Rica",
+    "macroRegion": "North America",
+    "kind": "coast",
+    "summary": "Surf beaches, wildlife-rich forests and easygoing coastal towns invite active days and sunset evenings.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "rainforest",
+        "wildlife"
+      ],
+      "vibe": [
+        "adventurous",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "surfing",
+        "wildlife",
+        "beach-time",
+        "wellness"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "lake-atitlan",
+    "name": "Lake Atitlán",
+    "country": "Guatemala",
+    "macroRegion": "North America",
+    "kind": "natural_area",
+    "summary": "A high volcanic lake framed by villages, markets and steep ridges creates a scenic, slower-paced retreat.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "volcanoes",
+        "mountains"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "cultural"
+      ],
+      "experiences": [
+        "hiking",
+        "boat-trips",
+        "markets",
+        "wellness"
+      ],
+      "food": [
+        "local-cuisine",
+        "markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "antigua-guatemala",
+    "name": "Antigua Guatemala",
+    "country": "Guatemala",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Cobblestone streets, courtyards and nearby volcanoes combine heritage charm with an adventurous edge.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "volcanoes",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "sociable"
+      ],
+      "experiences": [
+        "history",
+        "coffee-culture",
+        "hiking",
+        "food-tours"
+      ],
+      "food": [
+        "coffee",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Museums, vast food neighbourhoods, contemporary galleries and late nights make an endlessly layered capital.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "food-led",
+        "creative",
+        "energetic"
+      ],
+      "experiences": [
+        "food-tours",
+        "museums",
+        "nightlife",
+        "markets"
+      ],
+      "food": [
+        "street-food",
+        "markets",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "oaxaca",
+    "name": "Oaxaca",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Markets, craft traditions and rich regional cooking lend this colourful city a deeply food-centred identity.",
+    "tags": {
+      "scenery": [
+        "city",
+        "old-town"
+      ],
+      "vibe": [
+        "food-led",
+        "cultural",
+        "creative"
+      ],
+      "experiences": [
+        "markets",
+        "food-tours",
+        "culture",
+        "history"
+      ],
+      "food": [
+        "mole",
+        "street-food",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "riviera-maya",
+    "name": "Riviera Maya",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "coast",
+    "summary": "Caribbean beaches, cenotes and archaeological sites mix resort relaxation with outdoor excursions.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "jungle",
+        "cenotes"
+      ],
+      "vibe": [
+        "romantic",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "swimming",
+        "history",
+        "diving",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "new-york-city",
+    "name": "New York City",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Neighbourhood food scenes, galleries, skyline walks and late-night energy make a maximalist city escape.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "creative",
+        "food-led"
+      ],
+      "experiences": [
+        "nightlife",
+        "museums",
+        "food-tours",
+        "design"
+      ],
+      "food": [
+        "street-food",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "kaua-i",
+    "name": "Kauaʻi",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "island",
+    "summary": "Green cliffs, rainforest trails, secluded beaches and dramatic shorelines make this a landscape-led Hawaiian escape.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "rainforest",
+        "beach"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "boat-trips",
+        "swimming",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "vancouver",
+    "name": "Vancouver",
+    "country": "Canada",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "A waterfront city framed by mountains, with cycling, cafés and nearby wilderness trips.",
+    "tags": {
+      "scenery": [
+        "city",
+        "mountains",
+        "harbour"
+      ],
+      "vibe": [
+        "adventurous",
+        "creative",
+        "relaxed"
+      ],
+      "experiences": [
+        "cycling",
+        "hiking",
+        "food-tours",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "banff",
+    "name": "Banff",
+    "country": "Canada",
+    "macroRegion": "North America",
+    "kind": "natural_area",
+    "summary": "Turquoise lakes, imposing peaks and mountain trails suit travellers pursuing big alpine landscapes.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes",
+        "forest"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "skiing",
+        "photography",
+        "road-trips"
+      ],
+      "food": [
+        "mountain-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "cartagena",
+    "name": "Cartagena",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Colourful old-town streets, Caribbean rhythms, warm evenings and nearby islands shape a sociable city-and-coast trip.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "coast",
+        "island"
+      ],
+      "vibe": [
+        "romantic",
+        "sociable",
+        "energetic"
+      ],
+      "experiences": [
+        "history",
+        "nightlife",
+        "boat-trips",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "medellin",
+    "name": "Medellín",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Hillside neighbourhoods, a busy café culture and energetic nightlife make a vibrant Colombian city experience.",
+    "tags": {
+      "scenery": [
+        "city",
+        "mountains"
+      ],
+      "vibe": [
+        "sociable",
+        "creative",
+        "energetic"
+      ],
+      "experiences": [
+        "nightlife",
+        "coffee-culture",
+        "culture",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "buenos-aires",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Leafy avenues, tango, neighbourhood bars and late dinners create a theatrical, food-loving urban atmosphere.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "food-led",
+        "nightlife"
+      ],
+      "experiences": [
+        "music",
+        "food-tours",
+        "nightlife",
+        "culture"
+      ],
+      "food": [
+        "steak",
+        "traditional-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "patagonia",
+    "name": "Patagonia",
+    "country": "Argentina / Chile",
+    "macroRegion": "South America",
+    "kind": "region",
+    "summary": "Glacial lakes, wild steppe and jagged peaks make a demanding but unforgettable landscape journey.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "glaciers",
+        "lakes"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "road-trips",
+        "wildlife"
+      ],
+      "food": [
+        "mountain-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "cusco-sacred-valley",
+    "name": "Cusco & Sacred Valley",
+    "country": "Peru",
+    "macroRegion": "South America",
+    "kind": "region",
+    "summary": "Andean villages, terraces and ancient sites combine high-altitude scenery with cultural exploration.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys",
+        "old-town"
+      ],
+      "vibe": [
+        "cultural",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "hiking",
+        "markets",
+        "rail-trips"
+      ],
+      "food": [
+        "local-cuisine",
+        "markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "rio-de-janeiro",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Iconic city beaches, forested peaks, music and sociable outdoor life give Rio distinctive energy.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "mountains",
+        "city"
+      ],
+      "vibe": [
+        "sociable",
+        "nightlife",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "beach-time",
+        "music",
+        "nightlife"
+      ],
+      "food": [
+        "street-food",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "florianopolis",
+    "name": "Florianópolis",
+    "country": "Brazil",
+    "macroRegion": "South America",
+    "kind": "island",
+    "summary": "Surf beaches, green hills and summer social life make this island city feel active and outdoorsy.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "island",
+        "hills"
+      ],
+      "vibe": [
+        "sociable",
+        "adventurous",
+        "relaxed"
+      ],
+      "experiences": [
+        "surfing",
+        "hiking",
+        "beach-time",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "queenstown",
+    "name": "Queenstown",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "town",
+    "summary": "A lakeside adventure hub beneath steep mountains, with scenic drives and adrenaline-filled activities.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "sociable"
+      ],
+      "experiences": [
+        "hiking",
+        "adventure-sports",
+        "cycling",
+        "road-trips"
+      ],
+      "food": [
+        "casual-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "new-zealand-south-island",
+    "name": "New Zealand South Island",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "region",
+    "summary": "Fjords, glaciers, alpine roads and secluded lakes reward road-trippers chasing vast landscapes.",
+    "tags": {
+      "scenery": [
+        "fjords",
+        "mountains",
+        "lakes"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "hiking",
+        "photography",
+        "wildlife"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "city",
+    "summary": "Harbour walks, ocean beaches, cafés and a buzzing social scene combine city life with outdoor living.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "city",
+        "harbour"
+      ],
+      "vibe": [
+        "sociable",
+        "energetic",
+        "relaxed"
+      ],
+      "experiences": [
+        "surfing",
+        "food-tours",
+        "boat-trips",
+        "nightlife"
+      ],
+      "food": [
+        "coffee",
+        "modern-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "byron-bay",
+    "name": "Byron Bay",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "town",
+    "summary": "Surf beaches, creative cafés, wellness culture and sunset gatherings define this casual east-coast base.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "wellness",
+        "creative",
+        "sociable"
+      ],
+      "experiences": [
+        "surfing",
+        "wellness",
+        "beach-time",
+        "walking"
+      ],
+      "food": [
+        "coffee",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "great-barrier-reef",
+    "name": "Great Barrier Reef",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "natural_area",
+    "summary": "Reef islands, marine life and tropical sea excursions put the underwater world first.",
+    "tags": {
+      "scenery": [
+        "reefs",
+        "island",
+        "beach"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "boat-trips",
+        "wildlife"
+      ],
+      "food": [
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "mamanuca-islands",
+    "name": "Mamanuca Islands",
+    "country": "Fiji",
+    "macroRegion": "Oceania",
+    "kind": "archipelago",
+    "summary": "Palm-lined islets, blue lagoons and quiet beach time suit a restorative ocean escape.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "reefs"
+      ],
+      "vibe": [
+        "romantic",
+        "peaceful",
+        "luxury"
+      ],
+      "experiences": [
+        "snorkelling",
+        "boat-trips",
+        "beach-time",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "petra",
+    "name": "Petra",
+    "country": "Jordan",
+    "macroRegion": "Middle East",
+    "kind": "natural_area",
+    "summary": "Carved rock façades, sandstone canyons and archaeological paths make an atmospheric historical adventure.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "canyons",
+        "rock-formations"
+      ],
+      "vibe": [
+        "cultural",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "wadi-rum",
+    "name": "Wadi Rum",
+    "country": "Jordan",
+    "macroRegion": "Middle East",
+    "kind": "natural_area",
+    "summary": "Red desert mountains, open skies and night camps create a cinematic, remote journey.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "rock-formations",
+        "mountains"
+      ],
+      "vibe": [
+        "remote",
+        "romantic",
+        "adventurous"
+      ],
+      "experiences": [
+        "photography",
+        "desert-tours",
+        "camping"
+      ],
+      "food": [
+        "camp-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "Contemporary architecture, beach resorts, ambitious dining and luxury shopping define a high-gloss city break.",
+    "tags": {
+      "scenery": [
+        "city",
+        "beach",
+        "desert"
+      ],
+      "vibe": [
+        "luxury",
+        "energetic",
+        "sociable"
+      ],
+      "experiences": [
+        "shopping",
+        "food-tours",
+        "beach-time",
+        "nightlife"
+      ],
+      "food": [
+        "modern-cuisine",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "muscat",
+    "name": "Muscat",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A low-rise coastal capital framed by mountains, with traditional markets and easy access to nearby coves.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "mountains",
+        "city"
+      ],
+      "vibe": [
+        "cultural",
+        "relaxed",
+        "elegant"
+      ],
+      "experiences": [
+        "markets",
+        "beach-time",
+        "history",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  },
+  {
+    "id": "salalah",
+    "name": "Salalah",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "region",
+    "summary": "A southern Omani landscape of beaches, frankincense heritage and seasonally green mountain slopes.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "mountains",
+        "coast"
+      ],
+      "vibe": [
+        "peaceful",
+        "cultural",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "history",
+        "beach-time",
+        "hiking"
+      ],
+      "food": [
+        "local-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
+    }
+  }
+]
