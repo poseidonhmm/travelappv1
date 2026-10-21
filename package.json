@@ -1,14 +1,16 @@
 {
-  "name": "wanderly-destination-database",
-  "version": "0.1.0",
+  "name": "wanderly-discovery-prototype",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
     "validate": "node scripts/validate.mjs",
-    "test": "node --test",
-    "search": "node scripts/search.mjs"
+    "search": "node scripts/search.mjs",
+    "test": "node --test"
   }
 }

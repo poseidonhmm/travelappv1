@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#f8f7f3">
+ <meta name="description" content="Wanderly is a private prototype for discovering travel ideas by feeling, scenery and experience.">
+ <title>Wanderly — find the trip you feel</title>
+ <link rel="stylesheet" href="/style.css">
+ <script type="module" src="/app.js"></script>
+</head>
+<body>
+ <div class="shell">
+  <header class="topbar">
+   <a href="/" id="brand" class="brand" aria-label="Wanderly home"><span class="brand-icon">✳</span> wanderly<span class="brand-dot">.</span></a>
+   <nav class="top-nav" aria-label="Main navigation">
+    <button id="navExplore" class="nav-link active" type="button">Explore</button>
+    <button id="navSaved" class="nav-link" type="button">Saved <span id="savedCount" class="saved-counter">0</span></button>
+   </nav>
+   <span class="private-pill">✦ Prototype</span>
+  </header>
+  <main id="app">
+   <div class="loading-state" role="status">Finding your next escape…</div>
+  </main>
+  <footer class="site-footer">
+   <div><span class="brand-icon">✳</span> Wanderly · Discovery prototype</div>
+   <p>All travel content is an unverified editorial draft. Photos are moodboard illustrations, not verified destination photography. No booking or live weather data.</p>
+  </footer>
+ </div>
+ <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
