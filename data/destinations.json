@@ -12811,5 +12811,804 @@
       "reviewedAt": null,
       "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
     }
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "city",
+    "summary": "Laneway cafés, contemporary galleries and neighbourhood music venues make this Australian city especially rewarding for food and culture lovers.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "creative",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "coffee-culture",
+        "museums",
+        "music"
+      ],
+      "food": [
+        "coffee",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "brisbane",
+    "name": "Brisbane",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "city",
+    "summary": "A subtropical river city of open-air dining, parkland and an easy pace with coastal excursions close at hand.",
+    "tags": {
+      "scenery": [
+        "river",
+        "city",
+        "gardens"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "energetic"
+      ],
+      "experiences": [
+        "cycling",
+        "walking",
+        "food-tours"
+      ],
+      "food": [
+        "modern-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "perth",
+    "name": "Perth",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "city",
+    "summary": "Long sandy beaches, a broad riverside and sunny urban parks give this western capital a distinctive outdoors-first lifestyle.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "river",
+        "city"
+      ],
+      "vibe": [
+        "relaxed",
+        "scenic",
+        "sociable"
+      ],
+      "experiences": [
+        "swimming",
+        "cycling",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "margaret-river",
+    "name": "Margaret River",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "region",
+    "summary": "Surf-swept beaches, forests and wineries invite a slower southwestern Australian journey through food, coastal walks and road trips.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "beach",
+        "forest"
+      ],
+      "vibe": [
+        "relaxed",
+        "food-led",
+        "romantic"
+      ],
+      "experiences": [
+        "surfing",
+        "wine-tasting",
+        "road-trips"
+      ],
+      "food": [
+        "modern-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "tasmania",
+    "name": "Tasmania",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "island",
+    "summary": "An island of wild mountains, temperate forests and rugged coasts, matched by farm-to-table food and outdoor journeys.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "forest",
+        "coast"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "road-trips",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "great-ocean-road",
+    "name": "Great Ocean Road",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "coast",
+    "summary": "Southern Ocean cliffs, surf beaches and tall forests make this coastal driving route a showcase of dramatic changing scenery.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "coast",
+        "forest"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "relaxed"
+      ],
+      "experiences": [
+        "road-trips",
+        "photography",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "blue-mountains",
+    "name": "Blue Mountains",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "natural_area",
+    "summary": "Eucalyptus-covered sandstone valleys and spectacular cliff lookouts create a green escape west of Sydney.",
+    "tags": {
+      "scenery": [
+        "forest",
+        "cliffs",
+        "valleys"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "walking"
+      ],
+      "food": [
+        "casual-dining",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "daintree-rainforest",
+    "name": "Daintree Rainforest",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "natural_area",
+    "summary": "Ancient tropical rainforest meets winding rivers and the Coral Sea coast, with remarkable biodiversity and guided forest experiences.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "river",
+        "coast"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "wildlife",
+        "walking",
+        "photography"
+      ],
+      "food": [
+        "tropical-produce",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "whitsunday-islands",
+    "name": "Whitsunday Islands",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "archipelago",
+    "summary": "Turquoise passages, white-sand bays and sailing routes offer a classic tropical reef-island escape.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "reefs"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "boat-trips",
+        "snorkelling",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "uluru",
+    "name": "Uluru",
+    "country": "Australia",
+    "macroRegion": "Oceania",
+    "kind": "natural_area",
+    "summary": "An immense red sandstone monolith anchors a desert cultural landscape with important Anangu heritage and changing light.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "rock-formations",
+        "dunes"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "culture",
+        "photography",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "auckland",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "city",
+    "summary": "A harbour city built across volcanic hills, offering coastal walks, island ferries and diverse urban dining.",
+    "tags": {
+      "scenery": [
+        "harbour",
+        "volcanoes",
+        "city"
+      ],
+      "vibe": [
+        "sociable",
+        "relaxed",
+        "food-led"
+      ],
+      "experiences": [
+        "boat-trips",
+        "hiking",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "rotorua",
+    "name": "Rotorua",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "town",
+    "summary": "Steam rises from geothermal pools in a lakeside town known for Māori cultural experiences and adventure activities.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "volcanoes",
+        "forest"
+      ],
+      "vibe": [
+        "cultural",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "hot-springs",
+        "culture",
+        "cycling"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "wanaka",
+    "name": "Wanaka",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "town",
+    "summary": "A clear Alpine lake, mountain trails and a quiet adventure-town atmosphere make a calmer alternative to busier resort centres.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "cycling",
+        "photography"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "abel-tasman-national-park",
+    "name": "Abel Tasman National Park",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "natural_area",
+    "summary": "Golden-sand bays, green coastal forest and protected walking tracks make this a gentle kayaking and hiking destination.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "forest",
+        "coast"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "walking",
+        "boat-trips",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "coromandel-peninsula",
+    "name": "Coromandel Peninsula",
+    "country": "New Zealand",
+    "macroRegion": "Oceania",
+    "kind": "coast",
+    "summary": "Forested hills, rocky headlands and sandy bays invite surf, walks and relaxed coastal road trips.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "forest",
+        "beach"
+      ],
+      "vibe": [
+        "relaxed",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "road-trips",
+        "surfing",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "taveuni",
+    "name": "Taveuni",
+    "country": "Fiji",
+    "macroRegion": "Oceania",
+    "kind": "island",
+    "summary": "Dense tropical greenery, waterfalls and reef-rich waters give this Fijian island a more nature-focused rhythm.",
+    "tags": {
+      "scenery": [
+        "island",
+        "rainforest",
+        "waterfalls"
+      ],
+      "vibe": [
+        "peaceful",
+        "remote",
+        "adventurous"
+      ],
+      "experiences": [
+        "diving",
+        "hiking",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
+  },
+  {
+    "id": "moorea",
+    "name": "Moorea",
+    "country": "French Polynesia",
+    "macroRegion": "Oceania",
+    "kind": "island",
+    "summary": "Jagged volcanic mountains rise above a luminous tropical lagoon, creating postcard-worthy water views and island exploration.",
+    "tags": {
+      "scenery": [
+        "island",
+        "lagoon",
+        "mountains"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "snorkelling",
+        "boat-trips",
+        "hiking"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Independently source travel characterisations and exact-location photos before publication."
+    }
   }
 ]
