@@ -12,25 +12,11 @@ const savedPlans=fromStore('wanderly-plans-v1',{});
 state.plans=(savedPlans&&typeof savedPlans==='object'&&!Array.isArray(savedPlans))?savedPlans:{};
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const title=s=>String(s).split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ');
-const photos={
- beach:['photo-1507525428034-b723cf961d3e','photo-1510414842594-a61c69b5ae57','photo-1502920917128-1aa500764cbd','photo-1533105079780-92b9be482077'],
- coast:['photo-1507525428034-b723cf961d3e','photo-1510414842594-a61c69b5ae57','photo-1527004013197-933c4bb611b3','photo-1502920917128-1aa500764cbd'],
- mountains:['photo-1464822759023-fed622ff2c3b','photo-1470770841072-f978cf4d019e','photo-1501785888041-af3ef285b470','photo-1493246507139-91e8fad9978e'],
- jungle:['photo-1441974231531-c6227db76b6e','photo-1469474968028-56623f02e42e','photo-1511497584788-876760111969','photo-1500534623283-312aade485b7'],
- city:['photo-1519501025264-65ba15a82390','photo-1480796927426-f609979314bd','photo-1523906834658-6e24ef2386f9','photo-1500534623283-312aade485b7'],
- island:['photo-1537996194471-e657df975ab4','photo-1518548419970-58e3b4079ab2','photo-1533105079780-92b9be482077','photo-1507525428034-b723cf961d3e'],
- desert:['photo-1509316785289-025f5b846b35','photo-1473580044384-7ba9967e16a0','photo-1500534623283-312aade485b7','photo-1447752875215-b2761acb3c5'],
- default:['photo-1500534623283-312aade485b7','photo-1441974231531-c6227db76b6e','photo-1464822759023-fed622ff2c3b','photo-1507525428034-b723cf961d3e']
-};
-function img(id,width=620){return 'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w='+width+'&q=75';}
-function imagesFor(d){
- const tags=d.tags.scenery;
- const type=['island','mountains','jungle','desert','beach','coast','city'].find(x=>tags.includes(x))||'default';
- const n=[...d.id].reduce((a,c)=>a+c.charCodeAt(0),0);
- const set=photos[type];
- return [set[n%4],set[(n+1)%4],photos[tags.includes('city')?'city':'default'][(n+2)%4],set[(n+3)%4]];
+// On-demand per-destination photos are provided by photos.js, not a shared stock pool.
+function moodboard(d){
+ return '<div class="mosaic" data-photo-destination="'+escapeHTML(d.id)+'">'+
+ Array.from({length:4},(_,i)=>'<div class="photo-slot" data-slot="'+i+'" aria-label="Photo pending"><span>Photo '+(i+1)+'</span></div>').join('')+'</div>';
 }
-function moodboard(d){return '<div class="mosaic">'+imagesFor(d).map((id,i)=>'<img loading="lazy" src="'+img(id)+'" alt="Illustrative travel mood photo '+(i+1)+' for '+escapeHTML(d.name)+'" onerror="this.style.opacity=.1">').join('')+'</div>';}
 function pills(d){return [...new Set([...d.tags.vibe.slice(0,2),...d.tags.scenery.slice(0,2)])].map(x=>'<span class="tag">'+escapeHTML(title(x))+'</span>').join('');}
 function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>toast.classList.remove('show'),2800);}
 function nav(){
@@ -157,7 +143,7 @@ function dayHTML(day,index,total){
  return '<article class="day"><div class="day-header"><span class="day-number">DAY '+(index+1)+'</span><h3>'+escapeHTML(day.label)+'</h3></div>'+
  day.items.map((item,j)=>{
   const t=library.find(x=>x[0]===item.template)||library[1];
-  return '<div class="activity"><button class="activity-thumb" data-action="video" aria-label="Preview video placeholder for '+escapeHTML(t[1])+'"><img loading="lazy" src="'+img((photos[t[3]]||photos.default)[1],320)+'" alt="Illustrative activity thumbnail"></button><div><div class="activity-title">'+escapeHTML(t[1])+'</div><div class="activity-caption">'+escapeHTML(t[2])+'</div></div>'+
+  return '<div class="activity"><button class="activity-thumb" data-action="video" aria-label="Preview video placeholder for '+escapeHTML(t[1])+'"><img loading="lazy" alt="Destination image pending" data-photo-activity="'+escapeHTML(state.detail)+'" data-photo-index="'+(index*3+j)+'"></button><div><div class="activity-title">'+escapeHTML(t[1])+'</div><div class="activity-caption">'+escapeHTML(t[2])+'</div></div>'+
   '<div class="activity-actions">'+
   '<button class="iconbtn" title="Move up" data-action="up" data-day="'+index+'" data-index="'+j+'" '+(j===0?'disabled':'')+'>↑</button>'+
   '<button class="iconbtn" title="Move down" data-action="down" data-day="'+index+'" data-index="'+j+'" '+(j===day.items.length-1?'disabled':'')+'>↓</button>'+
@@ -171,7 +157,7 @@ function detail(){
  if(!d){goExplore();return;}
  const current=plan(d);
  root.innerHTML='<button class="back-btn" data-action="back">← Back to '+(state.previous==='saved'?'saved trips':'discover')+'</button>'+
- '<section class="detail-hero"><img src="'+img(imagesFor(d)[0],1500)+'" alt="Illustrative destination mood image"><div class="detail-hero-content"><div class="eyebrow">WANDERLY · A DESTINATION TO DREAM ABOUT</div><h1>'+escapeHTML(d.name)+'</h1><p>'+escapeHTML(d.summary)+'</p><div class="tags">'+pills(d)+'</div></div></section>'+
+ '<section class="detail-hero" data-photo-hero="'+escapeHTML(d.id)+'"><div class="hero-photo-fallback">Finding destination images…</div><div class="detail-hero-content"><div class="eyebrow">WANDERLY · A DESTINATION TO DREAM ABOUT</div><h1>'+escapeHTML(d.name)+'</h1><p>'+escapeHTML(d.summary)+'</p><div class="tags">'+pills(d)+'</div></div></section>'+
  '<div class="detail-toolbar"><div class="result-meta"><span class="tag">'+escapeHTML(d.country)+'</span><span class="tag">'+state.days+' day inspiration</span><span class="mini-count">Edit the outline as you like</span></div><div class="result-meta"><button class="outline" data-action="save" data-id="'+escapeHTML(d.id)+'">'+(state.saved.has(d.id)?'♥ Saved':'♡ Save')+'</button><button class="outline" data-action="reset">↺ Reset outline</button></div></div>'+
  '<section class="detail-content"><div><div class="panel"><h2>Make this trip yours</h2><p>This is your starting point: a flexible idea board, not a real researched route. Reorder activities, move them between days and add new experiences.</p><div class="demo-banner">⚑ Locations, transfer times and attractions are not verified. Thumbnail play icons are placeholders until videos are connected.</div></div>'+
  '<div class="planner-heading"><h2>Your '+state.days+'-day idea board</h2><span class="small-note">↑↓ Reorder activities</span></div>'+current.map((x,i)=>dayHTML(x,i,current.length)).join('')+
