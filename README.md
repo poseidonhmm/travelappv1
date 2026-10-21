@@ -1,56 +1,58 @@
-# Wanderly — Destination Database (Phase 1)
+# Wanderly — Mobile-first travel discovery prototype
 
-This repository now contains the **database foundation only**. The prior Wayfarer UI experiment has been superseded with the user's permission.
+This project combines the existing 88 draft destination profiles with a responsive search and itinerary exploration UI. The current objective is **hands-on visual testing**, before research and verification.
 
-## What exists
+## Try the website in Codex
 
-- `data/destinations.json`: **88** varied destination profiles, all marked **draft**.
-- `data/taxonomy.json`: controlled vocabularies for consistent search indexing.
-- `database/schema.sql`: a future PostgreSQL schema for verified fact provenance, tags and review records.
-- `scripts/validate.mjs`: strict checks for IDs, tags, evidence and publish status.
-- `scripts/search.mjs`: small **keyword-only** smoke test (not AI semantic search).
-- `scripts/wikidata-candidates.mjs`: optional read-only helper to find possible Wikidata matches **without automatically accepting them**.
-- `test/catalog.test.mjs`: database and safety regression tests.
+Open the `poseidonhmm/travelappv1` repository in Codex, then run:
 
-## Run
-
-Use Node.js 22 or newer (no dependencies).
-
-```bash
-npm test
-npm run validate
-npm run search -- "feel-good food"
-npm run search -- "dramatic landscape nightlife"
-node scripts/wikidata-candidates.mjs "San Sebastián"
+```sh
+npm run dev
 ```
 
-## Important: draft does not mean verified
+Open the forwarded port **3000** preview (or http://localhost:3000 if working locally). Node.js 22 or later is required. There are **no external Node dependencies** to install and no API keys required.
 
-All 88 travel summaries and tags are editorial starting points; they are **NOT fact-checked** and **NOT ready for publication as authoritative destination advice**. No weather, real-time price, hotel availability, flight or booking information is included.
+Run:
 
-`bestMonths` is intentionally empty; `budget.tier` and coordinates are null, instead of inventing climate/budget precision. The place names and countries are also pending source reconciliation. Each entry carries a `sources` list and a `geographic.verification` status.
+```sh
+npm test
+npm run validate
+```
 
-**Never change an entry to `published` without at least one supporting source and a review date**. Factual subclaims (cost, season, coordinates) will require their own dated sources once added. A source URL is not proof that every assertion in a profile is supported.
+## Try these things
 
-## Proposed workflow
+1. Search **"feel-good food"**, **"dramatic landscape party"**, **"posh city break"** or **"tropical beach"**.
+2. Choose a region and tap scenery/vibe chips to refine your results.
+3. Browse the 2×2 photo moodboards on cards and open a destination.
+4. Save a destination using the heart.
+5. Open a draft itinerary, change the duration using the Discover page, and use arrow controls to reorder or move activities to another day. Add or remove ideas. Reset when you want to start again.
+6. Open Saved to see your favourites.
 
-1. Curate the initial list and reject or merge low-quality entries.
-2. Use Wikidata candidate suggestions to link each destination to a verified geographic identifier; check ambiguity manually. Structured Wikidata data is CC0: https://www.wikidata.org/wiki/Wikidata:Licensing
-3. Verify subjective travel claims with multiple reliable references and an editorial review. Record links in `sources`.
-4. Add sourced and time-scoped cost, geography, seasons, activities and media records. Store individual media licensing and attribution.
-5. Approve selected destinations. Build search embeddings **only from approved profiles**; keep draft records out of public search results.
-6. Add day-by-day itinerary tables later; weather and booking integrations explicitly deferred.
+## Features and honest limitations
 
-## Data design
+- The UI searches the existing **88 draft destination profiles** from `data/destinations.json`.
+- Search is a **simple local keyword-and-tag matcher**, not AI semantic search yet.
+- 2×2 moodboard photos and activity thumbnails come from external Unsplash links. They are **illustrations and may not depict the destination or activity**. Do not publish before licensing and location verification.
+- The itinerary is a **generic, editable inspiration outline**, not a real route. No actual attraction names, transfer times or live videos are claimed.
+- The duration selector changes the **illustrative itinerary length**, not the destinations returned by the search. Budget and season filters are not yet enabled because that data is missing.
+- Dates, live weather, prices, accommodation availability and booking redirects are not implemented.
+- Saved trips and edits are stored only in the browser's localStorage. They can be lost when browser data is cleared and will not sync between devices.
+- The local development server only binds to 127.0.0.1. A cloud preview may be forwarded by your development environment, but the site has **not been independently deployed to public hosting**.
+- **The GitHub repository itself is public** at present. A non-deployed website is not the same as a private GitHub repository.
 
-One destination can support many itineraries. Locations can be cities, islands, coasts, broad regions or natural sites. **Do not** treat a broad region as a single precise weather/price point. Link narrower sub-destinations when needed.
+## Project layout
 
-Search should eventually combine semantic matching of approved descriptions + structured constraint filtering (region, budget, season, duration) + factual validation. A phrase like "posh city break" is an interpretation problem, not a factual database column.
+- `public/index.html` — app entry, brand and navigation
+- `public/style.css` — responsive presentation and photo-led cards
+- `public/app.js` — UI, navigation, saving and sample itinerary editor
+- `public/recommend.js` — deterministic, explainable search
+- `server.mjs` — minimal dependency-free local HTTP server
+- `data/destinations.json` — original 88 draft editorial profiles
+- `data/taxonomy.json` — controlled category vocabularies
+- `database/schema.sql` — proposed persistence model (not deployed)
+- `scripts/validate.mjs` — checks database shape and some review rules
+- `docs/review-checklist.md` — future evidence/review process
 
-## Licensing
+## Next phase
 
-The prose in this seed is newly drafted, not copied from travel guides. Geographic metadata may later be imported from Wikidata (CC0). Every third-party media asset needs license-specific checking and attribution; do not scrape unlicensed travel photography.
-
-## Repository status
-
-No hosted database or public frontend has been deployed by this commit. This file-based catalogue can seed Postgres/Supabase or be consumed by a web app directly after quality review.
+After using this UI, we should iterate on which photos, card layouts and discovery interactions feel most convincing. We can then add AI semantic search and a systematic sourcing/review process, without rebuilding the UI from scratch.
