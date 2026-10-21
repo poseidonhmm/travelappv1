@@ -8816,5 +8816,1885 @@
       "reviewedAt": null,
       "notes": "New editorial draft; verify locations, travel characteristics and photo provenance before publishing."
     }
+  },
+  {
+    "id": "fes",
+    "name": "Fes",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "A maze of historic craft workshops, tiled courtyards and narrow medina lanes rewards patient wandering and traditional meals.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "hills"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "local"
+      ],
+      "experiences": [
+        "walking",
+        "history",
+        "markets"
+      ],
+      "food": [
+        "tagines",
+        "spices"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "chefchaouen",
+    "name": "Chefchaouen",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "Blue-washed lanes climb a mountain-backed hillside, forming a gentle base for photography, café stops and walking.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "mountains",
+        "hills"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "romantic"
+      ],
+      "experiences": [
+        "walking",
+        "photography",
+        "markets"
+      ],
+      "food": [
+        "tagines",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "merzouga",
+    "name": "Merzouga",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "A Saharan gateway beside immense sand dunes, known for sunrise viewpoints and remote desert camp experiences.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "dunes",
+        "rock-formations"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "desert-tours",
+        "camping",
+        "photography"
+      ],
+      "food": [
+        "camp-dining",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "tangier",
+    "name": "Tangier",
+    "country": "Morocco",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Sea-facing cafés, hillside streets and Atlantic-Mediterranean viewpoints give this port a cosmopolitan literary character.",
+    "tags": {
+      "scenery": [
+        "harbour",
+        "coast",
+        "old-town"
+      ],
+      "vibe": [
+        "creative",
+        "cultural",
+        "sociable"
+      ],
+      "experiences": [
+        "walking",
+        "coffee-culture",
+        "markets"
+      ],
+      "food": [
+        "seafood",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "tunis",
+    "name": "Tunis",
+    "country": "Tunisia",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Historic souks, ornate architecture and café culture provide a varied capital for food markets and medina exploring.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "coast"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "local"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "spices"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "sidi-bou-said",
+    "name": "Sidi Bou Said",
+    "country": "Tunisia",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "White houses trimmed in blue overlook the Mediterranean from an evocative hilltop village of terraces and narrow streets.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "old-town",
+        "hills"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "walking",
+        "photography",
+        "coffee-culture"
+      ],
+      "food": [
+        "seafood",
+        "pastries"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "djerba",
+    "name": "Djerba",
+    "country": "Tunisia",
+    "macroRegion": "Africa",
+    "kind": "island",
+    "summary": "A low-lying Mediterranean island with whitewashed settlements, sandy shores and distinctive local heritage.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "relaxed",
+        "cultural",
+        "peaceful"
+      ],
+      "experiences": [
+        "beach-time",
+        "cycling",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "cairo",
+    "name": "Cairo",
+    "country": "Egypt",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "A vast Nile metropolis where ancient monuments, Islamic architecture and busy bazaars meet everyday contemporary city life.",
+    "tags": {
+      "scenery": [
+        "river",
+        "city",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "museums"
+      ],
+      "food": [
+        "street-food",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "luxor",
+    "name": "Luxor",
+    "country": "Egypt",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Monumental temples and tomb landscapes line the Nile, offering an immersive window into ancient Egyptian history.",
+    "tags": {
+      "scenery": [
+        "river",
+        "temples",
+        "desert"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "history",
+        "boat-trips",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "aswan",
+    "name": "Aswan",
+    "country": "Egypt",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Granite islands, gentle Nile sailing and Nubian cultural influences give this southern river city a calmer character.",
+    "tags": {
+      "scenery": [
+        "river",
+        "island",
+        "desert"
+      ],
+      "vibe": [
+        "relaxed",
+        "cultural",
+        "scenic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "culture",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "dahab",
+    "name": "Dahab",
+    "country": "Egypt",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "A low-key Red Sea dive town with a desert mountain backdrop, seafront cafés and striking reef landscapes.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "reefs",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "A lively East African capital with creative restaurants and distinctive access to wildlife conservation experiences.",
+    "tags": {
+      "scenery": [
+        "city",
+        "savanna",
+        "gardens"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "food-tours",
+        "wildlife",
+        "markets"
+      ],
+      "food": [
+        "local-cuisine",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "maasai-mara",
+    "name": "Maasai Mara",
+    "country": "Kenya",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Wide grassland plains and rich savanna wildlife offer immersive safari landscapes beneath enormous skies.",
+    "tags": {
+      "scenery": [
+        "savanna",
+        "wildlife",
+        "river"
+      ],
+      "vibe": [
+        "scenic",
+        "remote",
+        "adventurous"
+      ],
+      "experiences": [
+        "safari",
+        "wildlife",
+        "photography"
+      ],
+      "food": [
+        "camp-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "lamu",
+    "name": "Lamu",
+    "country": "Kenya",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "Car-free Swahili streets, carved doors and dhow-filled channels give this Indian Ocean town a distinctive heritage atmosphere.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "coast",
+        "harbour"
+      ],
+      "vibe": [
+        "cultural",
+        "peaceful",
+        "romantic"
+      ],
+      "experiences": [
+        "walking",
+        "boat-trips",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "spices"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "ngorongoro-crater",
+    "name": "Ngorongoro Crater",
+    "country": "Tanzania",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "A vast volcanic caldera surrounds grasslands and wildlife habitats, creating sweeping viewpoints and concentrated safari experiences.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "savanna",
+        "wildlife"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "remote"
+      ],
+      "experiences": [
+        "safari",
+        "photography",
+        "wildlife"
+      ],
+      "food": [
+        "camp-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "mount-kilimanjaro",
+    "name": "Mount Kilimanjaro",
+    "country": "Tanzania",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Africa's highest mountain rises through varied vegetation zones toward high snowy slopes, drawing ambitious trekkers.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "snow",
+        "forest"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "camping",
+        "photography"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "pemba-island",
+    "name": "Pemba Island",
+    "country": "Tanzania",
+    "macroRegion": "Africa",
+    "kind": "island",
+    "summary": "Green spice-growing hills and reef-fringed coastline make a more secluded Indian Ocean island escape.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "coast"
+      ],
+      "vibe": [
+        "remote",
+        "peaceful",
+        "relaxed"
+      ],
+      "experiences": [
+        "diving",
+        "boat-trips",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "spices"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "volcanoes-national-park",
+    "name": "Volcanoes National Park",
+    "country": "Rwanda",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Misty volcanic slopes and dense highland forests protect remarkable wildlife and carefully regulated nature encounters.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "wildlife",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "bwindi-impenetrable-forest",
+    "name": "Bwindi Impenetrable Forest",
+    "country": "Uganda",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "A dense mountain rainforest known for gorilla conservation and challenging guided forest walks.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "mountains",
+        "wildlife"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "wildlife",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "local-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "lalibela",
+    "name": "Lalibela",
+    "country": "Ethiopia",
+    "macroRegion": "Africa",
+    "kind": "town",
+    "summary": "Churches carved into rock and a dramatic highland setting create an extraordinary architectural heritage destination.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "mountains",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "peaceful",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "simien-mountains",
+    "name": "Simien Mountains",
+    "country": "Ethiopia",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Deep escarpments and high plateaus support ambitious trekking routes and distinctive mountain wildlife.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "cliffs",
+        "valleys"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "wildlife",
+        "photography"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "etosha-national-park",
+    "name": "Etosha National Park",
+    "country": "Namibia",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Wide salt pans and sparse savanna create dramatic horizons around wildlife-rich waterholes.",
+    "tags": {
+      "scenery": [
+        "savanna",
+        "wildlife",
+        "desert"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "safari",
+        "photography",
+        "wildlife"
+      ],
+      "food": [
+        "camp-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "okavango-delta",
+    "name": "Okavango Delta",
+    "country": "Botswana",
+    "macroRegion": "Africa",
+    "kind": "natural_area",
+    "summary": "Seasonal waterways spread across inland grasslands, making small-boat trips and wildlife observation exceptional.",
+    "tags": {
+      "scenery": [
+        "river",
+        "lagoon",
+        "wildlife"
+      ],
+      "vibe": [
+        "remote",
+        "peaceful",
+        "scenic"
+      ],
+      "experiences": [
+        "safari",
+        "boat-trips",
+        "wildlife"
+      ],
+      "food": [
+        "camp-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "bazaruto-archipelago",
+    "name": "Bazaruto Archipelago",
+    "country": "Mozambique",
+    "macroRegion": "Africa",
+    "kind": "archipelago",
+    "summary": "Low sandy islands and turquoise reefs promise seclusion, diving and boat exploration off Mozambique's coast.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "reefs"
+      ],
+      "vibe": [
+        "peaceful",
+        "romantic",
+        "remote"
+      ],
+      "experiences": [
+        "diving",
+        "boat-trips",
+        "swimming"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "dakar",
+    "name": "Dakar",
+    "country": "Senegal",
+    "macroRegion": "Africa",
+    "kind": "city",
+    "summary": "Atlantic-facing streets, contemporary art, markets and a rich music culture energise this West African coastal capital.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "city",
+        "harbour"
+      ],
+      "vibe": [
+        "creative",
+        "energetic",
+        "cultural"
+      ],
+      "experiences": [
+        "music",
+        "markets",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "amman",
+    "name": "Amman",
+    "country": "Jordan",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A hilly capital of Roman remains, bustling food streets and cafés where old and contemporary neighbourhoods overlap.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "old-town",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "food-tours"
+      ],
+      "food": [
+        "street-food",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "aqaba",
+    "name": "Aqaba",
+    "country": "Jordan",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A Red Sea waterfront with reef landscapes and a relaxed coastal contrast to Jordan's desert and ancient-site journeys.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "reefs",
+        "harbour"
+      ],
+      "vibe": [
+        "relaxed",
+        "adventurous",
+        "sociable"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "dead-sea",
+    "name": "Dead Sea",
+    "country": "Jordan",
+    "macroRegion": "Middle East",
+    "kind": "natural_area",
+    "summary": "A stark salt-edged lake below desert cliffs creates surreal mineral landscapes and a slow resort-oriented escape.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "desert",
+        "cliffs"
+      ],
+      "vibe": [
+        "peaceful",
+        "scenic",
+        "wellness"
+      ],
+      "experiences": [
+        "swimming",
+        "wellness",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "abu-dhabi",
+    "name": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "Monumental architecture, broad waterfronts and museums define a polished Gulf capital with nearby desert scenery.",
+    "tags": {
+      "scenery": [
+        "city",
+        "waterfront",
+        "desert"
+      ],
+      "vibe": [
+        "elegant",
+        "luxury",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "architecture",
+        "shopping"
+      ],
+      "food": [
+        "modern-cuisine",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "sharjah",
+    "name": "Sharjah",
+    "country": "United Arab Emirates",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "Restored historical districts, waterfront promenades and contemporary arts institutions offer a reflective Gulf city experience.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "waterfront",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "creative",
+        "relaxed"
+      ],
+      "experiences": [
+        "museums",
+        "design",
+        "history"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "ras-al-khaimah",
+    "name": "Ras Al Khaimah",
+    "country": "United Arab Emirates",
+    "macroRegion": "Middle East",
+    "kind": "region",
+    "summary": "Mountain valleys, rugged desert plains and coastal resorts create an outdoors-oriented mix in the northern Emirates.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "desert",
+        "coast"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "hiking",
+        "road-trips",
+        "swimming"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "nizwa",
+    "name": "Nizwa",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "town",
+    "summary": "A commanding fort, traditional souq and date-growing villages make an inviting base for inland Omani heritage.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "mountains"
+      ],
+      "vibe": [
+        "cultural",
+        "local",
+        "peaceful"
+      ],
+      "experiences": [
+        "history",
+        "markets",
+        "road-trips"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "dates"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "jebel-akhdar",
+    "name": "Jebel Akhdar",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "natural_area",
+    "summary": "Terraced villages and stark canyons rise above the Omani interior, drawing walkers to highland viewpoints.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "gorges",
+        "valleys"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "road-trips"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "wahiba-sands",
+    "name": "Wahiba Sands",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "natural_area",
+    "summary": "Tall ochre dunes stretch into empty desert horizons, offering guided drives and night-time camping.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "dunes",
+        "valleys"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "desert-tours",
+        "camping",
+        "photography"
+      ],
+      "food": [
+        "camp-dining",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "musandam",
+    "name": "Musandam",
+    "country": "Oman",
+    "macroRegion": "Middle East",
+    "kind": "region",
+    "summary": "Steep rocky inlets and blue water give this peninsula a dramatic fjord-like coast made for boat exploration.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "harbour"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "boat-trips",
+        "snorkelling",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "alula",
+    "name": "AlUla",
+    "country": "Saudi Arabia",
+    "macroRegion": "Middle East",
+    "kind": "region",
+    "summary": "Sandstone tombs and desert rock formations frame a heritage-rich landscape of archaeological sites and dramatic canyon scenery.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "rock-formations",
+        "canyons"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "history",
+        "photography",
+        "desert-tours"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "camp-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "jeddah",
+    "name": "Jeddah",
+    "country": "Saudi Arabia",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "Coral-stone historic streets meet a contemporary Red Sea waterfront in a city with lively coastal food culture.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "coast",
+        "waterfront"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "history",
+        "food-tours",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "riyadh",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A sprawling desert capital where modern districts and ambitious architecture contrast with older market quarters.",
+    "tags": {
+      "scenery": [
+        "city",
+        "desert",
+        "architecture"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "luxury"
+      ],
+      "experiences": [
+        "museums",
+        "shopping",
+        "design"
+      ],
+      "food": [
+        "modern-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "doha",
+    "name": "Doha",
+    "country": "Qatar",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A distinctive waterfront skyline, design museums and traditional souqs give this Gulf capital a polished urban focus.",
+    "tags": {
+      "scenery": [
+        "city",
+        "harbour",
+        "architecture"
+      ],
+      "vibe": [
+        "elegant",
+        "luxury",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "architecture",
+        "markets"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
+  },
+  {
+    "id": "manama",
+    "name": "Manama",
+    "country": "Bahrain",
+    "macroRegion": "Middle East",
+    "kind": "city",
+    "summary": "A compact Gulf capital of traditional markets, waterfront towers and a mix of trading heritage and contemporary dining.",
+    "tags": {
+      "scenery": [
+        "city",
+        "harbour",
+        "architecture"
+      ],
+      "vibe": [
+        "sociable",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "markets",
+        "history",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
+    }
   }
 ]
