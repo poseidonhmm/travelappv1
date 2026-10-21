@@ -10696,5 +10696,945 @@
       "reviewedAt": null,
       "notes": "Unverified editorial draft. Independently verify destination descriptions, travel safety, image locations and licences before publishing."
     }
+  },
+  {
+    "id": "bogota",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "A high-altitude capital of colourful historic streets, independent cafés and a flourishing creative food scene.",
+    "tags": {
+      "scenery": [
+        "city",
+        "old-town",
+        "mountains"
+      ],
+      "vibe": [
+        "creative",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "museums",
+        "food-tours",
+        "walking"
+      ],
+      "food": [
+        "coffee",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "salento",
+    "name": "Salento",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "town",
+    "summary": "Bright painted houses overlook coffee-growing hills and soaring wax palms in a green Andean rural setting.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "forest",
+        "valleys"
+      ],
+      "vibe": [
+        "peaceful",
+        "scenic",
+        "local"
+      ],
+      "experiences": [
+        "hiking",
+        "coffee-culture",
+        "photography"
+      ],
+      "food": [
+        "coffee",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "tayrona-national-park",
+    "name": "Tayrona National Park",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "natural_area",
+    "summary": "Dense tropical forest meets boulder-strewn Caribbean coves, creating a dramatic coast explored on designated paths.",
+    "tags": {
+      "scenery": [
+        "jungle",
+        "beach",
+        "coast"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "remote"
+      ],
+      "experiences": [
+        "hiking",
+        "swimming",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "san-gil",
+    "name": "San Gil",
+    "country": "Colombia",
+    "macroRegion": "South America",
+    "kind": "town",
+    "summary": "A compact mountain town beside river canyons, used as a base for rafting, hiking and other outdoor sports.",
+    "tags": {
+      "scenery": [
+        "river",
+        "gorges",
+        "hills"
+      ],
+      "vibe": [
+        "adventurous",
+        "sociable",
+        "scenic"
+      ],
+      "experiences": [
+        "adventure-sports",
+        "hiking",
+        "cycling"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "quito",
+    "name": "Quito",
+    "country": "Ecuador",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "An Andean capital with a well-preserved historic centre and volcanic peaks beyond steep urban streets.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "mountains",
+        "volcanoes"
+      ],
+      "vibe": [
+        "cultural",
+        "scenic",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "markets"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "galapagos-islands",
+    "name": "Galápagos Islands",
+    "country": "Ecuador",
+    "macroRegion": "South America",
+    "kind": "archipelago",
+    "summary": "Remote Pacific volcanic islands and protected marine habitats offer extraordinary wildlife observation.",
+    "tags": {
+      "scenery": [
+        "island",
+        "volcanoes",
+        "wildlife"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "scenic"
+      ],
+      "experiences": [
+        "wildlife",
+        "snorkelling",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "banos",
+    "name": "Baños",
+    "country": "Ecuador",
+    "macroRegion": "South America",
+    "kind": "town",
+    "summary": "Waterfalls tumble through green mountain valleys around a lively base for cycling and adventurous excursions.",
+    "tags": {
+      "scenery": [
+        "waterfalls",
+        "mountains",
+        "river"
+      ],
+      "vibe": [
+        "adventurous",
+        "sociable",
+        "scenic"
+      ],
+      "experiences": [
+        "cycling",
+        "hiking",
+        "adventure-sports"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "cuenca",
+    "name": "Cuenca",
+    "country": "Ecuador",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "An Andean colonial city of riverside walks, domed churches and craft markets with an easy residential rhythm.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "relaxed",
+        "local"
+      ],
+      "experiences": [
+        "walking",
+        "markets",
+        "history"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "lima",
+    "name": "Lima",
+    "country": "Peru",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Coastal cliffs, Pacific sunsets and an ambitious restaurant scene make Peru's capital a compelling urban food destination.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "coast",
+        "city"
+      ],
+      "vibe": [
+        "food-led",
+        "creative",
+        "elegant"
+      ],
+      "experiences": [
+        "food-tours",
+        "cycling",
+        "museums"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "arequipa",
+    "name": "Arequipa",
+    "country": "Peru",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "White volcanic stone buildings and distant Andean peaks give this southern Peruvian city a striking highland setting.",
+    "tags": {
+      "scenery": [
+        "architecture",
+        "mountains",
+        "volcanoes"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "food-tours"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "huaraz",
+    "name": "Huaraz",
+    "country": "Peru",
+    "macroRegion": "South America",
+    "kind": "town",
+    "summary": "A mountain gateway to blue glacial lakes and jagged Andean peaks, favoured by serious hikers.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "lakes",
+        "glaciers"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "scenic"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "camping"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "la-paz",
+    "name": "La Paz",
+    "country": "Bolivia",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "A high-altitude city cascading down a steep Andean basin, alive with markets, cable cars and mountain views.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys",
+        "city"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "adventurous"
+      ],
+      "experiences": [
+        "markets",
+        "history",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "salar-de-uyuni",
+    "name": "Salar de Uyuni",
+    "country": "Bolivia",
+    "macroRegion": "South America",
+    "kind": "natural_area",
+    "summary": "An immense salt flat stretches to the horizon, creating near-abstract desert reflections and surreal photo landscapes.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "valleys",
+        "rock-formations"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "photography",
+        "road-trips",
+        "camping"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "valparaiso",
+    "name": "Valparaíso",
+    "country": "Chile",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Colourful hillside houses, street art and steep port-city stairways make a bohemian Pacific urban escape.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "harbour",
+        "old-town"
+      ],
+      "vibe": [
+        "creative",
+        "sociable",
+        "cultural"
+      ],
+      "experiences": [
+        "photography",
+        "walking",
+        "music"
+      ],
+      "food": [
+        "seafood",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "atacama-desert",
+    "name": "Atacama Desert",
+    "country": "Chile",
+    "macroRegion": "South America",
+    "kind": "natural_area",
+    "summary": "High desert valleys, salt lagoons and distant volcanic ridges create some of the world's most otherworldly scenery.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "lagoon",
+        "volcanoes"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "desert-tours",
+        "photography",
+        "hot-springs"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "camp-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "chiloe",
+    "name": "Chiloé",
+    "country": "Chile",
+    "macroRegion": "South America",
+    "kind": "archipelago",
+    "summary": "Green islands, colourful stilt houses and misty Pacific coasts make a folklore-rich escape with seafood traditions.",
+    "tags": {
+      "scenery": [
+        "island",
+        "coast",
+        "forest"
+      ],
+      "vibe": [
+        "local",
+        "peaceful",
+        "cultural"
+      ],
+      "experiences": [
+        "road-trips",
+        "boat-trips",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "mendoza",
+    "name": "Mendoza",
+    "country": "Argentina",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "A leafy city at the foot of the Andes that draws wine lovers to vineyards and sunlit mountain outings.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "gardens",
+        "valleys"
+      ],
+      "vibe": [
+        "food-led",
+        "relaxed",
+        "elegant"
+      ],
+      "experiences": [
+        "wine-tasting",
+        "cycling",
+        "road-trips"
+      ],
+      "food": [
+        "steak",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "bariloche",
+    "name": "Bariloche",
+    "country": "Argentina",
+    "macroRegion": "South America",
+    "kind": "town",
+    "summary": "Forest-fringed lakes and snowy Andean peaks surround a Patagonian adventure base known for hiking and chocolate shops.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "hiking",
+        "cycling",
+        "skiing"
+      ],
+      "food": [
+        "cakes",
+        "mountain-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "salta",
+    "name": "Salta",
+    "country": "Argentina",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "A colonial Andean city near colourful mountain valleys and high-altitude wine regions, full of northwestern food traditions.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "old-town",
+        "valleys"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "scenic"
+      ],
+      "experiences": [
+        "road-trips",
+        "history",
+        "food-tours"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
+  },
+  {
+    "id": "salvador",
+    "name": "Salvador",
+    "country": "Brazil",
+    "macroRegion": "South America",
+    "kind": "city",
+    "summary": "Afro-Brazilian music and vividly painted historic streets meet Atlantic beaches in a vibrant northeastern capital.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "coast",
+        "beach"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "nightlife"
+      ],
+      "experiences": [
+        "music",
+        "history",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
+    }
   }
 ]
