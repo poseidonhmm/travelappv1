@@ -78,7 +78,7 @@ function results(){
  const found=state.ai?.matches?state.ai.matches.map(m=>{
   const d=byId.get(m.id);
   return d?{...d,matchReason:typeof m.reason==='string'?m.reason:''}:null;
- }).filter(Boolean):matchDestinations(state.all,{query:state.q,region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],limit:88});
+ }).filter(Boolean):matchDestinations(state.all,{query:state.q,region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],limit:state.all.length});
  const area=document.querySelector('#results');if(!area)return;
  const engine=state.searching?'✧ AI is interpreting your dream trip…':state.ai?.engine==='ai'?'✦ AI semantic matching':state.ai?.engine==='keyword'?'Tag-search fallback':'✧ Preview results · press Find my escape to run AI';
  const interpretation=state.ai?.interpretation?'<p class="ai-interpretation"><strong>We understood:</strong> '+escapeHTML(state.ai.interpretation)+'</p>':'';
@@ -87,12 +87,12 @@ function results(){
  const err=state.aiError?'<p class="notice" role="alert">Search error: '+escapeHTML(state.aiError)+' — showing local preview results.</p>':'';
  area.innerHTML='<div class="section-heading"><div><span class="eyebrow" style="color:var(--accent)">FIND YOUR KIND OF SOMEWHERE</span><h2>'+((state.q||state.scenery.size||state.vibe.size)?'Matching escapes':'Explore everywhere')+'</h2><p>Feel inspired by destinations chosen for their atmosphere and experiences.</p></div><span class="count">'+found.length+' of '+state.all.length+' draft destinations</span></div>'+
  '<p class="search-mode" role="status">'+engine+'</p>'+interpretation+notice+err+
- (state.searching?'<div class="loading-state">Comparing the feeling of your search with 88 destination profiles…</div>':found.length?'<div class="results">'+found.map(card).join('')+'</div>':'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
+ (state.searching?'<div class="loading-state">Comparing the feeling of your search with 288 destination profiles…</div>':found.length?'<div class="results">'+found.map(card).join('')+'</div>':'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
  warnings+(!state.ai&&queryHasWeather(state.q)?'<p class="notice">☀ Weather and seasons are not connected yet. Results cannot guarantee sunshine for your dates.</p>':'')+
  '<p class="notice">✧ Private prototype: destination descriptions and photos are unverified. AI matches meaning, not real-time weather, travel prices or booking availability.</p>';
 }
 function savedPage(){
- const matches=matchDestinations(state.all,{savedIds:state.saved,limit:88});
+ const matches=matchDestinations(state.all,{savedIds:state.saved,limit:state.all.length});
  root.innerHTML='<section class="main-section" style="padding-top:32px"><div class="section-heading"><div><span class="eyebrow" style="color:var(--accent)">YOUR DAYDREAMS</span><h2>Saved escapes</h2><p>All the places you have been dreaming about.</p></div><span class="count">'+matches.length+' saved</span></div>'+
  (matches.length?'<div class="results">'+matches.map(card).join('')+'</div>':'<div class="empty"><h3>Your wish list starts here</h3><p>Tap the heart on any destination to save it.</p><button class="primary" data-action="explore">Explore destinations</button></div>')+
  '<div class="notice">Saved trips and edits live in this browser only. They are not synced across devices.</div></section>';

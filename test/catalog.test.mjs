@@ -4,8 +4,11 @@ import {load,validateCatalogue} from '../scripts/validate.mjs';
 import {searchDestinations} from '../scripts/search.mjs';
 const {destinations,taxonomy}=load();
 test('catalogue has broad geographic coverage',()=>{
- assert.ok(destinations.length>=75);
- assert.ok(new Set(destinations.map(x=>x.macroRegion)).size>=7);
+ assert.equal(destinations.length,288,'200 added to original 88');
+ assert.equal(new Set(destinations.map(x=>x.id)).size,288);
+ assert.ok(new Set(destinations.map(x=>x.country)).size>=70);
+ assert.equal(new Set(destinations.map(x=>x.macroRegion)).size,7);
+ assert.equal(new Set(destinations.map(x=>x.kind)).size,7);
 });
 test('catalogue passes schema and editorial safeguards',()=>{
  assert.deepEqual(validateCatalogue(destinations,taxonomy),[]);
@@ -27,4 +30,12 @@ test('keyword smoke searches have suggestions but do not claim verification',()=
   assert.ok(found.length>0,query);
   assert.ok(found.every(x=>x.status==='draft'));
  }
+});
+
+test('new 200 records keep unverified facts explicitly empty',()=>{
+ const added=destinations.slice(88);
+ assert.equal(added.length,200);
+ assert.ok(added.every(d=>d.editorial.status==='draft'&&d.sources.length===0));
+ assert.ok(added.every(d=>d.geographic.latitude===null&&d.geographic.longitude===null));
+ assert.ok(added.every(d=>d.budget.tier===null&&d.bestMonths.length===0));
 });
