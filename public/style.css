@@ -12,3 +12,6 @@ main{max-width:1420px;margin:0 auto;padding:0 42px 70px}.hero{position:relative;
 .ai-interpretation{color:#4b5d52;background:#fff;border:1px solid #e4e9e1;padding:15px 18px;border-radius:14px;line-height:1.65;font-size:13px;margin:0 0 16px}
 .ai-reason{margin:13px 0 0;padding:12px;border-radius:12px;background:#f6f6f0;color:#50675a;font-size:12px;line-height:1.55}
 .ai-reason strong{color:#29493a}
+
+.show-more-wrap{display:flex;justify-content:center;padding:28px 0 7px}
+.show-more-wrap .outline{min-width:210px}
