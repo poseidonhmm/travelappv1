@@ -4207,5 +4207,2263 @@
       "reviewedAt": null,
       "notes": "AI-assisted editorial seed: travel characterisations require human review; geographic and seasonal facts need sources before publishing."
     }
+  },
+  {
+    "id": "valencia",
+    "name": "Valencia",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Mediterranean beaches meet inventive architecture, lively produce markets and long evenings around rice dishes and neighbourhood cafés.",
+    "tags": {
+      "scenery": [
+        "city",
+        "beach",
+        "architecture"
+      ],
+      "vibe": [
+        "food-led",
+        "relaxed",
+        "creative"
+      ],
+      "experiences": [
+        "cycling",
+        "markets",
+        "architecture"
+      ],
+      "food": [
+        "paella",
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "granada",
+    "name": "Granada",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Moorish palaces crown narrow hillside streets, while mountain views, tapas bars and intimate plazas lend this Andalusian city a layered atmosphere.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "mountains"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "food-tours"
+      ],
+      "food": [
+        "tapas",
+        "tea"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "seville",
+    "name": "Seville",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Golden courtyards, tiled squares and animated lanes frame flamenco traditions and famously late dinners.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "river"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "sociable"
+      ],
+      "experiences": [
+        "culture",
+        "music",
+        "walking"
+      ],
+      "food": [
+        "tapas",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "bilbao",
+    "name": "Bilbao",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "An inventive Basque city of bold museums, river walks and packed pintxos counters, with green hills close by.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "hills"
+      ],
+      "vibe": [
+        "creative",
+        "food-led",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "food-tours",
+        "design"
+      ],
+      "food": [
+        "pintxos",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "costa-brava",
+    "name": "Costa Brava",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Pine-fringed coves, rocky coastal paths and fishing villages reward swimming stops and Mediterranean seafood lunches.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "beach"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "romantic"
+      ],
+      "experiences": [
+        "swimming",
+        "walking",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "galicia",
+    "name": "Galicia",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Wild Atlantic coastline, wooded valleys and fishing ports invite surfing, long walking routes and deeply local seafood culture.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "hills",
+        "forest"
+      ],
+      "vibe": [
+        "local",
+        "scenic",
+        "food-led"
+      ],
+      "experiences": [
+        "surfing",
+        "walking",
+        "road-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "la-palma",
+    "name": "La Palma",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Volcanic ridgelines, deep ravines and lush forest trails set this Canary Island apart as a quieter hiking escape.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "peaceful",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "road-trips"
+      ],
+      "food": [
+        "local-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "tenerife",
+    "name": "Tenerife",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Volcanic highlands and contrasting coastal towns offer dramatic terrain alongside swimming and historic streets.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "mountains",
+        "coast"
+      ],
+      "vibe": [
+        "scenic",
+        "energetic",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "swimming",
+        "road-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "menorca",
+    "name": "Menorca",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Turquoise inlets, dry-stone countryside and small harbours invite slow swims, coastal walks and gentle evenings.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "harbour"
+      ],
+      "vibe": [
+        "peaceful",
+        "romantic",
+        "relaxed"
+      ],
+      "experiences": [
+        "swimming",
+        "boat-trips",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "cadiz",
+    "name": "Cádiz",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A breezy Atlantic peninsula city where old-town plazas, beaches and bustling seafood markets sit within an easy stroll.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "old-town",
+        "waterfront"
+      ],
+      "vibe": [
+        "sociable",
+        "food-led",
+        "relaxed"
+      ],
+      "experiences": [
+        "walking",
+        "beach-time",
+        "food-tours"
+      ],
+      "food": [
+        "seafood",
+        "local-markets",
+        "tapas"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid",
+    "country": "Spain",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Grand boulevards lead to galleries, neighbourhood markets and animated terraces where dinners and nightlife run late.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "gardens"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "nightlife"
+      ],
+      "experiences": [
+        "museums",
+        "nightlife",
+        "food-tours"
+      ],
+      "food": [
+        "tapas",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "azores",
+    "name": "Azores",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "archipelago",
+    "summary": "Emerald volcanic crater lakes and open Atlantic waters promise a lush island escape shaped by walking trails and geothermal landscapes.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "lakes",
+        "coast"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "hot-springs",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "alentejo-coast",
+    "name": "Alentejo Coast",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Long sandy beaches and rugged headlands suit surf mornings, quiet road trips and meals in low-key fishing settlements.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "cliffs"
+      ],
+      "vibe": [
+        "peaceful",
+        "local",
+        "relaxed"
+      ],
+      "experiences": [
+        "surfing",
+        "road-trips",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "olive-oil"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "coimbra",
+    "name": "Coimbra",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A storied university town with steep lanes, riverside cafés and an intimate atmosphere shaped by students and tradition.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "river"
+      ],
+      "vibe": [
+        "cultural",
+        "local",
+        "romantic"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "culture"
+      ],
+      "food": [
+        "pastries",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "douro-valley",
+    "name": "Douro Valley",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Terraced vineyards fold toward a winding river, offering peaceful drives, countryside stays and leisurely wine tastings.",
+    "tags": {
+      "scenery": [
+        "valleys",
+        "hills",
+        "river"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "wine-tasting",
+        "boat-trips",
+        "road-trips"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "ericeira",
+    "name": "Ericeira",
+    "country": "Portugal",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "A whitewashed Atlantic surf town where cliffside views, casual cafés and daily wave reports set the pace.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "beach"
+      ],
+      "vibe": [
+        "sociable",
+        "relaxed",
+        "local"
+      ],
+      "experiences": [
+        "surfing",
+        "beach-time",
+        "coffee-culture"
+      ],
+      "food": [
+        "seafood",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "nice",
+    "name": "Nice",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Pastel lanes and colourful markets meet a broad seafront promenade in a Riviera city that feels stylish yet easy to explore.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "city",
+        "old-town"
+      ],
+      "vibe": [
+        "elegant",
+        "romantic",
+        "food-led"
+      ],
+      "experiences": [
+        "walking",
+        "markets",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "lyon",
+    "name": "Lyon",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Historic passages, riverside walks and traditional bouchons make this French city satisfying for travellers who put food first.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "food-led",
+        "cultural",
+        "local"
+      ],
+      "experiences": [
+        "food-tours",
+        "history",
+        "walking"
+      ],
+      "food": [
+        "bistros",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "bordeaux",
+    "name": "Bordeaux",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Elegant stone squares, riverfront cycling and wine culture create a polished urban escape with a lively restaurant scene.",
+    "tags": {
+      "scenery": [
+        "city",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "elegant",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "wine-tasting",
+        "cycling",
+        "food-tours"
+      ],
+      "food": [
+        "bistros",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "marseille",
+    "name": "Marseille",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A vibrant Mediterranean port of rugged coves, colourful districts and harbour markets, best explored with curiosity.",
+    "tags": {
+      "scenery": [
+        "harbour",
+        "coast",
+        "cliffs"
+      ],
+      "vibe": [
+        "creative",
+        "energetic",
+        "local"
+      ],
+      "experiences": [
+        "markets",
+        "boat-trips",
+        "walking"
+      ],
+      "food": [
+        "seafood",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "french-riviera",
+    "name": "French Riviera",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Pastel hillside villages, glamorous marinas and sheltered Mediterranean bays balance swimming days with a refined social scene.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "harbour",
+        "beach"
+      ],
+      "vibe": [
+        "luxury",
+        "elegant",
+        "romantic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "shopping"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "provence",
+    "name": "Provence",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Stone villages, market towns and rolling countryside invite slow drives, cycling excursions and lunches built around local produce.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "gardens",
+        "valleys"
+      ],
+      "vibe": [
+        "romantic",
+        "peaceful",
+        "food-led"
+      ],
+      "experiences": [
+        "cycling",
+        "markets",
+        "road-trips"
+      ],
+      "food": [
+        "olive-oil",
+        "local-markets"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "chamonix",
+    "name": "Chamonix",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "An Alpine base beneath immense snowy peaks, mixing high-mountain adventure with chalet cafés and outdoor culture.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "glaciers",
+        "snow"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "sociable"
+      ],
+      "experiences": [
+        "hiking",
+        "rock-climbing",
+        "skiing"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "annecy",
+    "name": "Annecy",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "Clear lake water, pastel canals and nearby peaks make a picturesque setting for cycling, swimming and unhurried wandering.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "mountains",
+        "old-town"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "cycling",
+        "swimming",
+        "walking"
+      ],
+      "food": [
+        "bistros",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "brittany",
+    "name": "Brittany",
+    "country": "France",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Rugged Atlantic headlands, tidal bays and proud harbour towns reward windswept walks and leisurely crêpe stops.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "beach"
+      ],
+      "vibe": [
+        "local",
+        "scenic",
+        "peaceful"
+      ],
+      "experiences": [
+        "walking",
+        "road-trips",
+        "culture"
+      ],
+      "food": [
+        "seafood",
+        "pastries"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Ancient ruins and lively trattorias appear around almost every corner, inviting long walks and atmospheric piazza evenings.",
+    "tags": {
+      "scenery": [
+        "architecture",
+        "old-town",
+        "city"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "food-led"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "food-tours"
+      ],
+      "food": [
+        "pasta",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "florence",
+    "name": "Florence",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Renaissance art, warm stone streets and riverside sunsets form an inviting setting for galleries, Tuscan food and intimate strolling.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "river"
+      ],
+      "vibe": [
+        "romantic",
+        "elegant",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "history",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "venice",
+    "name": "Venice",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Quiet canals, stone bridges and boat-only approaches create an unusually atmospheric city for getting lost together.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "waterfront",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "elegant"
+      ],
+      "experiences": [
+        "boat-trips",
+        "walking",
+        "history"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "naples",
+    "name": "Naples",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A spirited southern city of bustling markets, crowded lanes and pizza traditions, with volcanic scenery on the horizon.",
+    "tags": {
+      "scenery": [
+        "city",
+        "waterfront",
+        "volcanoes"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "local"
+      ],
+      "experiences": [
+        "food-tours",
+        "history",
+        "walking"
+      ],
+      "food": [
+        "street-food",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "cinque-terre",
+    "name": "Cinque Terre",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Colourful villages cling to steep Ligurian slopes over a bright sea, linked by walking trails and small harbours.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "cliffs",
+        "hills"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "hiking",
+        "boat-trips",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "pasta"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "puglia",
+    "name": "Puglia",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "Whitewashed towns, olive groves and rocky coastlines make an excellent setting for slow road trips and outdoor meals.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "old-town",
+        "hills"
+      ],
+      "vibe": [
+        "romantic",
+        "food-led",
+        "relaxed"
+      ],
+      "experiences": [
+        "road-trips",
+        "walking",
+        "beach-time"
+      ],
+      "food": [
+        "olive-oil",
+        "pasta"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "lake-como",
+    "name": "Lake Como",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "natural_area",
+    "summary": "Lakefront villas, ferry towns and wooded mountains give this northern Italian lake an effortlessly glamorous atmosphere.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "mountains",
+        "gardens"
+      ],
+      "vibe": [
+        "romantic",
+        "luxury",
+        "scenic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "walking",
+        "photography"
+      ],
+      "food": [
+        "bistros",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "sardinia",
+    "name": "Sardinia",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Transparent bays, granite headlands and mountain villages reward beach days alternating with adventurous inland exploration.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "mountains"
+      ],
+      "vibe": [
+        "scenic",
+        "relaxed",
+        "adventurous"
+      ],
+      "experiences": [
+        "swimming",
+        "road-trips",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "turin",
+    "name": "Turin",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Arcaded boulevards, historic cafés and mountain-framed avenues offer understated elegance, chocolate culture and museums.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "mountains"
+      ],
+      "vibe": [
+        "elegant",
+        "food-led",
+        "cultural"
+      ],
+      "experiences": [
+        "museums",
+        "coffee-culture",
+        "walking"
+      ],
+      "food": [
+        "cakes",
+        "pastries"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "matera",
+    "name": "Matera",
+    "country": "Italy",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "Honey-coloured cave houses and winding stone stairways create an ancient landscape glowing with intimate terrace light.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "old-town",
+        "hills"
+      ],
+      "vibe": [
+        "cultural",
+        "romantic",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "athens",
+    "name": "Athens",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Ancient hilltop temples overlook animated modern streets full of rooftop dining, art and sociable nights.",
+    "tags": {
+      "scenery": [
+        "city",
+        "architecture",
+        "hills"
+      ],
+      "vibe": [
+        "cultural",
+        "energetic",
+        "nightlife"
+      ],
+      "experiences": [
+        "history",
+        "food-tours",
+        "museums"
+      ],
+      "food": [
+        "casual-dining",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "naxos",
+    "name": "Naxos",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Long beaches, whitewashed hill villages and fertile countryside give this island a welcoming, down-to-earth rhythm.",
+    "tags": {
+      "scenery": [
+        "island",
+        "beach",
+        "hills"
+      ],
+      "vibe": [
+        "relaxed",
+        "romantic",
+        "food-led"
+      ],
+      "experiences": [
+        "swimming",
+        "walking",
+        "road-trips"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "milos",
+    "name": "Milos",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Sculpted white rocks and vivid blue coves make this Aegean island a draw for boat exploration and quiet evenings.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "coast",
+        "island"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "corfu",
+    "name": "Corfu",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Olive-covered hills, Venetian lanes and green bays combine historic character with slow Mediterranean beach days.",
+    "tags": {
+      "scenery": [
+        "island",
+        "coast",
+        "old-town"
+      ],
+      "vibe": [
+        "romantic",
+        "relaxed",
+        "cultural"
+      ],
+      "experiences": [
+        "walking",
+        "swimming",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "olive-oil"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "meteora",
+    "name": "Meteora",
+    "country": "Greece",
+    "macroRegion": "Europe",
+    "kind": "natural_area",
+    "summary": "Towering sandstone pillars crowned by monasteries create a near-surreal setting for viewpoint walks and contemplative exploration.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "mountains",
+        "valleys"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "cultural"
+      ],
+      "experiences": [
+        "walking",
+        "history",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "split",
+    "name": "Split",
+    "country": "Croatia",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "A living Roman palace opens onto a modern waterfront of café terraces, ferries and energetic summer evenings.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "harbour",
+        "waterfront"
+      ],
+      "vibe": [
+        "sociable",
+        "cultural",
+        "nightlife"
+      ],
+      "experiences": [
+        "history",
+        "boat-trips",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "dubrovnik",
+    "name": "Dubrovnik",
+    "country": "Croatia",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Stone fortifications rise over the Adriatic, framing dramatic sea views, maze-like lanes and scenic boat journeys.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "coast",
+        "cliffs"
+      ],
+      "vibe": [
+        "scenic",
+        "cultural",
+        "romantic"
+      ],
+      "experiences": [
+        "history",
+        "walking",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "hvar",
+    "name": "Hvar",
+    "country": "Croatia",
+    "macroRegion": "Europe",
+    "kind": "island",
+    "summary": "Sheltered coves and dry hills accompany a glamorous harbour restaurant scene and sociable summers.",
+    "tags": {
+      "scenery": [
+        "island",
+        "harbour",
+        "coast"
+      ],
+      "vibe": [
+        "elegant",
+        "nightlife",
+        "romantic"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "albanian-riviera",
+    "name": "Albanian Riviera",
+    "country": "Albania",
+    "macroRegion": "Europe",
+    "kind": "coast",
+    "summary": "Turquoise beaches backed by mountains invite an informal coastal road trip, long swims and village meals.",
+    "tags": {
+      "scenery": [
+        "coast",
+        "beach",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "relaxed",
+        "sociable"
+      ],
+      "experiences": [
+        "road-trips",
+        "swimming",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "theth",
+    "name": "Theth",
+    "country": "Albania",
+    "macroRegion": "Europe",
+    "kind": "town",
+    "summary": "A remote village beneath jagged Albanian Alps peaks, where mountain trails and simple guesthouses define the stay.",
+    "tags": {
+      "scenery": [
+        "mountains",
+        "valleys",
+        "waterfalls"
+      ],
+      "vibe": [
+        "remote",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "culture"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "traditional-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "lake-bled",
+    "name": "Lake Bled",
+    "country": "Slovenia",
+    "macroRegion": "Europe",
+    "kind": "natural_area",
+    "summary": "A lake island and Alpine backdrop create storybook views alongside gentle walking and cycling routes.",
+    "tags": {
+      "scenery": [
+        "lakes",
+        "mountains",
+        "forest"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "peaceful"
+      ],
+      "experiences": [
+        "walking",
+        "cycling",
+        "boat-trips"
+      ],
+      "food": [
+        "cakes",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "soca-valley",
+    "name": "Soca Valley",
+    "country": "Slovenia",
+    "macroRegion": "Europe",
+    "kind": "region",
+    "summary": "A brilliant turquoise river winds through forested Alpine valleys, attracting walkers, cyclists and whitewater enthusiasts.",
+    "tags": {
+      "scenery": [
+        "river",
+        "gorges",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "cycling",
+        "adventure-sports"
+      ],
+      "food": [
+        "mountain-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
+  },
+  {
+    "id": "budapest",
+    "name": "Budapest",
+    "country": "Hungary",
+    "macroRegion": "Europe",
+    "kind": "city",
+    "summary": "Thermal bathing culture, grand Danube views and ruin-bar nights give the Hungarian capital a dramatic split personality.",
+    "tags": {
+      "scenery": [
+        "river",
+        "architecture",
+        "city"
+      ],
+      "vibe": [
+        "nightlife",
+        "cultural",
+        "romantic"
+      ],
+      "experiences": [
+        "hot-springs",
+        "nightlife",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial discovery draft. Check names, factual claims, travel mood and image provenance before public use."
+    }
   }
 ]
