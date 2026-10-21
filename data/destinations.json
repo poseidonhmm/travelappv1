@@ -11636,5 +11636,1180 @@
       "reviewedAt": null,
       "notes": "Unverified editorial discovery profile; confirm details and imagery before publishing."
     }
+  },
+  {
+    "id": "san-miguel-de-allende",
+    "name": "San Miguel de Allende",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "Colourful colonial streets, arts workshops and rooftop terraces give this highland town a romantic, creative atmosphere.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "hills"
+      ],
+      "vibe": [
+        "romantic",
+        "creative",
+        "elegant"
+      ],
+      "experiences": [
+        "walking",
+        "design",
+        "markets"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "modern-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "merida",
+    "name": "Mérida",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "A lively Yucatán city of pastel mansions, shady plazas and regional cooking full of market flavours.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "architecture",
+        "city"
+      ],
+      "vibe": [
+        "cultural",
+        "food-led",
+        "sociable"
+      ],
+      "experiences": [
+        "food-tours",
+        "markets",
+        "history"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "bacalar",
+    "name": "Bacalar",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "A striking freshwater lagoon of changing blue tones invites kayaking, quiet docks and unhurried waterside days.",
+    "tags": {
+      "scenery": [
+        "lagoon",
+        "lakes",
+        "forest"
+      ],
+      "vibe": [
+        "peaceful",
+        "romantic",
+        "relaxed"
+      ],
+      "experiences": [
+        "swimming",
+        "boat-trips",
+        "photography"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "puerto-escondido",
+    "name": "Puerto Escondido",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "Pacific surf breaks, casual beach bars and sandy neighbourhoods create a lively but relaxed coastal base.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "waterfront"
+      ],
+      "vibe": [
+        "sociable",
+        "adventurous",
+        "nightlife"
+      ],
+      "experiences": [
+        "surfing",
+        "swimming",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "sayulita",
+    "name": "Sayulita",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "A colourful Pacific surf village of beach cafés, craft shops and laid-back social energy.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "hills"
+      ],
+      "vibe": [
+        "sociable",
+        "creative",
+        "relaxed"
+      ],
+      "experiences": [
+        "surfing",
+        "shopping",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "baja-california-sur",
+    "name": "Baja California Sur",
+    "country": "Mexico",
+    "macroRegion": "North America",
+    "kind": "region",
+    "summary": "Desert mountains meet the Sea of Cortez and Pacific shorelines, producing wildlife outings and dramatic coastal drives.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "coast",
+        "mountains"
+      ],
+      "vibe": [
+        "adventurous",
+        "scenic",
+        "relaxed"
+      ],
+      "experiences": [
+        "road-trips",
+        "boat-trips",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "flores-peten",
+    "name": "Flores Petén",
+    "country": "Guatemala",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "A colourful lakeside island town used as a base for exploring ancient Maya temples in the northern rainforest.",
+    "tags": {
+      "scenery": [
+        "island",
+        "lakes",
+        "old-town"
+      ],
+      "vibe": [
+        "cultural",
+        "relaxed",
+        "scenic"
+      ],
+      "experiences": [
+        "history",
+        "boat-trips",
+        "temples"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "caye-caulker",
+    "name": "Caye Caulker",
+    "country": "Belize",
+    "macroRegion": "North America",
+    "kind": "island",
+    "summary": "A tiny Caribbean island of sandy paths, colourful boats and reef trips with a deliberately slow pace.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "beach"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "peaceful"
+      ],
+      "experiences": [
+        "snorkelling",
+        "diving",
+        "boat-trips"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "san-ignacio",
+    "name": "San Ignacio",
+    "country": "Belize",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "A jungle-edged inland town with cave adventures, Maya history and access to forest rivers.",
+    "tags": {
+      "scenery": [
+        "jungle",
+        "caves",
+        "river"
+      ],
+      "vibe": [
+        "adventurous",
+        "cultural",
+        "local"
+      ],
+      "experiences": [
+        "history",
+        "adventure-sports",
+        "wildlife"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "utila",
+    "name": "Utila",
+    "country": "Honduras",
+    "macroRegion": "North America",
+    "kind": "island",
+    "summary": "A small Bay Island pairing reef diving, informal waterfront bars and a sociable traveller atmosphere.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "coast"
+      ],
+      "vibe": [
+        "sociable",
+        "adventurous",
+        "relaxed"
+      ],
+      "experiences": [
+        "diving",
+        "snorkelling",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "casual-dining"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "ometepe",
+    "name": "Ometepe",
+    "country": "Nicaragua",
+    "macroRegion": "North America",
+    "kind": "island",
+    "summary": "Twin volcanoes rise from a great freshwater lake, shaping a rural island of hiking trails and small villages.",
+    "tags": {
+      "scenery": [
+        "volcanoes",
+        "island",
+        "lakes"
+      ],
+      "vibe": [
+        "adventurous",
+        "remote",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "cycling",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "monteverde",
+    "name": "Monteverde",
+    "country": "Costa Rica",
+    "macroRegion": "North America",
+    "kind": "region",
+    "summary": "Cloud forests, hanging walkways and mist-filled canopy make this upland area a classic wildlife and nature escape.",
+    "tags": {
+      "scenery": [
+        "rainforest",
+        "forest",
+        "mountains"
+      ],
+      "vibe": [
+        "peaceful",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "wildlife",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "coffee",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "puerto-viejo",
+    "name": "Puerto Viejo",
+    "country": "Costa Rica",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "A Caribbean coastal town of reggae rhythms, jungle-backed beaches and an easygoing cycling culture.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "jungle",
+        "coast"
+      ],
+      "vibe": [
+        "relaxed",
+        "sociable",
+        "creative"
+      ],
+      "experiences": [
+        "cycling",
+        "surfing",
+        "beach-time"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "bocas-del-toro",
+    "name": "Bocas del Toro",
+    "country": "Panama",
+    "macroRegion": "North America",
+    "kind": "archipelago",
+    "summary": "Caribbean islands, stilt-house villages and reef bays mix relaxed boat days with sociable waterfront nightlife.",
+    "tags": {
+      "scenery": [
+        "island",
+        "reefs",
+        "beach"
+      ],
+      "vibe": [
+        "sociable",
+        "relaxed",
+        "adventurous"
+      ],
+      "experiences": [
+        "boat-trips",
+        "snorkelling",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "panama-city",
+    "name": "Panama City",
+    "country": "Panama",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "A tropical skyline meets a colonial quarter and waterfront promenades, with diverse food and neighbourhood nightlife.",
+    "tags": {
+      "scenery": [
+        "city",
+        "harbour",
+        "old-town"
+      ],
+      "vibe": [
+        "energetic",
+        "food-led",
+        "cultural"
+      ],
+      "experiences": [
+        "history",
+        "food-tours",
+        "nightlife"
+      ],
+      "food": [
+        "seafood",
+        "international-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "havana",
+    "name": "Havana",
+    "country": "Cuba",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Weathered pastel façades, live music and expressive streetscapes make an atmospheric Caribbean capital for urban wandering.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "waterfront",
+        "architecture"
+      ],
+      "vibe": [
+        "cultural",
+        "creative",
+        "sociable"
+      ],
+      "experiences": [
+        "music",
+        "history",
+        "walking"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "vinales",
+    "name": "Viñales",
+    "country": "Cuba",
+    "macroRegion": "North America",
+    "kind": "region",
+    "summary": "Rounded limestone hills rise from tobacco-growing valleys, where cycling and rural walking take centre stage.",
+    "tags": {
+      "scenery": [
+        "rock-formations",
+        "valleys",
+        "hills"
+      ],
+      "vibe": [
+        "scenic",
+        "peaceful",
+        "local"
+      ],
+      "experiences": [
+        "cycling",
+        "hiking",
+        "photography"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "samana-peninsula",
+    "name": "Samaná Peninsula",
+    "country": "Dominican Republic",
+    "macroRegion": "North America",
+    "kind": "coast",
+    "summary": "Palm-lined coves, forested hills and Atlantic wildlife outings give this peninsula a lush Caribbean character.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "coast",
+        "forest"
+      ],
+      "vibe": [
+        "romantic",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "boat-trips",
+        "swimming",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "tropical-produce"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "new-orleans",
+    "name": "New Orleans",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Brass music, atmospheric streets and extraordinary food traditions give this Louisiana city an exuberant rhythm.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "nightlife",
+        "creative",
+        "food-led"
+      ],
+      "experiences": [
+        "music",
+        "food-tours",
+        "history"
+      ],
+      "food": [
+        "traditional-cuisine",
+        "street-food"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "yosemite-national-park",
+    "name": "Yosemite National Park",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "natural_area",
+    "summary": "Sheer granite walls, powerful waterfalls and giant forest landscapes draw hikers into immense Sierra Nevada scenery.",
+    "tags": {
+      "scenery": [
+        "cliffs",
+        "waterfalls",
+        "forest"
+      ],
+      "vibe": [
+        "scenic",
+        "adventurous",
+        "peaceful"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "camping"
+      ],
+      "food": [
+        "camp-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "joshua-tree",
+    "name": "Joshua Tree",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "natural_area",
+    "summary": "Strange desert trees and massive boulder fields create wide-open California landscapes for walks and stargazing.",
+    "tags": {
+      "scenery": [
+        "desert",
+        "rock-formations",
+        "dunes"
+      ],
+      "vibe": [
+        "remote",
+        "creative",
+        "adventurous"
+      ],
+      "experiences": [
+        "hiking",
+        "photography",
+        "camping"
+      ],
+      "food": [
+        "casual-dining",
+        "local-cuisine"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "san-francisco",
+    "name": "San Francisco",
+    "country": "United States",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Steep neighbourhood streets, dramatic bay views and diverse food districts reward walkers and curious urban travellers.",
+    "tags": {
+      "scenery": [
+        "hills",
+        "harbour",
+        "city"
+      ],
+      "vibe": [
+        "creative",
+        "food-led",
+        "cultural"
+      ],
+      "experiences": [
+        "walking",
+        "food-tours",
+        "museums"
+      ],
+      "food": [
+        "modern-cuisine",
+        "seafood"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "montreal",
+    "name": "Montréal",
+    "country": "Canada",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "French-speaking neighbourhoods, outdoor terraces and a strong arts scene make this city a sociable stop for dining and festivals.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "city"
+      ],
+      "vibe": [
+        "creative",
+        "sociable",
+        "food-led"
+      ],
+      "experiences": [
+        "music",
+        "food-tours",
+        "cycling"
+      ],
+      "food": [
+        "bistros",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "quebec-city",
+    "name": "Québec City",
+    "country": "Canada",
+    "macroRegion": "North America",
+    "kind": "city",
+    "summary": "Fortified stone streets and river views lend an old-world character to this French-speaking North American city.",
+    "tags": {
+      "scenery": [
+        "old-town",
+        "river",
+        "architecture"
+      ],
+      "vibe": [
+        "romantic",
+        "cultural",
+        "elegant"
+      ],
+      "experiences": [
+        "walking",
+        "history",
+        "photography"
+      ],
+      "food": [
+        "bistros",
+        "pastries"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
+  },
+  {
+    "id": "tofino",
+    "name": "Tofino",
+    "country": "Canada",
+    "macroRegion": "North America",
+    "kind": "town",
+    "summary": "Wild Pacific surf, wide beaches and temperate rainforest make this Vancouver Island town a rugged coastal retreat.",
+    "tags": {
+      "scenery": [
+        "beach",
+        "rainforest",
+        "coast"
+      ],
+      "vibe": [
+        "remote",
+        "scenic",
+        "adventurous"
+      ],
+      "experiences": [
+        "surfing",
+        "walking",
+        "wildlife"
+      ],
+      "food": [
+        "seafood",
+        "coffee"
+      ]
+    },
+    "geographic": {
+      "latitude": null,
+      "longitude": null,
+      "wikidataId": null,
+      "verification": "not_verified"
+    },
+    "budget": {
+      "tier": null,
+      "source": null,
+      "checkedAt": null
+    },
+    "bestMonths": [],
+    "sources": [],
+    "editorial": {
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": "Unverified editorial draft for destination discovery, requiring research and photo provenance checks."
+    }
   }
 ]
