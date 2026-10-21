@@ -10,6 +10,8 @@ const files=new Map([
  ['/index.html',['public/index.html','text/html; charset=utf-8']],
  ['/style.css',['public/style.css','text/css; charset=utf-8']],
  ['/app.js',['public/app.js','text/javascript; charset=utf-8']],
+ ['/feedback.js',['public/feedback.js','text/javascript; charset=utf-8']],
+ ['/feedback.css',['public/feedback.css','text/css; charset=utf-8']],
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
  ['/data/destinations.json',['data/destinations.json','application/json; charset=utf-8']]
 ]);

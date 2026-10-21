@@ -9,7 +9,7 @@ test('mobile-first UI serves source files and destination catalogue',async()=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  try {
   const base='http://127.0.0.1:'+server.address().port;
-  for(const path of ['/','/style.css','/app.js','/recommend.js','/data/destinations.json']){
+  for(const path of ['/','/style.css','/app.js','/recommend.js','/feedback.js','/feedback.css','/data/destinations.json']){
    const response=await fetch(base+path);
    assert.equal(response.status,200,path);
    assert.ok((await response.text()).length>20,path);

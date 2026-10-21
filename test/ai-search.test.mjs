@@ -57,8 +57,9 @@ test('model interpretation and embeddings are called with cache for destination 
  assert.equal(first.interpretation,'Quiet mountain scenery and gentle adventures');
  assert.ok(first.matches.every(m=>destinations.some(d=>d.id===m.id)));
  assert.equal(second.engine,'ai');
- assert.equal(embeddingCalls,3,'one destination embedding batch + two query embeddings');
- assert.equal(interpretationCalls,2);
+ assert.equal(embeddingCalls,2,'one destination embedding batch + one query embedding when repeated');
+ assert.equal(interpretationCalls,1);
+ assert.equal(second.cached,true);
 });
 test('upstream failure uses labelled fallback and does not invent climate',async()=>{
  const failFetch=async()=>({ok:false,status:429});

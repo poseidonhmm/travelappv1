@@ -26,6 +26,12 @@ AI interprets unconventional travel requests and semantically compares them with
 - Open destinations, choose 5/7/10-day **generic idea boards**, add, remove, reorder and move ideas.
 - Save places and customisations to browser local storage (not synced).
 
+## Feedback and low-cost testing
+
+Rate destination cards with 👍 / 👎, add reasons to poor recommendations, then open **Feedback** in the top navigation to review or export your judgments. Ratings are stored locally in `data/feedback.local.json`, which is excluded from Git. They do **not** trigger OpenAI calls or automatically retrain the model. Repeating identical AI searches uses a temporary in-memory cache to avoid paying again during one server session.
+
+See [docs/feedback.md](docs/feedback.md) for details and backup instructions.
+
 ## Known limitations
 
 All 88 destination profiles are editorial **drafts**. They have not been fact-checked. The images may not depict the named destinations. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
