@@ -14,7 +14,7 @@ const concepts={
  scenery:{words:['dramatic','landscape','landscapes','scenery','scenic'],tags:['scenic','mountains','cliffs','glaciers','rock-formations','volcanoes','lakes','waterfalls']},
  nightlife:{words:['party','partying','nightlife','bars','social','sociable'],tags:['nightlife','sociable','energetic']},
  refined:{words:['posh','fancy','luxury','luxurious','upmarket','upscale'],tags:['elegant','luxury','romantic']},
- city:{words:['city','cities','urban'],tags:['city','architecture','food-tours']},
+ city:{words:['city','cities','urban'],tags:['city','architecture']},
  food:{words:['food','foodie','eating','cuisine','delicious'],tags:['food-led','food-tours','street-food','markets','local-cuisine','seafood','traditional-cuisine']},
  romantic:{words:['romantic','couple','romance'],tags:['romantic','elegant','peaceful']},
  peaceful:{words:['quiet','peaceful','calm','tranquil'],tags:['peaceful','remote','relaxed']},
@@ -41,8 +41,9 @@ export function matchDestinations(destinations,options={}){
   groups.get(name).add(word);
  }
  const selected=[...scenery,...vibes];
+ const cityBreak=/\bcity\s+break\b/.test(normalized);
  const hasCriteria=groups.size>0||selected.length>0;
- return destinations.filter(d=>(region==='all'||d.macroRegion===region)&&(!savedIds||savedIds.has(d.id))).map(d=>{
+ return destinations.filter(d=>(region==='all'||d.macroRegion===region)&&(!cityBreak||d.kind==='city')&&(!savedIds||savedIds.has(d.id))).map(d=>{
   const tags=Object.values(d.tags||{}).flat();
   const tagSet=new Set(tags);
   const blob=normalize([d.name,d.country,d.macroRegion,d.kind,d.summary,...tags].join(' '));
