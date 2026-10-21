@@ -5,3 +5,5 @@ node_modules/
 .DS_Store
 data/feedback.local.json
 data/feedback.local.json.tmp-*
+data/photo-cache.local.json
+data/photo-cache.local.json.tmp-*

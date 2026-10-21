@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { createAiSearch,InputError,parseSearchRequest } from './lib/ai-search.mjs';
 import { createFeedbackStore,DEFAULT_FEEDBACK_PATH } from './lib/feedback.mjs';
+import { createPhotoStore,DEFAULT_PHOTO_CACHE } from './lib/photos.mjs';
 
 const files=new Map([
  ['/', ['public/index.html','text/html; charset=utf-8']],
@@ -12,6 +13,8 @@ const files=new Map([
  ['/app.js',['public/app.js','text/javascript; charset=utf-8']],
  ['/feedback.js',['public/feedback.js','text/javascript; charset=utf-8']],
  ['/feedback.css',['public/feedback.css','text/css; charset=utf-8']],
+ ['/photos.js',['public/photos.js','text/javascript; charset=utf-8']],
+ ['/photos.css',['public/photos.css','text/css; charset=utf-8']],
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
  ['/data/destinations.json',['data/destinations.json','application/json; charset=utf-8']]
 ]);
@@ -54,14 +57,21 @@ function allowSearch(){
  if(requestTimes.length>=20)return false;
  requestTimes.push(now);return true;
 }
-export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH}={}){
- let feedbackStore=null;
+export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePath=DEFAULT_PHOTO_CACHE,photoFetchImpl=fetch}={}){
+ let feedbackStore=null,photoStore=null;
  async function getFeedback(){
   if(!feedbackStore){
    const profiles=JSON.parse(await readFile(new URL('data/destinations.json',import.meta.url),'utf8'));
    feedbackStore=createFeedbackStore({filePath:feedbackPath,knownIds:new Set(profiles.map(d=>d.id))});
   }
   return feedbackStore;
+ }
+ async function getPhotos(){
+  if(!photoStore){
+   const destinations=JSON.parse(await readFile(new URL('data/destinations.json',import.meta.url),'utf8'));
+   photoStore=createPhotoStore({destinations,cachePath:photoCachePath,fetchImpl:photoFetchImpl});
+  }
+  return photoStore;
  }
  return http.createServer(async(request,response)=>{
   try{
@@ -73,6 +83,17 @@ export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH}={}){
     if(origin.host!==host||!['http:','https:'].includes(origin.protocol)){
      json(response,403,{error:'Cross-origin requests are not allowed.'});return;
     }
+   }
+   if(url.pathname==='/api/photos'){
+    if(!['GET','HEAD'].includes(request.method)){
+     response.writeHead(405,{'Allow':'GET, HEAD'});response.end();return;
+    }
+    const id=url.searchParams.get('destination')||'';
+    if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)||id.length>100){json(response,400,{error:'Invalid destination ID.'});return;}
+    const store=await getPhotos();
+    const images=await store.getPhotos(id);
+    if(images===null){json(response,404,{error:'Destination not found.'});return;}
+    json(response,200,{destinationId:id,photos:images,verified:false,source:'Wikimedia Commons candidates'},request.method);return;
    }
    if(url.pathname==='/api/status'&&['GET','HEAD'].includes(request.method)){
     json(response,200,{aiConfigured:!!(await getApiKey())},request.method);return;
