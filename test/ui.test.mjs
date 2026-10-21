@@ -68,3 +68,44 @@ test('feedback API persists judgments locally without requiring an OpenAI key',a
   await rm(folder,{recursive:true,force:true});
  }
 });
+
+test('photo API returns distinct attributed Commons candidates per destination',async()=>{
+ const folder=await mkdtemp(join(tmpdir(),'wanderly-photo-http-'));
+ const fileTitles=['Shared.jpg','ParisA.jpg','ParisB.jpg','ParisC.jpg','ParisD.jpg','VeniceA.jpg','VeniceB.jpg','VeniceC.jpg','VeniceD.jpg'];
+ const upstream=async url=>{
+  const query=new URL(url);
+  const search=query.searchParams.has('generator');
+  const pages=Object.fromEntries(fileTitles.map((file,i)=>[i,{
+   title:'File:'+file,index:i,
+   imageinfo:[{width:1600,height:900,mime:'image/jpeg',
+    ...(search?{}:{
+      sha1:file,
+      thumburl:'https://upload.wikimedia.org/wikipedia/commons/thumb/'+file,
+      descriptionurl:'https://commons.wikimedia.org/wiki/File:'+file,
+      extmetadata:{
+       LicenseShortName:{value:'CC BY 4.0'},
+       LicenseUrl:{value:'https://creativecommons.org/licenses/by/4.0/'},
+       Artist:{value:'Fixture Photographer'}
+      }
+    })
+   }]
+  }]));
+  return {ok:true,json:async()=>({query:{pages}})};
+ };
+ const server=createAppServer({photoCachePath:join(folder,'photo-cache.json'),photoFetchImpl:upstream});
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ try{
+  const base='http://127.0.0.1:'+server.address().port;
+  const first=await (await fetch(base+'/api/photos?destination=paris')).json();
+  const second=await (await fetch(base+'/api/photos?destination=venice')).json();
+  const used=[...first.photos,...second.photos].map(p=>p.file);
+  assert.equal(first.photos.length,4);
+  assert.equal(second.photos.length,4);
+  assert.equal(new Set(used).size,8);
+  assert.ok(first.photos.every(p=>p.license==='CC BY 4.0'&&p.verified===false));
+  assert.equal((await fetch(base+'/api/photos?destination=not-a-place')).status,404);
+ }finally{
+  await new Promise(resolve=>server.close(resolve));
+  await rm(folder,{recursive:true,force:true});
+ }
+});
