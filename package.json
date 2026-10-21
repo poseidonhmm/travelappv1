@@ -11,6 +11,8 @@
     "start": "node server.mjs",
     "validate": "node scripts/validate.mjs",
     "search": "node scripts/search.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "photos:audit": "node scripts/photo-audit.mjs",
+    "photos:sample": "node scripts/photo-audit.mjs --sample"
   }
 }

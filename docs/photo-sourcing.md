@@ -26,6 +26,10 @@ The cache is loaded on server startup and is intended to keep images consistent 
 
 Without internet access or when Wikimedia rate-limits requests, slots remain visibly blank rather than showing incorrect generic travel photographs.
 
+## Audit the local cache
+
+After you browse destinations, run `npm run photos:audit` to see how many four-photo galleries have been populated and to check for duplicate file identifiers or content hashes. Run `npm run photos:sample` to fetch licensed image candidates for four sample destinations and print their Commons source URLs (internet access required). These commands do **not** call OpenAI or consume your API credits.
+
 ## Limitations
 
 - This is a candidate-photo collection system, **not** 1,152 manually verified and curated photos. Some places may have fewer than four accepted photos.
