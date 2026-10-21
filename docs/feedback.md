@@ -22,7 +22,7 @@ Ratings are unique for the combination of query, region, scenery/vibe filter sel
 ### Cost
 
 - **Thumbs-up/down, reason notes, Feedback review and JSON export make zero OpenAI API requests**. They have no extra model cost.
-- Running a new AI search makes model calls (one query interpretation plus embeddings). The initial search after starting the Node server computes a batch of 88 destination embeddings.
+- Running a new AI search makes model calls (one query interpretation plus embeddings). The initial search after starting the Node server computes a batch of 288 destination embeddings.
 - **Identical queries plus identical filters are cached in memory while the local server is running**, so repeating them does not cause new paid calls. The cache holds up to 80 recent searches and is reset on restart.
 - Browsing the existing results and adding feedback never reruns AI.
 - Using ChatGPT to discuss the findings does not store ratings in your local Wanderly project. Export a JSON file or share a non-secret sample when you want analysis here.

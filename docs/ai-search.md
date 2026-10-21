@@ -1,6 +1,6 @@
 # Wanderly: local AI semantic search
 
-The existing mobile-first website now supports real AI-powered natural-language interpretation and destination retrieval. No changes to the 88 draft profiles were required.
+The existing mobile-first website now supports real AI-powered natural-language interpretation and destination retrieval. The source catalogue was subsequently expanded from 88 to 288 editorial drafts.
 
 ## Steps on your Mac
 
@@ -18,12 +18,12 @@ Never paste your key into chat, Codex messages, GitHub, a browser console or any
 ## How it works
 
 1. The local Node server sends only the search description to gpt-4o-mini using the OpenAI Responses API with structured JSON output.
-2. The server embeds the rewritten travel intent and the 88 existing destination profiles using text-embedding-3-small.
+2. The server embeds the rewritten travel intent and the 288 existing destination profiles using text-embedding-3-small.
 3. It computes cosine similarity and gives modest boosts for selected scenery/vibe filters.
 4. Region filtering is strict, results are selected only by existing database IDs, and explanations cite the existing draft themes (not imagined attractions).
 5. The website visibly identifies whether it is displaying AI semantic matches or fallback keyword/tag matches.
 
-The full 88-destination embedding catalogue is cached in server memory once per server process (and will be regenerated on a restart). Every subsequent AI query still uses one interpreter call and one query-embedding call. The model requests incur API charges. No live web search or booking API is used.
+The full 288-destination embedding catalogue is cached in server memory once per server process (and will be regenerated on a restart). Every subsequent AI query still uses one interpreter call and one query-embedding call. The model requests incur API charges. No live web search or booking API is used.
 
 ## Safeguards and current limits
 

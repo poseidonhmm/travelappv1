@@ -34,7 +34,7 @@ See [docs/feedback.md](docs/feedback.md) for details and backup instructions. Al
 
 ## Known limitations
 
-All 88 destination profiles are editorial **drafts**. They have not been fact-checked. The photo candidates are automatically found by destination name and may not actually depict the destination; they must be reviewed for accuracy and licensing before publication. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
+All 288 destination profiles are editorial **drafts**. They have not been fact-checked. The photo candidates are automatically found by destination name and may not actually depict the destination; they must be reviewed for accuracy and licensing before publication. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
 
 This website has not been deployed. The GitHub repository itself is currently public. Never commit an API key to GitHub.
 
