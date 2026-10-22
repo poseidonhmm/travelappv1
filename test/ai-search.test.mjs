@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { load } from '../scripts/validate.mjs';
-import { createAiSearch,cosineSimilarity,destinationText,parseSearchRequest,rankDestinations } from '../lib/ai-search.mjs';
+import { createAiSearch,cosineSimilarity,destinationText,parseSearchRequest,rankDestinations,explainOpenAiFailure } from '../lib/ai-search.mjs';
 const destinations=load().destinations;
 
 test('rejects malformed or unsafe search payloads',()=>{
@@ -69,4 +69,27 @@ test('upstream failure uses labelled fallback and does not invent climate',async
  assert.match(res.notice,/unavailable/i);
  assert.ok(res.warnings.some(x=>x.includes('Weather')));
  assert.ok(res.warnings.some(x=>x.includes('Prices')));
+});
+
+test('API diagnostics distinguish temporary rate limits from exhausted credits and spend limits',()=>{
+ const rate=explainOpenAiFailure(429,{error:{code:'rate_limit_exceeded',message:'sensitive server message'}});
+ assert.equal(rate.code,'rate_limit_exceeded');
+ assert.match(rate.notice,/rate limit/i);
+ assert.doesNotMatch(rate.notice,/sensitive server message/i);
+ for(const code of ['credit_balance_exhausted','insufficient_quota','project_spend_limit_exceeded','organization_usage_limit_exceeded']){
+  const res=explainOpenAiFailure(429,{error:{code}});
+  assert.equal(res.code,code);
+  assert.match(res.notice,/quota|billing|spend limit/i);
+ }
+ assert.equal(explainOpenAiFailure(401,{error:{type:'invalid_request_error'}}).status,401);
+});
+test('fallback shows safe API code without leaking provider message or key',async()=>{
+ const upstream=async()=>({
+  ok:false,status:429,json:async()=>({error:{code:'credit_balance_exhausted',message:'Internal secret dump'}})
+ });
+ const service=createAiSearch({destinations:destinations.slice(0,3),apiKey:'my-private-key',fetchImpl:upstream});
+ const result=await service.search(parseSearchRequest({query:'romantic mountains',region:'all'}));
+ assert.equal(result.engine,'keyword');
+ assert.match(result.notice,/credit_balance_exhausted/);
+ assert.doesNotMatch(result.notice,/Internal secret dump|my-private-key/);
 });
