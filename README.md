@@ -26,6 +26,10 @@ AI interprets unconventional travel requests and semantically compares them with
 - Open destinations, choose 5/7/10-day **generic idea boards**, add, remove, reorder and move ideas.
 - Save places and customisations to browser local storage (not synced).
 
+## Collaborative travel discovery
+
+Short requests such as `sunny` now open a **refine as you browse** panel instead of inventing food, nightlife and socialising preferences. Travellers can optionally tell Wanderly when they plan to travel, where they're starting from, and whether food, proximity or a particular mood matters. These choices are used transparently by the local preview and semantic ranking. They do not claim verified weather or journey times. See [Travel context and clarification](docs/travel-context.md).
+
 ## Feedback and low-cost testing
 
 Rate destination cards with 👍 / 👎, add reasons to poor recommendations, then open **Feedback** in the top navigation to review or export your judgments. Ratings are stored locally in `data/feedback.local.json`, which is excluded from Git. They do **not** trigger OpenAI calls or automatically retrain the model. Repeating identical AI searches uses a temporary in-memory cache to avoid paying again during one server session.
