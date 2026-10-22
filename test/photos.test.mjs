@@ -43,3 +43,38 @@ test('Commons photo lookups are credited and globally de-duplicated',async()=>{
   assert.equal((await reloaded.getPhotos('a')).length,4);
  }finally{await rm(folder,{recursive:true,force:true});}
 });
+
+test('partial image caches are topped up after the next app restart',async()=>{
+ const folder=await mkdtemp(join(tmpdir(),'wanderly-photo-refresh-'));
+ const files=['A','B','C','D'];
+ let broad=false;
+ const fetchImpl=async url=>{
+  const q=new URL(url);
+  const results=(broad?files:files.slice(0,1)).map((file,index)=>{
+   const base={title:'File:'+file+'.jpg',index};
+   const imageinfo={width:1200,height:800,mime:'image/jpeg'};
+   if(!q.searchParams.has('generator'))Object.assign(imageinfo,{
+    sha1:file,
+    url:'https://upload.wikimedia.org/wikipedia/commons/'+file+'.jpg',
+    thumburl:'https://upload.wikimedia.org/wikipedia/commons/thumb/'+file+'.jpg',
+    descriptionurl:'https://commons.wikimedia.org/wiki/File:'+file+'.jpg',
+    extmetadata:{LicenseShortName:{value:'CC BY 4.0'},Artist:{value:'Test Photographer'}}
+   });
+   return [index,{...base,imageinfo:[imageinfo]}];
+  });
+  return {ok:true,json:async()=>({query:{pages:Object.fromEntries(results)}})};
+ };
+ try{
+  const path=join(folder,'photos.json');
+  const destinations=[{id:'test-destination',name:'Test Destination',country:'Testland'}];
+  const initial=createPhotoStore({destinations,cachePath:path,fetchImpl});
+  const first=await initial.getPhotos('test-destination');
+  assert.equal(first.length,1);
+  assert.ok(first[0].originalSrc?.startsWith('https://upload.wikimedia.org/'));
+  broad=true;
+  const renewed=createPhotoStore({destinations,cachePath:path,fetchImpl});
+  const full=await renewed.getPhotos('test-destination');
+  assert.equal(full.length,4);
+  assert.equal(new Set(full.map(x=>x.file)).size,4);
+ }finally{await rm(folder,{recursive:true,force:true});}
+});
