@@ -26,8 +26,25 @@ function pump(){
  }
 }
 function isCommonsUrl(value){
- try{const u=new URL(value);return u.protocol==='https:'&&(u.hostname==='upload.wikimedia.org'||u.hostname==='commons.wikimedia.org');}
+ try{const u=new URL(value);return u.protocol==='https:'&&(u.hostname==='wikimedia.org'||u.hostname.endsWith('.wikimedia.org'));}
  catch{return false;}
+}
+// Wikimedia thumbnails can occasionally be missing, inaccessible, or blocked.
+// Try the full-size file and a Commons redirect before giving up.
+function attachPhoto(image,photo,onFailure){
+ const urls=[photo?.src,photo?.originalSrc,
+  photo?.file?'https://commons.wikimedia.org/wiki/Special:Redirect/file/'+encodeURIComponent(photo.file.replace(/^File:/,'')):null]
+  .filter(isCommonsUrl);
+ const tried=[...new Set(urls)];
+ if(!tried.length){onFailure();return;}
+ let index=0;
+ image.onerror=()=>{
+  index++;
+  if(index<tried.length){image.src=tried[index];return;}
+  image.onerror=null;
+  onFailure();
+ };
+ image.src=tried[index];
 }
 function hue(id){
  let n=0;for(const char of id)n=(n*33+char.charCodeAt(0))%360;
@@ -73,15 +90,18 @@ async function renderMosaic(mosaic){
  const slots=[...mosaic.querySelectorAll('[data-slot]')];
  slots.forEach((slot,i)=>{
   const photo=photos[i];
-  if(!photo||!isCommonsUrl(photo.src)){
+  if(!photo||![photo.src,photo.originalSrc].some(isCommonsUrl)){
    slot.classList.add('photo-missing');
    slot.textContent='Photo unavailable';
    return;
   }
   const image=document.createElement('img');
-  image.src=photo.src;image.alt='Automatically found image candidate for '+id.replaceAll('-',' ');
+  image.alt='Wikimedia Commons photo candidate for '+id.replaceAll('-',' ');
   image.loading='lazy';image.decoding='async';
-  image.onerror=()=>{image.remove();slot.classList.add('photo-missing');slot.textContent='Image unavailable';};
+  image.referrerPolicy='no-referrer';
+  attachPhoto(image,photo,()=>{
+   image.remove();slot.classList.add('photo-missing');slot.textContent='Image unavailable';
+  });
   slot.replaceChildren(image);
   slot.classList.add('photo-loaded');
  });
@@ -101,10 +121,11 @@ async function renderHero(hero){
  const photo=photos[0];
  if(!photo||!isCommonsUrl(photo.src))return;
  const image=document.createElement('img');
- image.src=photo.src;image.alt='Wikimedia Commons photo candidate for '+id.replaceAll('-',' ');
- image.onerror=()=>image.remove();
+ image.alt='Wikimedia Commons photo candidate for '+id.replaceAll('-',' ');
+ image.referrerPolicy='no-referrer';
+ attachPhoto(image,photo,()=>{image.remove();});
  hero.prepend(image);
- hero.querySelector('.hero-photo-fallback')?.remove();
+ image.addEventListener('load',()=>hero.querySelector('.hero-photo-fallback')?.remove(),{once:true});
 }
 async function renderActivity(image){
  const id=image.dataset.photoActivity;
@@ -113,7 +134,10 @@ async function renderActivity(image){
  if(!image.isConnected||!photos.length)return;
  const n=Number(image.dataset.photoIndex)||0;
  const selected=photos[n%photos.length];
- if(selected&&isCommonsUrl(selected.src)){image.src=selected.src;image.loading='lazy';}
+ if(selected&&isCommonsUrl(selected.src)){
+  image.loading='lazy';image.referrerPolicy='no-referrer';
+  attachPhoto(image,selected,()=>image.removeAttribute('src'));
+ }
 }
 function observe(element){
  if(element.dataset.photosObserved)return;
