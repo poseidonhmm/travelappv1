@@ -35,6 +35,18 @@ The full 288-destination embedding catalogue is cached in server memory once per
 - Weather, climate, prices, flights, accommodation and availability are NOT verified, even when the search mentions them.
 - Do not expose this local server on a public network or deploy it as-is before adding production authentication, rate limits, credential management, observability and data review.
 
+## Diagnosing AI fallback after a successful search
+
+If `/api/status` says `{"aiConfigured":true}`, the local project **found** an API key, but that does not guarantee every provider request will succeed. Click **Find my escape**, check the visible fallback message, and check Terminal for an `AI search unavailable:` line.
+
+- `credit_balance_exhausted` or `insufficient_quota`: inspect **API** prepaid credits at https://platform.openai.com/settings/organization/billing/overview. ChatGPT credits are separate.
+- `project_spend_limit_exceeded`, `organization_spend_limit_exceeded`, or `organization_usage_limit_exceeded`: review project/organisation spending and usage controls in the OpenAI Platform dashboard.
+- `rate_limit_exceeded` (HTTP 429): a temporary requests-per-minute or tokens-per-minute limit can be reached even with positive prepaid credit. Slow your test queries and consult your API model/project limits; repeatedly retrying immediately can make the limit worse.
+- HTTP 401 or 403: check API key/project permissions.
+- Generic provider/network failure: inspect the Terminal message before assuming it is a credit issue.
+
+The backend logs only HTTP status, provider error code and endpoint, and the UI shows a sanitised diagnostic. The API key is never printed. These diagnostics are included after the October 2026 code update.
+
 ## Checks
 
 Run npm test and npm run validate inside the repository. Unit tests use a simulated API response and are not billed.
