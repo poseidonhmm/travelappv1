@@ -47,8 +47,8 @@ function preferenceOptions(key,options){
 }
 function refinePanel(){
  return '<aside class="refinement-card" id="refinementPanel" aria-label="Refine your travel recommendations">'+
- '<div class="refinement-heading"><div class="eyebrow">MAKE IT MORE YOU</div><h3>One detail can change everything.</h3>'+
- '<p>We won’t guess that “sunny” means food, parties or luxury. What matters to you?</p></div>'+
+ '<div class="refinement-heading"><div class="eyebrow">MAKE IT MORE YOU</div><h3>'+(state.needsClarification?'What kind of trip did you have in mind?':'What would improve these matches?')+'</h3>'+
+ '<p>'+ (state.needsClarification?'A short search shouldn’t lead us to invent your preferences.':'As you explore, refine the recommendations based on what actually matters to you.') +'</p></div>'+
  '<div class="refinement-fields">'+
  '<label>Is food a priority?<select data-pref="foodPriority">'+preferenceOptions('foodPriority',[['any','No preference'],['important','Quite important'],['essential','A main reason to travel']])+'</select></label>'+
  '<label>How far from home?<select data-pref="journey">'+preferenceOptions('journey',[['any','Open to anywhere'],['nearby','Closer to home first'],['different','Somewhere quite different']])+'</select></label>'+
@@ -60,8 +60,8 @@ function refinePanel(){
 }
 function previewMatches(query){
  return matchDestinations(state.all,{query:query.q,region:query.region,scenery:query.scenery,vibes:query.vibes,limit:state.all.length})
-  .map((d,i)=>({...d,score:Math.max(0,state.all.length-i)+contextBoost(d,query)}))
-  .sort((a,b)=>b.score-a.score);
+  .map(d=>({...d,score:(d.score||0)+contextBoost(d,query)}))
+  .sort((a,b)=>b.score-a.score||a.name.localeCompare(b.name));
 }
 function tripContextLine(){
  const pieces=[];
@@ -260,7 +260,9 @@ function edit(action,dayIndex,itemIndex){
 document.addEventListener('change',event=>{
  const key=event.target?.dataset?.pref;
  if(!['foodPriority','journey','mood'].includes(key))return;
- state[key]=event.target.value;savePrefs();clearAi();results();
+ state[key]=event.target.value;savePrefs();clearAi();
+ if(isBroadSearch(state.q)&&!state.all.some(d=>d.name.toLowerCase()===state.q.trim().toLowerCase()))state.needsClarification=true;
+ results();
 });
 document.addEventListener('click',event=>{
  const target=event.target.closest('[data-action]');if(!target)return;
