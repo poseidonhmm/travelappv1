@@ -50,7 +50,7 @@ test('model interpretation and embeddings are called with cache for destination 
   throw Error('Unexpected URL');
  };
  const service=createAiSearch({destinations:destinations.slice(0,10),apiKey:'unit-test-key',fetchImpl:fakeFetch});
- const query=parseSearchRequest({query:'quiet mountains',region:'Europe'});
+ const query=parseSearchRequest({query:'quiet scenic mountains',region:'Europe'});
  const first=await service.search(query);
  const second=await service.search(query);
  assert.equal(first.engine,'ai');
@@ -108,4 +108,33 @@ test('timeout interruption shows a clear retry notice instead of blaming API cre
  assert.equal(response.engine,'keyword');
  assert.match(response.notice,/took too long|timed out/i);
  assert.doesNotMatch(response.notice,/credit balance|missing key/i);
+});
+
+test('one-word sunshine request never invents food, sociability, luxury or nightlife',async()=>{
+ let responseCalls=0,embeddingCalls=0;
+ const fetchImpl=async(url,options)=>{
+  const body=JSON.parse(options.body);
+  if(url.endsWith('/responses')){responseCalls++;throw Error('One-word requests must bypass interpretation');}
+  if(url.endsWith('/embeddings')){
+   embeddingCalls++;
+   return {ok:true,json:async()=>({data:body.input.map((_,index)=>({index,embedding:[1,0]}))})};
+  }
+  throw Error('Unexpected API path');
+ };
+ const service=createAiSearch({destinations:destinations.slice(0,3),apiKey:'test-key',fetchImpl});
+ const found=await service.search(parseSearchRequest({query:'sunny',region:'all',travelMonth:'2026-10'}));
+ assert.equal(found.engine,'ai');
+ assert.equal(found.interpretation,'You asked for "sunny". No other trip preferences assumed.');
+ assert.equal(responseCalls,0,'No paid interpretation required');
+ assert.equal(embeddingCalls,2);
+ assert.ok(found.warnings.some(w=>w.includes('Weather')));
+});
+test('new travel context is validated and included in preference ranking',()=>{
+ const req=parseSearchRequest({query:'somewhere lovely',region:'all',homeRegion:'Europe',
+  homeCountry:'United Kingdom',travelMonth:'2026-11',foodPriority:'essential',journey:'nearby',mood:'sociable'});
+ assert.equal(req.homeCountry,'United Kingdom');
+ assert.equal(req.foodPriority,'essential');
+ assert.throws(()=>parseSearchRequest({query:'sunny',region:'all',travelMonth:'bad'}));
+ assert.throws(()=>parseSearchRequest({query:'sunny',region:'all',homeRegion:'Atlantis'}));
+ assert.throws(()=>parseSearchRequest({query:'sunny',region:'all',journey:'transcontinental-flight'}));
 });
