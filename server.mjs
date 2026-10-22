@@ -131,5 +131,13 @@ export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePa
 }
 if(process.argv[1]&&fileURLToPath(import.meta.url)===resolve(process.argv[1])){
  const port=Number(process.env.PORT)||3000;
- createAppServer().listen(port,'127.0.0.1',()=>console.log('Wanderly: http://localhost:'+port+'\nTo enable AI, set OPENAI_API_KEY in a local .env file.'));
+ createAppServer().listen(port,'127.0.0.1',async()=>{
+  console.log('Wanderly: http://localhost:'+port);
+  try{
+   const configured=!!(await getApiKey());
+   console.log(configured
+    ?'OpenAI API key detected. AI searches are enabled (subject to API quota and rate limits).'
+    :'OpenAI API key not found. Add OPENAI_API_KEY to this project\'s .env file to enable AI search.');
+  }catch(error){console.warn('Could not check OpenAI API key configuration.');}
+ });
 }
