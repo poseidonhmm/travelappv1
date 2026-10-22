@@ -17,6 +17,7 @@ const files=new Map([
  ['/photos.js',['public/photos.js','text/javascript; charset=utf-8']],
  ['/photos.css',['public/photos.css','text/css; charset=utf-8']],
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
+ ['/trip-context.js',['public/trip-context.js','text/javascript; charset=utf-8']],
  ['/data/destinations.json',['data/destinations.json','application/json; charset=utf-8']]
 ]);
 const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer'};
