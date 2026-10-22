@@ -7,6 +7,7 @@ import { DEFAULT_EMBEDDING_CACHE } from './lib/embedding-index.mjs';
 import { createFeedbackStore,DEFAULT_FEEDBACK_PATH } from './lib/feedback.mjs';
 import { createPhotoStore,DEFAULT_PHOTO_CACHE } from './lib/photos.mjs';
 import { createActivityStore,DEFAULT_ACTIVITY_REVIEWS_PATH } from './lib/activities.mjs';
+import { createActivityPhotoStore,DEFAULT_ACTIVITY_PHOTO_CACHE } from './lib/activity-photos.mjs';
 
 const files=new Map([
  ['/', ['public/index.html','text/html; charset=utf-8']],
@@ -20,6 +21,7 @@ const files=new Map([
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
  ['/activities.js',['public/activities.js','text/javascript; charset=utf-8']],
  ['/activity-photos.js',['public/activity-photos.js','text/javascript; charset=utf-8']],
+ ['/activity-photos.css',['public/activity-photos.css','text/css; charset=utf-8']],
  ['/itinerary.js',['public/itinerary.js','text/javascript; charset=utf-8']],
  ['/activity-planner.js',['public/activity-planner.js','text/javascript; charset=utf-8']],
  ['/activity-planner.css',['public/activity-planner.css','text/css; charset=utf-8']],
@@ -71,11 +73,12 @@ function allowSearch(){
  if(requestTimes.length>=20)return false;
  requestTimes.push(now);return true;
 }
-export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePath=DEFAULT_PHOTO_CACHE,photoFetchImpl=fetch,activityReviewPath=DEFAULT_ACTIVITY_REVIEWS_PATH}={}){
+export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePath=DEFAULT_PHOTO_CACHE,photoFetchImpl=fetch,activityReviewPath=DEFAULT_ACTIVITY_REVIEWS_PATH,activityPhotoCachePath=DEFAULT_ACTIVITY_PHOTO_CACHE,activityCataloguePath=new URL('data/activities.json',import.meta.url)}={}){
  let feedbackStore=null,photoStore=null,activityStore=null;
+ const activityPhotoStore=createActivityPhotoStore({cachePath:activityPhotoCachePath});
  async function getActivities(){
   if(!activityStore){
-   const [records,destinations]=await Promise.all(['data/activities.json','data/destinations.json'].map(path=>readFile(new URL(path,import.meta.url),'utf8').then(JSON.parse)));
+   const [records,destinations]=await Promise.all([activityCataloguePath,new URL('data/destinations.json',import.meta.url)].map(path=>readFile(path,'utf8').then(JSON.parse)));
    activityStore=createActivityStore({filePath:activityReviewPath,records,knownDestinationIds:new Set(destinations.map(d=>d.id))});
   }
   return activityStore;
@@ -111,6 +114,9 @@ export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePa
      let items=await store.list();
      const destination=url.searchParams.get('destination');
      if(destination)items=items.filter(item=>item.destinationId===destination);
+     // Candidate images stay in the existing reviewer; traveller metadata comes
+     // through a separate cache gated by the current activity approval.
+     if(url.pathname==='/api/activities')items=await Promise.all(items.map(async item=>({...item,photo:await activityPhotoStore.getPhoto(item)})));
      json(response,200,{items},request.method);return;
     }
     if(request.method==='POST'&&url.pathname==='/api/activity-review'){

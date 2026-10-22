@@ -1,11 +1,11 @@
 # Evidence-backed activities and local verification
 
-The activity catalogue is `data/activities.json`. It is deliberately small: researched examples cover Rotorua, Lisbon and Kyoto; the other destinations keep their editable itinerary and manual activity entry. Expand the catalogue by researching source-backed records rather than generating plausible entries. There are no paid API calls in this system.
+The activity catalogue is `data/activities.json`. It is deliberately small: researched examples cover Rotorua, Lisbon and Kyoto; the other destinations keep their editable itinerary and manual activity entry. Expand it with the append-only JSON importer described in [ACTIVITY_IMPORT_SPEC.md](ACTIVITY_IMPORT_SPEC.md); activity research happens separately. There are no paid API calls in this system.
 
 ## Modules and routes
 
 - `public/activities.js`: shared schema validation, review flags, recommendation ranking, price eligibility, formatting and cost summaries. This is a pure module used by both browser and Node tests.
-- `lib/activities.mjs`: local review store. The original catalogue is immutable at runtime. Edits are atomic overrides in `data/activity-reviews.local.json`, which must remain Git-ignored. Reviews do not modify saved itineraries, destination reviews, recommendation feedback, photos or embeddings.
+- `lib/activities.mjs`: local review store. The running review store treats its original catalogue as immutable; restart the server after a CLI import to load additions. Edits are atomic overrides in `data/activity-reviews.local.json`, which must remain Git-ignored. Reviews do not modify saved itineraries, destination reviews, recommendation feedback, photos or embeddings.
 - `public/activity-review.js` and `.css`: the Activity review navigation panel. It exposes status filters, evidence links, structured record editing, notes and separate explicit activity/price approvals.
 - `GET /api/activities` and `GET /api/activity-review`: `{items:[...]}` including local overrides and a revision per record.
 - `POST /api/activity-review`: `{record,expectedRevision,action,reviewer,notes}`. Actions are `save`, `approve`, `approve-price` and `reject`. Successful response is `{saved:true,item}`; a stale revision returns 409. After a save the browser emits `wanderly:activities-updated` so the itinerary refreshes current catalogue evidence.
@@ -47,3 +47,13 @@ Totals group by **currency and pricing unit**. Per-person, per-ticket and per-gr
 Editing previously approved activity facts returns activity approval to `ready-for-review`. Editing approved price facts returns price approval to `ready-for-review`. Revision checks prevent one open review from overwriting a newer decision. Sources render as text or HTTP(S) links; arbitrary schemes are rejected by validation.
 
 Run `npm test` for model/store regressions and `npm run validate` for catalogue checks. Tests use temporary directories, not the ignored local review or feedback files. Research provenance for the initial records is in `docs/activity-evidence.md`.
+
+## Imported activities and their images
+
+`npm run activities:import -- <batch.json> --dry-run` validates a complete researched batch; omit `--dry-run` to append it atomically. Duplicate IDs within a batch reject it. Existing identical content is skipped, and an existing ID with changed content rejects the batch. Import never edits local reviews, saved itineraries, prices in existing records, feedback, photos or embeddings. See the specification for source requirements and the optional image object.
+
+`public/activity-photos.js` validates and renders image metadata independently of the destination photo system. `lib/activity-photos.mjs` caches validated display metadata by stable activity ID and a fingerprint of the current record, image and approval. The separate ignored cache is best-effort: a missing or unwritable cache cannot authorize an image or prevent a valid image from displaying. No image search, external metadata request or image download occurs on the server.
+
+`GET /api/activities` returns only photo metadata eligible for public display. `GET /api/activity-review` retains the proposed photo for reviewer inspection. Imported photos always have `subjectConfirmed:false`; public display requires both explicit activity approval and subject confirmation. In Activity review, inspect the candidate and attribution, check the subject/reuse confirmation, then choose **Approve activity**. Metadata edits update the preview and clear the checkbox. Existing review rules revoke activity approval when saved facts change, so outdated photo approval cannot survive edits. Adding a photo to a record that had none requires saving the new metadata first, then confirming its preview and approving.
+
+A null or missing photo remains compatible with existing records. Itinerary items continue storing activity IDs, not image URLs or approval snapshots. Cards and itinerary entries display the current approved image and its attribution, with neutral placeholders for missing, pending or failed images. No destination photo is reused as an activity image. These additions do not change pricing eligibility or the existing price review workflow.

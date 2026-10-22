@@ -1,4 +1,5 @@
 import {recommendActivities} from './activities.js';
+import {activityPhotoHTML} from './activity-photos.js';
 import {createActivityPlan,editPlan,planActivityRecords} from './itinerary.js';
 import {activityPriceHTML,activityEvidenceHTML,activityCostsHTML,recommendedActivitiesHTML} from './activity-planner.js';
 import {examples,matchDestinations,queryHasWeather} from './recommend.js';
@@ -234,7 +235,7 @@ function dayHTML(day,index,total){
   const unavailable=!!item.activityId&&!activity;
   const heading=activity?.name||template?.[1]||(unavailable?'Previously saved activity':'Saved idea');
   const description=activity?.description||template?.[2]||'This saved item is preserved, but its catalogue record is unavailable.';
-  return '<div class="activity has-evidence"><div><div class="activity-title">'+escapeHTML(heading)+'</div><div class="activity-caption">'+escapeHTML(description)+'</div>'+
+  return '<div class="activity has-evidence"><div>'+(activity?activityPhotoHTML(activity):'')+'<div class="activity-title">'+escapeHTML(heading)+'</div><div class="activity-caption">'+escapeHTML(description)+'</div>'+
    (activity?activityEvidenceHTML(activity)+activityPriceHTML(activity):'<p class="small-note">'+(unavailable?'Activity record unavailable':'Personal planning idea · attraction not researched')+' · Price unavailable</p>')+
    '<div class="move-activity"><label for="move-'+index+'-'+j+'">Move to day</label><select id="move-'+index+'-'+j+'">'+Array.from({length:total},(_,i)=>'<option value="'+i+'" '+(i===index?'selected':'')+'>Day '+(i+1)+'</option>').join('')+'</select><button class="outline" data-action="move" data-day="'+index+'" data-index="'+j+'">Move</button></div></div>'+
    '<div class="activity-actions">'+

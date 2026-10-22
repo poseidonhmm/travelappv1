@@ -27,6 +27,21 @@ Opening a researched destination suggests named experiences based on expressed i
 
 Activity prices show the source, last check, confidence, coverage and review status. Daily and itinerary activity estimates count only usable evidence, identify unknown prices, and keep currencies and pricing units separate. Unknown, conflicting, low-confidence and stale prices never become zero. These estimates are **activity costs only**, not a holiday total. Price confidence is separate from human approval.
 
+## Import independently researched activities
+
+Use the handoff document [ACTIVITY_IMPORT_SPEC.md](docs/ACTIVITY_IMPORT_SPEC.md) for the exact JSON format, evidence requirements, destination IDs and photo metadata. The importer makes no network or AI calls.
+
+```sh
+npm run activities:import -- /absolute/path/activity-batch.json --dry-run
+npm run activities:import -- /absolute/path/activity-batch.json
+npm test
+npm run validate
+```
+
+Imports validate the whole batch before appending. Identical existing records are skipped; conflicting IDs reject the batch without overwriting records. New candidates await human review. Restart the running server and reload the browser after an import. Existing saved itineraries stay intact; use the recommended activity cards to add new experiences to a chosen day.
+
+An optional activity-specific photograph includes its source page, licence, photographer attribution and checked date. Activity images are independent of destination mosaics. They appear after a reviewer confirms the image subject and reuse information and explicitly approves the activity. Pending, absent or broken images use a neutral placeholder. Metadata is cached separately in ignored `data/activity-photo-cache.local.json`; no automatic image search or download is involved in import.
+
 ## Local activity verification
 
 Open **Activity review** in the navigation to inspect sources and flags, edit structured facts/prices, leave notes, and approve activities and prices independently. Explicit approval requires a human reviewer name. Edits to approved facts return them to review; concurrent writes use revision checks.

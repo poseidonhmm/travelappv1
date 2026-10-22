@@ -51,6 +51,16 @@ All activity evidence URLs must be HTTP(S), with no credentials and at most 2,04
 
 **Vocabulary:** category and tags remain open strings, not enforced enums. Current categories are `culture`, `nature`; current interest terms include `culture`, `nature`, `walking`, `forest`, `wildlife`, `hot-springs`, `history`, `architecture`, `temples`, `gardens`; current atmospheres include `cultural`, `scenic`, `peaceful`, `relaxed`. Reuse these when accurate; propose additional terms consistently rather than changing the legacy schema. Matching understands a small set of explicit aliases; adding an arbitrary new tag does not create a new recommendation rule.
 
+### Obtaining destination IDs
+
+Use the repository’s [destination catalogue](https://github.com/poseidonhmm/travelappv1/blob/main/data/destinations.json). To copy a compact ID/name/country list from the local project:
+
+```sh
+node --input-type=module -e 'import{readFileSync}from"node:fs";for(const d of JSON.parse(readFileSync("data/destinations.json","utf8")))console.log([d.id,d.name,d.country].join(" | "))'
+```
+
+Supply that list alongside this specification if the research conversation cannot read the repository. Do not derive IDs merely by lowercasing place names.
+
 ### Prices
 
 Use `price:null` if evidence is insufficient. A supplied price uses exactly:

@@ -91,7 +91,7 @@ export function activityPhotoHTML(record,{reviewCandidate=false,now=new Date()}=
  let photo=publicActivityPhoto(record,{now});
  const isPublic=!!photo;
  if(!photo&&reviewCandidate){try{photo=validateActivityPhoto(record?.photo,{now});}catch{}}
- if(!photo)return placeholder(record,record?.photo?'Activity photo awaiting verification':'Activity photo research pending');
+ if(!photo)return placeholder(record,record?.photo?'Activity photo awaiting verification':'Activity photo not yet available');
  const candidate=reviewCandidate&&!isPublic;
  const name=record?.name||'this activity';
  const credit=(url,label)=>'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label)+'</a>';

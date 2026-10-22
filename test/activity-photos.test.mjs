@@ -22,7 +22,7 @@ test('legacy activity records without photo remain valid and render a neutral ac
  const record={id:'legacy-activity',name:'Saved activity'};
  assert.equal(publicActivityPhoto(record,{now}),null);
  const html=activityPhotoHTML(record,{now});
- assert.match(html,/Activity photo research pending/);assert.match(html,/Saved activity/);
+ assert.match(html,/Activity photo not yet available/);assert.match(html,/Saved activity/);
  assert.doesNotMatch(html,/<img|data-photo-activity|destination image/i);
 });
 

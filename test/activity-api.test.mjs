@@ -44,7 +44,7 @@ test('new browser modules are served and local review files stay private',async(
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const base='http://127.0.0.1:'+server.address().port;
  try{
-  for(const path of ['/activities.js','/itinerary.js','/activity-planner.js','/activity-planner.css','/activity-review.js','/activity-review.css','/countries.js','/discovery-groups.js','/discovery.css'])assert.equal((await fetch(base+path)).status,200,path);
-  for(const path of ['/data/activity-reviews.local.json','/.env'])assert.equal((await fetch(base+path)).status,404,path);
+  for(const path of ['/activities.js','/activity-photos.js','/activity-photos.css','/itinerary.js','/activity-planner.js','/activity-planner.css','/activity-review.js','/activity-review.css','/countries.js','/discovery-groups.js','/discovery.css'])assert.equal((await fetch(base+path)).status,200,path);
+  for(const path of ['/data/activity-reviews.local.json','/data/activity-photo-cache.local.json','/.env'])assert.equal((await fetch(base+path)).status,404,path);
  }finally{await new Promise(resolve=>server.close(resolve));}
 });

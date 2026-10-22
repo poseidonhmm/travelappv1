@@ -1,5 +1,7 @@
 import {recommendActivities, priceUsability, summarizeActivityCosts, activityFlags, safeSourceUrl, priceEvidenceMatches} from './activities.js';
 
+import {activityPhotoHTML} from './activity-photos.js';
+
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const words = value => String(value || '').replaceAll('-', ' ');
 const money = (amount, currency) => new Intl.NumberFormat(undefined, {style:'currency', currency, maximumFractionDigits:2}).format(amount);
@@ -50,7 +52,7 @@ export function recommendedActivitiesHTML(records, destinationId, preferences, d
  const activities = recommendActivities(records, destinationId, {...preferences, days});
  return '<section class="activity-recommendations panel"><div class="eyebrow">MAKE ROOM FOR SOMETHING MEMORABLE</div><h2>Experiences in this destination</h2>' +
   '<p>Source-backed ideas chosen for your interests. Check current information with the provider before making plans.</p>' +
-  (activities.length ? activities.map(a => '<article class="activity-option"><div class="activity-option-heading"><h3>' + escape(a.name) + '</h3><span class="tag">' + escape(words(a.category)) + '</span></div><p>' + escape(a.description) + '</p>' +
+  (activities.length ? activities.map(a => '<article class="activity-option">' + activityPhotoHTML(a) + '<div class="activity-option-heading"><h3>' + escape(a.name) + '</h3><span class="tag">' + escape(words(a.category)) + '</span></div><p>' + escape(a.description) + '</p>' +
    activityEvidenceHTML(a) + activityPriceHTML(a) + '<div class="add-recommendation"><label for="activity-day-' + escape(a.id) + '">Add to day</label><select id="activity-day-' + escape(a.id) + '">' +
    Array.from({length:days}, (_, i) => '<option value="' + i + '">Day ' + (i+1) + '</option>').join('') + '</select><button class="outline" data-action="add-recommended" data-activity-id="' + escape(a.id) + '">+ Add experience</button></div></article>').join('') :
    '<div class="research-empty">Destination-specific activity research is still pending here. Your editable ideas remain available below; they have no verified attraction or price attached.</div>') + '</section>';
