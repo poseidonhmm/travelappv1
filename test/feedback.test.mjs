@@ -49,3 +49,15 @@ test('feedback is stored locally and subsequent ratings update rather than dupli
   assert.equal((await fresh.list()).length,3);
  }finally{await rm(folder,{recursive:true,force:true});}
 });
+
+test('same query with different home, month or food priorities records separate evaluation examples',()=>{
+ const a=validateFeedback({...base,homeRegion:'Europe',homeCountry:'United Kingdom',
+  travelMonth:'2026-11',foodPriority:'essential',journey:'nearby',mood:'sociable',rank:120},known);
+ assert.equal(a.rank,120);
+ assert.equal(a.homeRegion,'Europe');
+ assert.notEqual(feedbackKey(a),feedbackKey({...a,foodPriority:'any'}));
+ assert.notEqual(feedbackKey(a),feedbackKey({...a,travelMonth:'2027-02'}));
+ assert.notEqual(feedbackKey(a),feedbackKey({...a,homeRegion:'Asia'}));
+ assert.throws(()=>validateFeedback({...a,foodPriority:'invalid'},known));
+ assert.throws(()=>validateFeedback({...a,travelMonth:'next week'},known));
+});
