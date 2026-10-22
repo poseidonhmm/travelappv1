@@ -1,0 +1,522 @@
+[
+  {
+    "id": "rotorua-te-ra-guided-experience",
+    "destinationId": "rotorua",
+    "name": "Te Rā Guided Experience",
+    "category": "culture",
+    "description": "Join Te Puia’s guided visit to its geothermal valley, Kiwi Conservation Centre and New Zealand Māori Arts and Crafts Institute.",
+    "provider": "Te Puia",
+    "location": {
+      "label": "20 Hemo Road, Rotorua, New Zealand",
+      "sourceUrl": "https://www.tepuia.com/faqs/",
+      "verified": true
+    },
+    "durationMinutes": 90,
+    "durationSourceUrl": "https://ecommerce.tepuia.com/te-ra-guided-experience",
+    "interests": [
+      "culture",
+      "hot-springs",
+      "nature"
+    ],
+    "atmospheres": [
+      "cultural",
+      "scenic"
+    ],
+    "seasonality": {
+      "months": [],
+      "restriction": null,
+      "sourceUrl": null,
+      "verified": false
+    },
+    "considerations": [],
+    "sources": [
+      {
+        "url": "https://ecommerce.tepuia.com/te-ra-guided-experience",
+        "title": "Te Puia: Te Rā Guided Experience",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.tepuia.com/faqs/",
+        "title": "Te Puia visitor FAQs",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.bookme.co.nz/things-to-do/new-zealand/te_uku_landing/activity/te-puia-te-ra-guided-experience/10115",
+        "title": "Bookme: Te Rā Guided Experience",
+        "type": "published",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. The operator states that daytime valley entry requires a guided visit. Geyser eruptions and kiwi sightings are not guaranteed."
+    },
+    "price": {
+      "currency": "NZD",
+      "min": 105,
+      "max": 105,
+      "unit": "per-person",
+      "covers": "One adult Te Rā guided experience; optional upgrades are separate.",
+      "sourceUrl": "https://ecommerce.tepuia.com/te-ra-guided-experience",
+      "checkedAt": "2026-10-22",
+      "confidence": "medium",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Te Rā Guided Experience — adult",
+      "unitVerified": true,
+      "conflict": false,
+      "notes": "The operator lists $105 per adult. The published booking listing identifies the same offer as NZD; currency needs final manual confirmation."
+    }
+  },
+  {
+    "id": "rotorua-redwoods-daytime-treewalk",
+    "destinationId": "rotorua",
+    "name": "Redwoods Daytime Treewalk",
+    "category": "nature",
+    "description": "Walk the elevated bridges and platforms of the Redwoods Treewalk through Rotorua’s forest canopy.",
+    "provider": "Redwoods Treewalk",
+    "location": {
+      "label": "1 Long Mile Road / Tītokorangi Drive, Whakarewarewa, Rotorua 3010, New Zealand",
+      "sourceUrl": "https://www.treewalk.co.nz/the-walk/redwoods-treewalk/",
+      "verified": true
+    },
+    "durationMinutes": 40,
+    "durationSourceUrl": "https://www.treewalk.co.nz/the-walk/redwoods-treewalk/",
+    "interests": [
+      "nature",
+      "walking",
+      "forest"
+    ],
+    "atmospheres": [
+      "peaceful",
+      "scenic"
+    ],
+    "seasonality": {
+      "months": [],
+      "restriction": null,
+      "sourceUrl": null,
+      "verified": false
+    },
+    "considerations": [
+      {
+        "type": "eligibility",
+        "text": "The operator states the elevated Treewalk is not wheelchair accessible. Review walking and young-child requirements before booking.",
+        "sourceUrl": "https://www.treewalk.co.nz/faqs/",
+        "verified": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.treewalk.co.nz/the-walk/redwoods-treewalk/",
+        "title": "Redwoods Daytime Treewalk",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.treewalk.co.nz/faqs/",
+        "title": "Redwoods Treewalk FAQs",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. The published approximate duration is 30–40 minutes from the first bridge; 40 minutes is the operator’s approximate completion figure and excludes queues."
+    },
+    "price": {
+      "currency": "NZD",
+      "min": 45,
+      "max": 45,
+      "unit": "per-person",
+      "covers": "Daytime general admission for one adult aged 16 or over.",
+      "sourceUrl": "https://www.treewalk.co.nz/the-walk/redwoods-treewalk/",
+      "checkedAt": "2026-10-22",
+      "confidence": "high",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Redwoods Daytime Treewalk — adult",
+      "unitVerified": true,
+      "conflict": false,
+      "notes": "The operator FAQ explicitly identifies all prices as New Zealand dollars. Nightlights, Glowworms and Altitude are different products."
+    }
+  },
+  {
+    "id": "rotorua-waiotapu-geothermal-park",
+    "destinationId": "rotorua",
+    "name": "Waiotapu Thermal Wonderland geothermal park",
+    "category": "nature",
+    "description": "Visit Waiotapu’s geothermal landscape and view the park’s volcanic features from its marked paths.",
+    "provider": "Waiotapu Thermal Wonderland",
+    "location": {
+      "label": "201 Waiotapu Loop Road, RD 3, Rotorua 3073, New Zealand",
+      "sourceUrl": "https://www.waiotapu.co.nz/information/",
+      "verified": true
+    },
+    "durationMinutes": null,
+    "durationSourceUrl": null,
+    "interests": [
+      "nature",
+      "hot-springs",
+      "walking"
+    ],
+    "atmospheres": [
+      "scenic"
+    ],
+    "seasonality": {
+      "months": [],
+      "restriction": null,
+      "sourceUrl": null,
+      "verified": false
+    },
+    "considerations": [
+      {
+        "type": "safety",
+        "text": "Active geothermal hazards: stay on marked paths, remain behind barriers and follow staff instructions. The operator recommends sturdy footwear and adult supervision for children.",
+        "sourceUrl": "https://www.waiotapu.co.nz/health--safety/",
+        "verified": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.waiotapu.co.nz/information/",
+        "title": "Waiotapu visitor information",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.waiotapu.co.nz/plan-your-visit/features/",
+        "title": "Waiotapu geothermal features",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.waiotapu.co.nz/health--safety/",
+        "title": "Waiotapu health and safety",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. Price unavailable: the official linked booking page did not expose a usable price during research. Do not import conflicting third-party amounts. Visit duration and seasonal suitability remain unresearched."
+    },
+    "price": null
+  },
+  {
+    "id": "lisbon-oceanario-visit",
+    "destinationId": "lisbon",
+    "name": "Oceanário de Lisboa visit",
+    "category": "nature",
+    "description": "Visit Oceanário de Lisboa’s aquarium and the exhibitions included in its standard admission.",
+    "provider": "Oceanário de Lisboa",
+    "location": {
+      "label": "Doca dos Olivais, Parque das Nações, Lisboa, Portugal",
+      "sourceUrl": "https://oceanario.pt/planear-visita/",
+      "verified": true
+    },
+    "durationMinutes": null,
+    "durationSourceUrl": "https://oceanario.pt/planear-visita/",
+    "interests": [
+      "nature",
+      "wildlife"
+    ],
+    "atmospheres": [
+      "relaxed"
+    ],
+    "seasonality": {
+      "months": [],
+      "restriction": null,
+      "sourceUrl": null,
+      "verified": false
+    },
+    "considerations": [],
+    "sources": [
+      {
+        "url": "https://oceanario.pt/planear-visita/",
+        "title": "Oceanário de Lisboa: plan your visit",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://tickets.oceanario.pt/",
+        "title": "Oceanário de Lisboa official tickets",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. The operator suggests an average 90–120 minute visit; durationMinutes remains null because the current schema accepts only a single figure."
+    },
+    "price": {
+      "currency": "EUR",
+      "min": 25.5,
+      "max": 29.9,
+      "unit": "per-person",
+      "covers": "Standard admission for one adult aged 13–64, covering the aquarium and included exhibitions.",
+      "sourceUrl": "https://oceanario.pt/planear-visita/",
+      "checkedAt": "2026-10-22",
+      "confidence": "high",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Visita ao Oceanário de Lisboa — adult age 13–64",
+      "unitVerified": true,
+      "conflict": false,
+      "notes": "The official schedule lists EUR29.90, EUR27.70 or EUR25.50 according to arrival time. This range excludes optional extras; promotional discounts are not assumed."
+    }
+  },
+  {
+    "id": "lisbon-castelo-sao-jorge-visit",
+    "destinationId": "lisbon",
+    "name": "Castelo de São Jorge visit",
+    "category": "culture",
+    "description": "Explore Castelo de São Jorge’s national monument, gardens and museum; some included guided visits depend on availability.",
+    "provider": "EGEAC — Castelo de São Jorge",
+    "location": {
+      "label": "Rua de Santa Cruz do Castelo, 1100-129 Lisboa, Portugal",
+      "sourceUrl": "https://castelodesaojorge.pt/en/plan-your-visit/choose-your-ticket/",
+      "verified": true
+    },
+    "durationMinutes": null,
+    "durationSourceUrl": null,
+    "interests": [
+      "culture",
+      "history",
+      "architecture",
+      "walking"
+    ],
+    "atmospheres": [
+      "cultural",
+      "scenic"
+    ],
+    "seasonality": {
+      "months": [],
+      "restriction": null,
+      "sourceUrl": null,
+      "verified": false
+    },
+    "considerations": [],
+    "sources": [
+      {
+        "url": "https://castelodesaojorge.pt/en/plan-your-visit/choose-your-ticket/",
+        "title": "Castelo de São Jorge: choose your ticket",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://castelodesaojorge.pt/en/plan-your-visit/included-in-your-ticket/",
+        "title": "Castelo de São Jorge: ticket inclusions",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.visitlisboa.com/pt-pt/locais/castelo-de-sao-jorge",
+        "title": "Visit Lisboa: Castelo de São Jorge",
+        "type": "published",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. Price conflict needs manual resolution. Included guided tours and Camera Obscura visits have limited places and may depend on weather; do not assume a reserved tour or visit duration."
+    },
+    "price": {
+      "currency": "EUR",
+      "min": 17,
+      "max": 17,
+      "unit": "per-person",
+      "covers": "One standard adult admission ticket to Castelo de São Jorge.",
+      "sourceUrl": "https://castelodesaojorge.pt/en/plan-your-visit/choose-your-ticket/",
+      "checkedAt": "2026-10-22",
+      "confidence": "low",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Castelo de São Jorge — adult admission",
+      "unitVerified": true,
+      "conflict": true,
+      "notes": "Conflicting published evidence: the operator lists EUR17; Visit Lisboa lists EUR15. The recorded amount follows the operator, but requires manual resolution and must be excluded from usable cost totals while conflict is true."
+    }
+  },
+  {
+    "id": "kyoto-kinkakuji-visit",
+    "destinationId": "kyoto",
+    "name": "Kinkaku-ji temple and garden visit",
+    "category": "culture",
+    "description": "View Kinkaku-ji’s Golden Pavilion and follow the temple garden route described by the temple’s visitor guide.",
+    "provider": "Kinkaku-ji / Shokoku-ji religious corporation",
+    "location": {
+      "label": "1 Kinkakuji-cho, Kita-ku, Kyoto 603-8361, Japan",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/kinkakuji/access/",
+      "verified": true
+    },
+    "durationMinutes": null,
+    "durationSourceUrl": null,
+    "interests": [
+      "culture",
+      "temples",
+      "gardens",
+      "architecture",
+      "walking"
+    ],
+    "atmospheres": [
+      "cultural",
+      "peaceful"
+    ],
+    "seasonality": {
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "restriction": "The temple states it opens year round; special exhibitions may change visiting hours. This is not a weather suitability claim.",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/kinkakuji/access/",
+      "verified": true
+    },
+    "considerations": [],
+    "sources": [
+      {
+        "url": "https://www.shokoku-ji.jp/en/kinkakuji/access/",
+        "title": "Kinkaku-ji: access and admission",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.shokoku-ji.jp/en/kinkakuji/guide/",
+        "title": "Kinkaku-ji: visitor guide",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. Visit duration remains unresearched. Year-round opening is evidence-backed, but has not yet received human editorial verification."
+    },
+    "price": {
+      "currency": "JPY",
+      "min": 500,
+      "max": 500,
+      "unit": "per-person",
+      "covers": "One general admission ticket; student concessions are separate.",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/kinkakuji/access/",
+      "checkedAt": "2026-10-22",
+      "confidence": "high",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Kinkaku-ji — general admission",
+      "unitVerified": true,
+      "conflict": false,
+      "notes": "The temple notes that special exhibitions may change admission fees."
+    }
+  },
+  {
+    "id": "kyoto-ginkakuji-visit",
+    "destinationId": "kyoto",
+    "name": "Ginkaku-ji temple and garden visit",
+    "category": "culture",
+    "description": "Visit Ginkaku-ji’s garden route, including the Silver Pavilion setting and the Ginshadan sand garden.",
+    "provider": "Ginkaku-ji / Shokoku-ji religious corporation",
+    "location": {
+      "label": "2 Ginakuji-cho, Sakyo-ku, Kyoto 606-8402, Japan",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/ginkakuji/access/",
+      "verified": true
+    },
+    "durationMinutes": null,
+    "durationSourceUrl": null,
+    "interests": [
+      "culture",
+      "temples",
+      "gardens",
+      "walking"
+    ],
+    "atmospheres": [
+      "cultural",
+      "peaceful"
+    ],
+    "seasonality": {
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "restriction": "The temple states it opens year round, with shorter winter visiting hours from December through February. Check current hours at the source.",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/ginkakuji/access/",
+      "verified": true
+    },
+    "considerations": [],
+    "sources": [
+      {
+        "url": "https://www.shokoku-ji.jp/en/ginkakuji/access/",
+        "title": "Ginkaku-ji: access and admission",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "url": "https://www.shokoku-ji.jp/en/ginkakuji/guide/",
+        "title": "Ginkaku-ji: visitor guide",
+        "type": "official",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "lastCheckedAt": "2026-10-22",
+    "verification": {
+      "status": "ready-for-review",
+      "reviewedAt": null,
+      "reviewer": "",
+      "notes": "Researched against cited sources; awaiting independent human editorial approval. Visit duration remains unresearched. Seasonal information concerns opening hours, not weather or ideal travel months."
+    },
+    "price": {
+      "currency": "JPY",
+      "min": 1000,
+      "max": 1000,
+      "unit": "per-person",
+      "covers": "One general admission ticket; student concessions are separate.",
+      "sourceUrl": "https://www.shokoku-ji.jp/en/ginkakuji/access/",
+      "checkedAt": "2026-10-22",
+      "confidence": "high",
+      "reviewStatus": "ready-for-review",
+      "evidenceType": "official",
+      "experience": "Ginkaku-ji — general admission",
+      "unitVerified": true,
+      "conflict": false,
+      "notes": "The temple notes that special exhibitions may change admission fees. Older sources may still quote a different fee."
+    }
+  }
+]

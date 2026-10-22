@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {validateActivity} from '../public/activities.js';
 import { fileURLToPath } from 'node:url';
 
 const root=new URL('../',import.meta.url);
@@ -40,6 +41,14 @@ export function validateCatalogue(destinations,taxonomy) {
 if(process.argv[1] && fileURLToPath(import.meta.url)===fileURLToPath(new URL(process.argv[1],'file://'+process.cwd()+'/'))) {
  const {destinations,taxonomy}=load();
  const errors=validateCatalogue(destinations,taxonomy);
+ const activities=JSON.parse(fs.readFileSync(new URL('data/activities.json',root),'utf8'));
+ const knownDestinationIds=new Set(destinations.map(d=>d.id));
+ const activityIds=new Set();
+ for(const activity of activities){
+  if(activityIds.has(activity.id))errors.push('Duplicate activity ID: '+activity.id);
+  activityIds.add(activity.id);
+  try{validateActivity(activity,{knownDestinationIds});}catch(error){errors.push(activity.id+': '+error.message);}
+ }
  if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}
- else console.log(`Validated ${destinations.length} destinations; ${destinations.filter(x=>x.editorial.status==='draft').length} drafts; no publishing implied.`);
+ else console.log(`Validated ${destinations.length} destinations; ${destinations.filter(x=>x.editorial.status==='draft').length} drafts; ${activities.length} source-backed activity records; no publishing implied.`);
 }
