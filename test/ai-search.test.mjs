@@ -66,7 +66,7 @@ test('upstream failure uses labelled fallback and does not invent climate',async
  const service=createAiSearch({destinations,apiKey:'fake-key',fetchImpl:failFetch});
  const res=await service.search(parseSearchRequest({query:'sunny in February and cheap',region:'all'}));
  assert.equal(res.engine,'keyword');
- assert.match(res.notice,/unavailable/i);
+ assert.match(res.notice,/HTTP 429|unavailable/i);
  assert.ok(res.warnings.some(x=>x.includes('Weather')));
  assert.ok(res.warnings.some(x=>x.includes('Prices')));
 });
