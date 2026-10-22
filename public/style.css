@@ -15,3 +15,30 @@ main{max-width:1420px;margin:0 auto;padding:0 42px 70px}.hero{position:relative;
 
 .show-more-wrap{display:flex;justify-content:center;padding:28px 0 7px}
 .show-more-wrap .outline{min-width:210px}
+
+/* Collaborative discovery: opt-in origin, season and contextual refinement */
+.origin-field{display:flex;flex-direction:column;gap:8px}
+.origin-field .filter-label{margin-bottom:0}
+.origin-field .field-select{width:100%;min-height:42px}
+.travel-context-summary{display:flex;gap:8px 14px;flex-wrap:wrap;align-items:center;margin:-2px 0 16px;padding:10px 13px;border:1px solid #e5e9df;border-radius:12px;font-size:12px;color:#445d51;background:#fff}
+.travel-context-summary span{color:#858e85;font-size:11px;flex-basis:100%}
+.clarification-notice{display:flex;flex-direction:column;gap:4px;font-size:13px;background:#fef7ef;border:1px solid #f0e3d2;color:#664f3f;padding:13px 16px;border-radius:13px;margin:0 0 14px}
+.clarification-notice span{font-size:12px;color:#82756b}
+.refinement-card{grid-column:1/-1;background:linear-gradient(125deg,#eaf2e7,#f8f8ed);border:1px solid #d9e7db;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:17px;box-shadow:0 6px 24px rgba(43,81,61,.07)}
+.refinement-heading .eyebrow{color:#d66b4c;font-size:11px;font-weight:750;letter-spacing:.12em}
+.refinement-heading h3{color:#2c493d;font-size:25px;line-height:1.15;margin:8px 0}
+.refinement-heading p{margin:0;color:#60756b;line-height:1.6;font-size:13px}
+.refinement-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.refinement-fields label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:700;color:#3a5a4c}
+.refinement-fields select{border:1px solid #cfded1;border-radius:12px;background:#fff;min-height:44px;width:100%;max-width:100%;min-width:0;padding:10px;color:#365549;font:inherit;font-size:12px}
+.refinement-footer{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.refinement-footer span{font-size:11px;color:#677b6f;line-height:1.5;max-width:360px}
+.refinement-footer .primary{width:auto;white-space:nowrap;font-size:13px}
+.refinement-alert{font-size:12px;margin:0;color:#a75a46}
+@media(max-width:700px){
+ .refinement-card{padding:17px;gap:14px}
+ .refinement-heading h3{font-size:21px}
+ .refinement-fields{grid-template-columns:1fr}
+ .refinement-footer{align-items:stretch;flex-direction:column}
+ .refinement-footer .primary{width:100%}
+}
