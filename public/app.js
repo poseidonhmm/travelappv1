@@ -3,7 +3,7 @@ import {WORLD_REGIONS,MONTHS,monthOptions,currentTravelMonth,seasonContext,isBro
 
 const root=document.querySelector('#app');
 const toast=document.querySelector('#toast');
-const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{},ai:null,searching:false,aiError:null,requestVersion:0,visibleLimit:24,homeRegion:'all',homeCountry:'',travelMonth:currentTravelMonth(),foodPriority:'any',journey:'any',mood:'any',needsClarification:false};
+const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{},ai:null,searching:false,aiError:null,requestVersion:0,visibleLimit:24,homeRegion:'all',homeCountry:'',travelMonth:'',foodPriority:'any',journey:'any',mood:'any',needsClarification:false};
 const choices={scenery:[['beach','Beach'],['coast','Coastal'],['jungle','Jungle'],['mountains','Mountains'],['city','Cities'],['island','Islands']],vibe:[['relaxed','Relaxed'],['sociable','Sociable'],['romantic','Romantic'],['adventurous','Adventure'],['food-led','Foodie'],['nightlife','Nightlife'],['luxury','Luxury']]};
 const regions=['Europe','Asia','Africa','North America','South America','Oceania','Middle East'];
 function fromStore(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
@@ -11,11 +11,13 @@ function toStore(key,value){try{localStorage.setItem(key,JSON.stringify(value));
 state.saved=new Set(Array.isArray(fromStore('wanderly-saved-v1',[]))?fromStore('wanderly-saved-v1',[]):[]);
 const prefFields=['homeRegion','homeCountry','travelMonth','foodPriority','journey','mood'];
 const savedPrefs=fromStore('wanderly-search-prefs-v1',{});
+const validMonthKeys=new Set(monthOptions().map(x=>x.value));
 if(savedPrefs&&typeof savedPrefs==='object'&&!Array.isArray(savedPrefs)){
  for(const key of prefFields){
   if(typeof savedPrefs[key]==='string')state[key]=savedPrefs[key].slice(0,60);
  }
 }
+if(!validMonthKeys.has(state.travelMonth))state.travelMonth='';
 function savePrefs(){toStore('wanderly-search-prefs-v1',Object.fromEntries(prefFields.map(k=>[k,state[k]])));}
 const savedPlans=fromStore('wanderly-plans-v1',{});
 state.plans=(savedPlans&&typeof savedPlans==='object'&&!Array.isArray(savedPlans))?savedPlans:{};
@@ -65,8 +67,9 @@ function previewMatches(query){
 }
 function tripContextLine(){
  const pieces=[];
- if(state.homeRegion!=='all')pieces.push('From '+(state.homeCountry||state.homeRegion));
- pieces.push(seasonContext(state.travelMonth,state.homeRegion,state.homeCountry));
+ if(state.homeCountry||state.homeRegion!=='all')pieces.push('From '+(state.homeCountry||state.homeRegion));
+ const planned=seasonContext(state.travelMonth,state.homeRegion,state.homeCountry);
+ pieces.push(planned||'When: not chosen yet');
  return pieces.join(' · ');
 }
 
@@ -76,7 +79,7 @@ function discover(){
  '<div class="hint-row"><span class="hint-label">Try searching:</span>'+examples.map(x=>'<button class="chip" data-action="preset" data-value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</button>').join('')+'</div>'+
  '<div class="filter-panel"><div><label class="filter-label" for="region">Part of the world</label><select class="field-select" id="region"><option value="all">Anywhere</option>'+regions.map(r=>'<option value="'+r+'" '+(state.region===r?'selected':'')+'>'+r+'</option>').join('')+'</select></div>'+
  '<div><span class="filter-label">Dream trip duration</span><div class="segmented">'+[5,7,10].map(n=>'<button type="button" class="toggle '+(state.days===n?'active':'')+'" data-action="duration" data-value="'+n+'">'+n+' days</button>').join('')+'</div></div>'+
- '<div><label class="filter-label" for="travelMonth">When do you want to travel?</label><select class="field-select" id="travelMonth">'+monthOptions().map(x=>'<option value="'+x.value+'" '+(state.travelMonth===x.value?'selected':'')+'>'+escapeHTML(x.label)+'</option>').join('')+'</select><p class="disabled-note" id="seasonNote">'+escapeHTML(seasonContext(state.travelMonth,state.homeRegion,state.homeCountry))+'</p></div>'+ 
+ '<div><label class="filter-label" for="travelMonth">When do you want to travel?</label><select class="field-select" id="travelMonth"><option value="" '+(!state.travelMonth?'selected':'')+'>Not sure yet</option>'+monthOptions().map(x=>'<option value="'+x.value+'" '+(state.travelMonth===x.value?'selected':'')+'>'+escapeHTML(x.label)+'</option>').join('')+'</select><p class="disabled-note" id="seasonNote">'+escapeHTML(seasonContext(state.travelMonth,state.homeRegion,state.homeCountry))+'</p></div>'+ 
  '<div class="origin-field"><label class="filter-label" for="homeRegion">Where are you starting from?</label><select class="field-select" id="homeRegion"><option value="all">Choose your home region (optional)</option>'+WORLD_REGIONS.map(r=>'<option value="'+r+'" '+(state.homeRegion===r?'selected':'')+'>'+r+'</option>').join('')+'</select><input class="field-select" id="homeCountry" type="text" maxlength="60" autocomplete="country-name" placeholder="Country (optional, e.g. United Kingdom)" value="'+escapeHTML(state.homeCountry)+'"><p class="disabled-note">Only what you choose is used. No GPS or address access.</p></div></div>'+
  '<div style="margin-top:18px"><span class="filter-label">Landscape & scenery</span><div class="hint-row">'+tagButtons('scenery')+'</div></div>'+
  '<div style="margin-top:16px"><span class="filter-label">The vibe</span><div class="hint-row">'+tagButtons('vibe')+'</div></div></section>'+
