@@ -12,3 +12,8 @@ data/embeddings.local.json.tmp-*
 
 data/activity-reviews.local.json
 data/activity-reviews.local.json.tmp-*
+
+data/activity-photo-cache.local.json
+data/activity-photo-cache.local.json.tmp-*
+data/activities.json.import.lock
+data/activities.json.import-tmp-*

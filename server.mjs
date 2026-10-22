@@ -19,6 +19,7 @@ const files=new Map([
  ['/photos.css',['public/photos.css','text/css; charset=utf-8']],
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
  ['/activities.js',['public/activities.js','text/javascript; charset=utf-8']],
+ ['/activity-photos.js',['public/activity-photos.js','text/javascript; charset=utf-8']],
  ['/itinerary.js',['public/itinerary.js','text/javascript; charset=utf-8']],
  ['/activity-planner.js',['public/activity-planner.js','text/javascript; charset=utf-8']],
  ['/activity-planner.css',['public/activity-planner.css','text/css; charset=utf-8']],

@@ -13,6 +13,7 @@
     "search": "node scripts/search.mjs",
     "test": "node --test",
     "photos:audit": "node scripts/photo-audit.mjs",
-    "photos:sample": "node scripts/photo-audit.mjs --sample"
+    "photos:sample": "node scripts/photo-audit.mjs --sample",
+    "activities:import": "node scripts/import-activities.mjs"
   }
 }

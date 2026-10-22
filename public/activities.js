@@ -1,3 +1,4 @@
+import {validateActivityPhoto} from './activity-photos.js';
 // Shared browser/server activity model. Catalogue facts and manual reviews are separate from itinerary edits.
 export const REVIEW_STATUSES=Object.freeze(['draft','needs-research','ready-for-review','approved','rejected','needs-rechecking']);
 export const PRICE_CONFIDENCES=Object.freeze(['high','medium','low']);
@@ -80,6 +81,7 @@ export function validateActivity(record,{knownDestinationIds,now=new Date()}={})
  }
  if(record.lastCheckedAt!==null&&(!validDate(record.lastCheckedAt)||daysOld(record.lastCheckedAt,now)<0))fail('Invalid activity last-checked date.');
  validateReview(record.verification,'activity');validatePrice(record.price,now);
+ validateActivityPhoto(record.photo,{now});
  if(record.price&&record.price.confidence!=='low'&&!priceEvidenceMatches(record))fail('High or medium price evidence must match a dated catalogue source and evidence type.');
  if(record.revision!==undefined&&(!Number.isInteger(record.revision)||record.revision<0))fail('Invalid activity revision.');
  return structuredClone(record);
