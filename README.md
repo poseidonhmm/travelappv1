@@ -1,50 +1,51 @@
-# Wanderly — travel discovery MVP
+# Wanderly — travel discovery and itinerary prototype
 
-A mobile-first, **private-prototype** travel discovery website using 288 editorial draft destination profiles. Includes a photo-rich 2×2-card browse UI, saved places, and editable demonstration itineraries.
+A mobile-first travel discovery app with **288 preserved editorial destination drafts**, AI search, saved places, destination photos, recommendation feedback, and editable browser-saved itineraries.
 
 ## Run locally
 
-Requires Node.js 22+.
+Requires Node.js 22+; no dependencies need installing.
 
-1. Download this repository (GitHub Code → Download ZIP), unzip and enter the folder in Terminal.
-2. Run: npm run dev
-3. Open http://localhost:3000 in Chrome.
+```sh
+cd ~/Documents/Wanderly
+npm run dev
+```
 
-The first screen and basic tag search work **without any API key**.
+Open http://localhost:3000. Search and itinerary editing work without an API key. AI search uses the existing private key automatically. To explicitly enable AI after a previous disabled session, run `WANDERLY_AI_DISABLED=0 npm run dev`. For development or review without paid AI requests, run `WANDERLY_AI_DISABLED=1 npm run dev`. The switch takes precedence over an existing private `.env` key. Never commit `.env` or cache files.
 
-## Enable real AI search
+## Discovery
 
-Read [docs/ai-search.md](docs/ai-search.md) for setup. Copy .env.example to .env, add your own private OPENAI_API_KEY and restart npm run dev. Search using Find my escape. The site visibly indicates AI search vs keyword fallback.
+The optional searchable **Where are you travelling from?** country selector derives a broad departure region from a sourced UN M49 mapping adapted to the existing catalogue categories. It sits beside the optional **When do you want to travel?** month field on desktop and stacks on mobile. Country, month and refinement preferences persist in this browser. No GPS, precise address, inferred home location, flight duration or flight price is used. **Part of the world** still filters destinations.
 
-AI interprets unconventional travel requests and semantically compares them with the catalogue. It does **not** generate or verify new destinations, travel prices, weather or activities.
+Results preserve the strongest matches and use adaptive, non-duplicating groups for broad proximity, different regions, expressed food interests, and nature/adventure interests. Optional food, near/far, atmosphere and beach questions refine the current results locally. A vague search such as `sunny` does not imply a detailed lifestyle. There is no sourced destination weather model or sunshine guarantee. See [travel context](docs/travel-context.md).
 
-## What works
+## Activities, itineraries and prices
 
-- Search 288 draft destinations by natural-language meaning (when AI enabled) or prototype tags (without key).
-- Region, scenery and vibe filters.
-- Four-photo destination gallery cards, with automatically found Wikimedia Commons candidates, credit/source links and uniqueness checks that prevent the same file or identical-content hash being assigned to two places.
-- Open destinations, choose 5/7/10-day **generic idea boards**, add, remove, reorder and move ideas.
-- Save places and customisations to browser local storage (not synced).
+Seven source-backed **Ready for review** records cover Rotorua, Lisbon and Kyoto. The other 285 destinations retain their editable personal idea boards and clearly show that specific activity research is pending. The records, prices and sources are detailed in [activity evidence](docs/activity-evidence.md).
 
-## Collaborative travel discovery
+Opening a researched destination suggests named experiences based on expressed interests, atmosphere, trip length and any source-backed seasonal restrictions. New outlines distribute these ideas without repeating them automatically. Existing v1 saved trips and edits remain intact. Add an experience to a chosen day, remove or reorder it, move it to any day, rename a day, and choose a 5/7/10-day outline. Edits and saved places remain browser-local; they are not synced.
 
-Short requests such as `sunny` now open a **refine as you browse** panel instead of inventing food, nightlife and socialising preferences. Travellers can optionally tell Wanderly when they plan to travel, where they're starting from, and whether food, proximity or a particular mood matters. These choices are used transparently by the local preview and semantic ranking. They do not claim verified weather or journey times. See [Travel context and clarification](docs/travel-context.md).
+Activity prices show the source, last check, confidence, coverage and review status. Daily and itinerary activity estimates count only usable evidence, identify unknown prices, and keep currencies and pricing units separate. Unknown, conflicting, low-confidence and stale prices never become zero. These estimates are **activity costs only**, not a holiday total. Price confidence is separate from human approval.
 
-## Feedback and low-cost testing
+## Local activity verification
 
-Rate destination cards with 👍 / 👎, add reasons to poor recommendations, then open **Feedback** in the top navigation to review or export your judgments. Ratings are stored locally in `data/feedback.local.json`, which is excluded from Git. They do **not** trigger OpenAI calls or automatically retrain the model. Repeating identical AI searches uses a temporary in-memory cache to avoid paying again during one server session.
+Open **Activity review** in the navigation to inspect sources and flags, edit structured facts/prices, leave notes, and approve activities and prices independently. Explicit approval requires a human reviewer name. Edits to approved facts return them to review; concurrent writes use revision checks.
 
-See [docs/feedback.md](docs/feedback.md) for details and backup instructions. Also see [docs/photo-sourcing.md](docs/photo-sourcing.md) for unique-image sourcing, credits and cache backups.
+Reviews persist as atomic overrides in ignored `data/activity-reviews.local.json`, independently of saved itinerary edits, existing destination editorial status, recommendation feedback, photos and embeddings. The working local interface is a foundation for the eventual Verification Studio; it has no hosted accounts or signed audit history. See [activity system](docs/activity-system.md).
 
-## Known limitations
+## Preserved systems
 
-All 288 destination profiles are editorial **drafts**. They have not been fact-checked. The photo candidates are automatically found by destination name and may not actually depict the destination; they must be reviewed for accuracy and licensing before publication. The itinerary builder creates flexible generic examples, not real verified routes. Cost, season and weather filtering are not connected. Bookings and actual videos are not supported.
+- AI search and persistent embedding cache: [AI search setup](docs/ai-search.md).
+- Recommendation judgments and export: [feedback](docs/feedback.md).
+- Photo mosaics, linked credits and unique image candidates: [photo sourcing](docs/photo-sourcing.md).
 
-This website has not been deployed. The GitHub repository itself is currently public. Never commit an API key to GitHub.
+All destination descriptions and automatic Wikimedia Commons photo candidates remain unverified drafts. Bookings, route feasibility, transfers, live availability and verified climate are not supported. Completed, tested stages are committed locally. Pushing to GitHub, merging and deployment require explicit approval. See [development workflow](AGENTS.md).
 
-## Test
+## Validation
 
-Run: npm test
-Run: npm run validate
+```sh
+npm test
+npm run validate
+```
 
-See also [docs/review-checklist.md](docs/review-checklist.md) for the future research and editorial pipeline.
+Tests use mocked AI providers and temporary review/feedback/photo files. The validator checks all destinations and the activity catalogue. See [local review checklist](docs/phase-review.md) for testing the interface.

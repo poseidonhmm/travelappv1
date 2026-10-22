@@ -1,38 +1,17 @@
-# Wanderly discovery: clarify intent, remember context, avoid invented weather
+# Discovery context and optional refinement
 
-## Short requests should not become fictional personalities
+Country and travel month are optional, user-selected fields displayed before secondary filters. The searchable country list covers 250 countries/areas from the [UN M49 table](https://unstats.un.org/unsd/methodology/m49/), checked 22 October 2026. ISO-alpha3 and M49 identifiers are retained in `public/countries.js`; source comments document regional adaptations (including existing Middle East and Türkiye categories) and UN FAQ statistical extensions. Country names and aliases resolve to a canonical choice. Invalid text cannot silently become a known origin. Region is derived in the browser and API; supplying only an old departure region does not imply a home country.
 
-A one- or two-word search, such as **sunny**, should **not** be inflated into a detailed desire for nightlife, socialising, food, romance or luxury. For an underspecified request, Wanderly displays an inline refinement panel. Its three optional dimensions are:
+The destination **Part of the world** filter remains independent. No address, GPS, IP lookup, flight route, journey duration or actual travel cost is inferred. Near/far matching uses only same-country and broad regional proxies, so labels explicitly qualify this.
 
-- Is food a priority?
-- Is somewhere nearer to home preferred, or an unfamiliar part of the world?
-- What atmosphere would suit the traveller?
+Country, month, food priority, proximity, atmosphere and beach priority use the existing browser-local `wanderly-search-prefs-v1` key. Old country names migrate through aliases; old region-only data is ignored. Departure and month remain optional. Month choices roll across the next 24 months. A month records planning intent without claiming destination climate.
 
-The panel also appears partway through longer result lists, so people can refine as they browse. Changing these controls immediately reorders preview recommendations locally. Pressing **Refine with AI** explicitly runs a paid API search. One-/two-word searches skip the paid GPT interpretation step and are embedded without additional invented detail.
+## Grouping and ranking
 
-For longer requests, the GPT interpreter now has explicit instructions to **only use stated preferences**, never treat missing preferences as confirmed, and refrain from claiming destination weather, costs or travel times.
+`public/discovery-groups.js` partitions an already ranked set. The top six remain **Best matches**. Optional groups use only eligible recommendations above a quality floor, with at least two suitable cards. Food and adventure/nature groups appear only when the traveller expresses those interests. Proximity groups require an actual selected country. A destination appears once, and remaining cards retain recommendation order under **More to explore**. Existing catalogue descriptions remain editorial drafts.
 
-## Travel context
+Optional inline follow-ups ask about food, near/far, relaxing/adventurous atmosphere and beaches. They are collapsible and dismissible for the current query. Nothing is assumed from `sunny` beyond the literal weather interest. Controls preserve semantic candidates and replace contextual ranking bonuses locally, avoiding a restart or an additional paid search. Explicit search submission retains the existing AI/keyword flow; provider interpretation tests use mocks.
 
-The home location is **optional and user-entered**, never inferred from a browser address or GPS permission. The traveller can choose a broad departure region and optionally enter a country. The choice is saved in this browser's local storage as \`wanderly-search-prefs-v1\` and sent to the local API for a search. Wanderly doesn't ask for a street address.
+## Limits
 
-The travel month is also **optional**, with a rolling 12-month choice. The calendar display shows an approximate hemisphere season **for the traveller's selected home** when we know it. Unknown climates are labelled unknown. Merely launching the app never assumes a trip is happening this month.
-
-## Ranking transparency
-
-- **Food important / essential**: modest boost for food-led destinations or food tours.
-- **Closer to home first**: boosts the same country or broad world region only. This is a rough proxy, **not a verified flight time, kilometres or actual accessibility**.
-- **Different part of the world**: modest boost for destinations outside the home region.
-- **Selected mood**: modest boost for matching destinations.
-
-These are **preferences, not hard filters**. The existing AI similarity ranking remains central, and explicit search text plus selected chips still matter.
-
-### Climate limitation
-
-The current 288-profile catalogue has no sourced, month-by-month climate attributes. Knowing that October is Northern Hemisphere autumn does **not** prove that October is rainy, sunny or safe at any particular destination. Consequently **travel month has no climate score** and the UI explicitly warns that sunshine, seasonal suitability and weather remain unverified.
-
-Before ranking on month/weather, we should acquire trusted **monthly** weather normals (temperature, precipitation, sunshine), check local variation (altitude, monsoons), and display data sources and update dates. The same applies to travel time: source city-to-city/airport route data rather than guessing from continents.
-
-## Local testing
-
-Run \`npm test\` and \`npm run validate\`. Search **sunny**, choose an optional mood/food/origin preference, and click **Refine with AI** to see the faithful interpretation. Repeat with **romantic coastal food**, **quiet mountains**, and a destination name. Verify no fabricated monthly weather claims.
+There is no sourced monthly destination climate model. Month affects activity recommendations only where an activity record has explicit sourced seasonal months/restrictions. Year-round opening is not ideal weather. No sunshine, affordability, flight duration or booking guarantees are implied.

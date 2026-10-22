@@ -61,3 +61,23 @@ test('same query with different home, month or food priorities records separate 
  assert.throws(()=>validateFeedback({...a,foodPriority:'invalid'},known));
  assert.throws(()=>validateFeedback({...a,travelMonth:'next week'},known));
 });
+
+
+test('beach follow-up is a distinct feedback context and legacy feedback keeps its identity',async()=>{
+ assert.equal(validateFeedback(base,known).beachPriority,'any');
+ assert.equal(feedbackKey(base),feedbackKey({...base,beachPriority:'any'}));
+ assert.notEqual(feedbackKey(base),feedbackKey({...base,beachPriority:'important'}));
+ assert.throws(()=>validateFeedback({...base,beachPriority:'required'},known));
+ const folder=await mkdtemp(join(tmpdir(),'wanderly-feedback-legacy-'));
+ try{
+  const {writeFile}=await import('node:fs/promises');
+  const filePath=join(folder,'feedback.json');
+  const legacy={...base,id:'saved-feedback-id',homeCountry:'An older free-text country',homeRegion:'Europe',createdAt:'2026-01-01T00:00:00.000Z'};
+  await writeFile(filePath,JSON.stringify([legacy]));
+  const store=createFeedbackStore({filePath,knownIds:known});
+  assert.equal((await store.list())[0].homeCountry,legacy.homeCountry,'history is read without country migration');
+  const updated=await store.save({...legacy,rating:'good'});
+  assert.equal(updated.id,'saved-feedback-id');
+  assert.equal((await store.list()).length,1);
+ }finally{await rm(folder,{recursive:true,force:true});}
+});

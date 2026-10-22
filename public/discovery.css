@@ -1,0 +1,25 @@
+/* Departure details have equal prominence before the secondary destination filters. */
+.departure-context{display:grid;grid-template-columns:1fr;gap:18px;margin:19px 0 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.departure-context label{letter-spacing:0;text-transform:none;font-size:13px;color:var(--ink)}
+.departure-context .optional-label{font-weight:400;color:var(--muted);font-size:11px;margin-left:5px}
+.departure-context .field-select{min-height:45px;max-width:100%}
+.country-help a{text-decoration:underline;text-underline-offset:2px}
+.field-select[aria-invalid=true]{border-color:#bd5d42}
+.country-error{color:#a64f38;font-size:12px;margin:7px 0 0;line-height:1.45}
+.filter-panel{grid-template-columns:1fr}
+.filter-panel>div:last-child{grid-column:auto}
+.result-group{margin:26px 0 34px}
+.result-group-heading{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.result-group-heading h3{font-size:23px;margin:0;letter-spacing:-.035em}
+.result-group-heading p{font-size:12px;color:var(--muted);line-height:1.55;margin:0;max-width:660px}
+.result-group-heading .group-count{background:var(--sage);padding:3px 8px;border-radius:10px;color:#496354;font-size:11px}
+.refinement-card{margin:24px 0;position:relative}
+.refinement-card summary{cursor:pointer;display:list-item;font-size:17px;font-weight:700;color:#2c493d}
+.refinement-card[open] summary{margin-bottom:15px}
+.refinement-card .refinement-heading{padding-right:30px}
+.refinement-dismiss{position:absolute;right:12px;top:10px;border:0;background:transparent;color:#60756b;padding:7px;font-size:20px}
+.refinement-fields{grid-template-columns:1fr 1fr}
+.refinement-inline-note{font-size:12px;color:#60756b;line-height:1.6;margin:12px 0 0}
+@media(min-width:701px){.departure-context{grid-template-columns:1fr 1fr}.filter-panel{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.refinement-fields{grid-template-columns:1fr}.result-group-heading h3{font-size:21px}.result-group{margin-top:22px}.departure-context{gap:16px}.filter-panel>div:last-child{grid-column:auto}}
+.refinement-card:not([open]) > :not(summary){display:none}

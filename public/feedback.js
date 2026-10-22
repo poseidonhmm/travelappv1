@@ -1,4 +1,5 @@
 import {normalize} from './recommend.js';
+import {departureContext} from './countries.js';
 
 // Local-only editorial feedback. No OpenAI request is made to save or review ratings.
 const state={items:[],dialog:null};
@@ -26,20 +27,21 @@ function snapshot(id,rank){
  let prefs={};
  try{prefs=JSON.parse(localStorage.getItem('wanderly-search-prefs-v1'))||{};}catch{}
  const preference=(key,fallback)=>document.querySelector('[data-pref="'+key+'"]')?.value||prefs[key]||fallback;
- const homeRegion=document.querySelector('#homeRegion')?.value||prefs.homeRegion||'all';
- const homeCountry=document.querySelector('#homeCountry')?.value||prefs.homeCountry||'';
+ const selectedCountry=document.querySelector('#homeCountry');
+ const {homeRegion,homeCountry}=departureContext(selectedCountry?selectedCountry.value:prefs.homeCountry||'');
  const travelMonth=document.querySelector('#travelMonth')?.value||prefs.travelMonth||'';
  const foodPriority=preference('foodPriority','any');
  const journey=preference('journey','any');
  const mood=preference('mood','any');
+ const beachPriority=preference('beachPriority','any');
  return {query,region,scenery:selected('scenery'),vibes:selected('vibe'),engine,destinationId:id,rank,
-  interpretation:interpretation.slice(0,300),homeRegion,homeCountry,travelMonth,foodPriority,journey,mood};
+  interpretation:interpretation.slice(0,300),homeRegion,homeCountry,travelMonth,foodPriority,journey,mood,beachPriority};
 }
 function recordKey(r){
  return JSON.stringify([
   normalize(r.query),r.region,[...(r.scenery||[])].sort(),[...(r.vibes||[])].sort(),r.engine,r.destinationId,
   r.homeRegion||'all',normalize(r.homeCountry||''),r.travelMonth||'',
-  r.foodPriority||'any',r.journey||'any',r.mood||'any'
+  r.foodPriority||'any',r.journey||'any',r.mood||'any',r.beachPriority||'any'
  ]);
 }
 function existing(context){return state.items.find(x=>recordKey(x)===recordKey(context));}

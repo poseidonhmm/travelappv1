@@ -1,23 +1,33 @@
+import {recommendActivities} from './activities.js';
+import {createActivityPlan,editPlan,planActivityRecords} from './itinerary.js';
+import {activityPriceHTML,activityEvidenceHTML,activityCostsHTML,recommendedActivitiesHTML} from './activity-planner.js';
 import {examples,matchDestinations,queryHasWeather} from './recommend.js';
-import {WORLD_REGIONS,MONTHS,monthOptions,currentTravelMonth,seasonContext,isBroadSearch,contextBoost} from './trip-context.js';
+import {monthOptions,seasonContext,isBroadSearch,contextBoost} from './trip-context.js';
+import {COUNTRIES,COUNTRY_MAPPING_SOURCE,departureContext,findCountry} from './countries.js';
+import {groupRecommendations,followupQuestions,rerankWithContext} from './discovery-groups.js';
 
 const root=document.querySelector('#app');
 const toast=document.querySelector('#toast');
-const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{},ai:null,searching:false,aiError:null,requestVersion:0,visibleLimit:24,homeRegion:'all',homeCountry:'',travelMonth:'',foodPriority:'any',journey:'any',mood:'any',needsClarification:false};
+const state={all:[],view:'explore',previous:'explore',detail:null,q:'',region:'all',days:7,scenery:new Set(),vibe:new Set(),saved:new Set(),plans:{},ai:null,searching:false,aiError:null,requestVersion:0,visibleLimit:24,homeRegion:'all',homeCountry:'',travelMonth:'',foodPriority:'any',journey:'any',mood:'any',beachPriority:'any',needsClarification:false,refinementDismissed:new Set(),aiContext:null};
+state.refinementOpen=new Map();
+state.activities=[];
+state.activitiesError='';
 const choices={scenery:[['beach','Beach'],['coast','Coastal'],['jungle','Jungle'],['mountains','Mountains'],['city','Cities'],['island','Islands']],vibe:[['relaxed','Relaxed'],['sociable','Sociable'],['romantic','Romantic'],['adventurous','Adventure'],['food-led','Foodie'],['nightlife','Nightlife'],['luxury','Luxury']]};
 const regions=['Europe','Asia','Africa','North America','South America','Oceania','Middle East'];
 function fromStore(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 function toStore(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch{notify('Browser storage is unavailable. Your edits may not persist.');}}
 state.saved=new Set(Array.isArray(fromStore('wanderly-saved-v1',[]))?fromStore('wanderly-saved-v1',[]):[]);
-const prefFields=['homeRegion','homeCountry','travelMonth','foodPriority','journey','mood'];
+const prefFields=['homeRegion','homeCountry','travelMonth','foodPriority','journey','mood','beachPriority'];
 const savedPrefs=fromStore('wanderly-search-prefs-v1',{});
-const validMonthKeys=new Set(monthOptions().map(x=>x.value));
+const validMonthKeys=new Set(monthOptions(undefined,24).map(x=>x.value));
 if(savedPrefs&&typeof savedPrefs==='object'&&!Array.isArray(savedPrefs)){
  for(const key of prefFields){
   if(typeof savedPrefs[key]==='string')state[key]=savedPrefs[key].slice(0,60);
  }
 }
+Object.assign(state,departureContext(state.homeCountry));
 if(!validMonthKeys.has(state.travelMonth))state.travelMonth='';
+for(const [key,allowed] of Object.entries({foodPriority:['any','important','essential'],journey:['any','nearby','different'],mood:['any','relaxed','sociable','adventurous','romantic','cultural'],beachPriority:['any','important']})){if(!allowed.includes(state[key]))state[key]='any';}
 function savePrefs(){toStore('wanderly-search-prefs-v1',Object.fromEntries(prefFields.map(k=>[k,state[k]])));}
 const savedPlans=fromStore('wanderly-plans-v1',{});
 state.plans=(savedPlans&&typeof savedPlans==='object'&&!Array.isArray(savedPlans))?savedPlans:{};
@@ -48,17 +58,28 @@ function preferenceOptions(key,options){
  return options.map(([value,label])=>'<option value="'+escapeHTML(value)+'" '+(state[key]===value?'selected':'')+'>'+escapeHTML(label)+'</option>').join('');
 }
 function refinePanel(){
- return '<aside class="refinement-card" id="refinementPanel" aria-label="Refine your travel recommendations">'+
- '<div class="refinement-heading"><div class="eyebrow">MAKE IT MORE YOU</div><h3>'+(state.needsClarification?'What kind of trip did you have in mind?':'What would improve these matches?')+'</h3>'+
- '<p>'+ (state.needsClarification?'A short search shouldn’t lead us to invent your preferences.':'As you explore, refine the recommendations based on what actually matters to you.') +'</p></div>'+
- '<div class="refinement-fields">'+
- '<label>Is food a priority?<select data-pref="foodPriority">'+preferenceOptions('foodPriority',[['any','No preference'],['important','Quite important'],['essential','A main reason to travel']])+'</select></label>'+
- '<label>How far from home?<select data-pref="journey">'+preferenceOptions('journey',[['any','Open to anywhere'],['nearby','Closer to home first'],['different','Somewhere quite different']])+'</select></label>'+
- '<label>What kind of atmosphere?<select data-pref="mood">'+preferenceOptions('mood',[['any','Not sure yet'],['relaxed','Relaxed'],['sociable','Sociable'],['adventurous','Adventurous'],['romantic','Romantic'],['cultural','Culture-rich']])+'</select></label></div>'+
- '<div class="refinement-footer"><span>Choices preview locally; only running an AI search uses API credits.</span>'+
- '<button class="primary" type="button" data-action="apply-refinement">Refine with AI ↗</button></div>'+
- (state.journey!=='any'&&state.homeRegion==='all'?'<p class="refinement-alert">To prioritise near or far, select your departure region above.</p>':'')+
- '</aside>';
+ const queryKey=state.q.trim().toLowerCase();
+ const expanded=state.refinementOpen.has(queryKey)?state.refinementOpen.get(queryKey):state.needsClarification;
+ const questions=followupQuestions(currentSearch());
+ // Once answered, controls remain available; missing preferences determine which
+ // questions are offered initially. Closing the card applies to this query only.
+ const fields={
+ foodPriority:['Is food important?',[['any','No preference'],['important','Quite important'],['essential','A main reason to travel']]],
+ journey:['Closer to home or somewhere different?',[['any','Open to anywhere'],['nearby','Closer to home first'],['different','Somewhere quite different']]],
+ mood:['Relaxing or adventurous?',[['any','Not sure yet'],['relaxed','Relaxed'],['adventurous','Adventurous'],['sociable','Sociable'],['romantic','Romantic'],['cultural','Culture-rich']]],
+ beachPriority:['Are beaches important?',[['any','No preference'],['important','Yes, I would like a beach']]]
+ };
+ const keys=Object.keys(fields).filter(key=>questions.includes(key)||state[key]!=='any');
+ if(!keys.length||state.refinementDismissed.has(state.q.trim().toLowerCase()))return '';
+ return '<details class="refinement-card" id="refinementPanel" data-refinement-query="'+escapeHTML(queryKey)+'" '+(expanded?'open':'')+'><summary>Make these matches more you <span class="small-note">· optional</span></summary>'+
+ '<button type="button" class="refinement-dismiss" data-action="dismiss-refinement" aria-label="Dismiss optional follow-up questions">×</button>'+
+ '<div class="refinement-heading"><p>'+(state.needsClarification?'A short search leaves room to explore. Choose only what matters to you.':'A few optional choices can help narrow things down.')+'</p></div>'+
+ '<div class="refinement-fields">'+keys.map(key=>'<label>'+fields[key][0]+'<select data-pref="'+key+'">'+preferenceOptions(key,fields[key][1])+'</select></label>').join('')+'</div>'+
+ '<p class="refinement-inline-note" role="status">Your choices update these recommendations as you go.</p>'+
+ (state.journey!=='any'&&state.homeRegion==='all'?'<p class="refinement-alert">Choose a departure country above to use the broad near or far preference.</p>':'')+'</details>';
+}
+function refreshContext(){
+ state.requestVersion++;state.searching=false;savePrefs();results();
 }
 function previewMatches(query){
  return matchDestinations(state.all,{query:query.q,region:query.region,scenery:query.scenery,vibes:query.vibes,limit:state.all.length})
@@ -68,7 +89,7 @@ function previewMatches(query){
 function tripContextLine(){
  const pieces=[];
  if(state.homeCountry||state.homeRegion!=='all')pieces.push('From '+(state.homeCountry||state.homeRegion));
- const planned=seasonContext(state.travelMonth,state.homeRegion,state.homeCountry);
+ const planned=seasonContext(state.travelMonth);
  pieces.push(planned||'When: not chosen yet');
  return pieces.join(' · ');
 }
@@ -77,40 +98,41 @@ function discover(){
  root.innerHTML='<section class="hero"><div class="hero-content"><div class="eyebrow">A WORLD OF POSSIBILITIES</div><h1>Go somewhere<br><em>that feels like you.</em></h1><p>Don’t know where to go? Describe the feeling you’re chasing. We’ll find places that match.</p></div></section>'+
  '<section class="search-card"><form id="searchForm" class="search-row"><label class="search-field"><span>⌕</span><input id="query" type="search" autocomplete="off" aria-label="Describe your dream holiday" placeholder="Try: amazing food, beaches, a bit of nightlife" value="'+escapeHTML(state.q)+'"></label><button class="primary" type="submit">Find my escape ↗</button></form>'+
  '<div class="hint-row"><span class="hint-label">Try searching:</span>'+examples.map(x=>'<button class="chip" data-action="preset" data-value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</button>').join('')+'</div>'+
+ '<div class="departure-context"><div><label class="filter-label" for="homeCountry">Where are you travelling from? <span class="optional-label">Optional</span></label><input class="field-select" id="homeCountry" type="search" list="departureCountries" autocomplete="off" aria-describedby="countryHelp countryError" placeholder="Search countries or leave blank" value="'+escapeHTML(state.homeCountry)+'"><datalist id="departureCountries">'+COUNTRIES.map(c=>'<option value="'+escapeHTML(c.name)+'"></option>').join('')+'</datalist><p class="disabled-note country-help" id="countryHelp">Only the country you choose is used. Broad regions follow <a href="'+COUNTRY_MAPPING_SOURCE.url+'" target="_blank" rel="noopener noreferrer">UN geography</a> with Wanderly’s regional categories.</p><p class="country-error" id="countryError" hidden></p></div>'+
+ '<div><label class="filter-label" for="travelMonth">When do you want to travel? <span class="optional-label">Optional</span></label><select class="field-select" id="travelMonth"><option value="" '+(!state.travelMonth?'selected':'')+'>Not sure yet</option>'+monthOptions(undefined,24).map(x=>'<option value="'+x.value+'" '+(state.travelMonth===x.value?'selected':'')+'>'+escapeHTML(x.label)+'</option>').join('')+'</select><p class="disabled-note" id="seasonNote">'+escapeHTML(state.travelMonth?seasonContext(state.travelMonth):'Choose a month when you know. Destination climate is not verified.')+'</p></div></div>'+
  '<div class="filter-panel"><div><label class="filter-label" for="region">Part of the world</label><select class="field-select" id="region"><option value="all">Anywhere</option>'+regions.map(r=>'<option value="'+r+'" '+(state.region===r?'selected':'')+'>'+r+'</option>').join('')+'</select></div>'+
- '<div><span class="filter-label">Dream trip duration</span><div class="segmented">'+[5,7,10].map(n=>'<button type="button" class="toggle '+(state.days===n?'active':'')+'" data-action="duration" data-value="'+n+'">'+n+' days</button>').join('')+'</div></div>'+
- '<div><label class="filter-label" for="travelMonth">When do you want to travel?</label><select class="field-select" id="travelMonth"><option value="" '+(!state.travelMonth?'selected':'')+'>Not sure yet</option>'+monthOptions().map(x=>'<option value="'+x.value+'" '+(state.travelMonth===x.value?'selected':'')+'>'+escapeHTML(x.label)+'</option>').join('')+'</select><p class="disabled-note" id="seasonNote">'+escapeHTML(seasonContext(state.travelMonth,state.homeRegion,state.homeCountry))+'</p></div>'+ 
- '<div class="origin-field"><label class="filter-label" for="homeRegion">Where are you starting from?</label><select class="field-select" id="homeRegion"><option value="all">Choose your home region (optional)</option>'+WORLD_REGIONS.map(r=>'<option value="'+r+'" '+(state.homeRegion===r?'selected':'')+'>'+r+'</option>').join('')+'</select><input class="field-select" id="homeCountry" type="text" maxlength="60" autocomplete="country-name" placeholder="Country (optional, e.g. United Kingdom)" value="'+escapeHTML(state.homeCountry)+'"><p class="disabled-note">Only what you choose is used. No GPS or address access.</p></div></div>'+
+ '<div><span class="filter-label">Dream trip duration</span><div class="segmented">'+[5,7,10].map(n=>'<button type="button" class="toggle '+(state.days===n?'active':'')+'" data-action="duration" data-value="'+n+'">'+n+' days</button>').join('')+'</div></div></div>'+
  '<div style="margin-top:18px"><span class="filter-label">Landscape & scenery</span><div class="hint-row">'+tagButtons('scenery')+'</div></div>'+
  '<div style="margin-top:16px"><span class="filter-label">The vibe</span><div class="hint-row">'+tagButtons('vibe')+'</div></div></section>'+
  '<section class="main-section" id="resultsSection"><div id="results"></div></section>';
  document.querySelector('#searchForm').addEventListener('submit',event=>{event.preventDefault();state.q=document.querySelector('#query').value;runAiSearch();document.querySelector('#resultsSection').scrollIntoView({behavior:'smooth'});});
  document.querySelector('#query').addEventListener('input',event=>{state.q=event.target.value;clearAi();results();});
  document.querySelector('#region').addEventListener('change',event=>{state.region=event.target.value;clearAi();results();});
- document.querySelector('#travelMonth').addEventListener('change',event=>{state.travelMonth=event.target.value;savePrefs();clearAi();document.querySelector('#seasonNote').textContent=seasonContext(state.travelMonth,state.homeRegion,state.homeCountry);results();});
- document.querySelector('#homeRegion').addEventListener('change',event=>{state.homeRegion=event.target.value;savePrefs();clearAi();document.querySelector('#seasonNote').textContent=seasonContext(state.travelMonth,state.homeRegion,state.homeCountry);results();});
- document.querySelector('#homeCountry').addEventListener('change',event=>{state.homeCountry=event.target.value.slice(0,60);savePrefs();clearAi();document.querySelector('#seasonNote').textContent=seasonContext(state.travelMonth,state.homeRegion,state.homeCountry);results();});
+ document.querySelector('#travelMonth').addEventListener('change',event=>{state.travelMonth=event.target.value;document.querySelector('#seasonNote').textContent=state.travelMonth?seasonContext(state.travelMonth):'Choose a month when you know. Destination climate is not verified.';refreshContext();});
+ document.querySelector('#homeCountry').addEventListener('change',event=>{
+  const country=findCountry(event.target.value),invalid=!!event.target.value.trim()&&!country;
+  Object.assign(state,departureContext(country?.name||''));
+  event.target.setAttribute('aria-invalid',String(invalid));
+  const error=document.querySelector('#countryError');error.hidden=!invalid;error.textContent=invalid?'Choose a country from the suggestions, or leave this optional field blank.':'';
+  if(country)event.target.value=country.name;
+  refreshContext();
+ });
  results();
 }
 function clearAi(){
  state.visibleLimit=24;
  state.needsClarification=false;
  state.requestVersion++;
- state.ai=null;state.aiError=null;state.searching=false;
+ state.ai=null;state.aiContext=null;state.aiError=null;state.searching=false;
 }
 function currentSearch(){
- return {query:state.q.trim(),region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],homeRegion:state.homeRegion,homeCountry:state.homeCountry,travelMonth:state.travelMonth,foodPriority:state.foodPriority,journey:state.journey,mood:state.mood};
+ return {query:state.q.trim(),region:state.region,scenery:[...state.scenery],vibes:[...state.vibe],homeRegion:state.homeRegion,homeCountry:state.homeCountry,travelMonth:state.travelMonth,foodPriority:state.foodPriority,journey:state.journey,mood:state.mood,beachPriority:state.beachPriority};
 }
-async function runAiSearch(force=false){
+async function runAiSearch(){
  const query=currentSearch();
  if(!query.query){clearAi();results();notify('Describe your dream trip first.');return;}
  const isKnownPlace=state.all.some(d=>d.name.toLowerCase()===query.query.toLowerCase());
- if(!force&&isBroadSearch(query.query)&&!isKnownPlace){
-  clearAi();state.needsClarification=true;results();
-  document.querySelector('#refinementPanel')?.scrollIntoView({behavior:'smooth',block:'center'});
-  return;
- }
- state.needsClarification=false;
+ state.needsClarification=isBroadSearch(query.query)&&!isKnownPlace;
  const requestId=++state.requestVersion;
  state.searching=true;state.ai=null;state.aiError=null;results();
  try{
@@ -119,7 +141,7 @@ async function runAiSearch(force=false){
   const result=await response.json();
   if(requestId!==state.requestVersion)return;
   if(!['ai','keyword'].includes(result.engine)||!Array.isArray(result.matches))throw new Error('Unexpected search response');
-  state.ai=result;
+  state.ai=result;state.aiContext=query;
  }catch(error){
   if(requestId!==state.requestVersion)return;
   state.aiError=error?.message||'Search failed';
@@ -130,10 +152,12 @@ async function runAiSearch(force=false){
 function results(){
  const byId=new Map(state.all.map(d=>[d.id,d]));
  const q=currentSearch();
- const found=state.ai?.matches?state.ai.matches.map(m=>{
+ // Keyword fallback can be recomputed across the full catalogue without a network call.
+ // Only semantic results need to retain their original embedding-ranked candidates.
+ const found=state.ai?.engine==='ai'&&Array.isArray(state.ai.matches)?rerankWithContext(state.ai.matches.map(m=>{
   const d=byId.get(m.id);
-  return d?{...d,matchReason:typeof m.reason==='string'?m.reason:''}:null;
- }).filter(Boolean):previewMatches({q:state.q, ...q});
+  return d?{...d,score:m.score,matchReason:typeof m.reason==='string'?m.reason:''}:null;
+ }).filter(Boolean),state.aiContext||q,q):previewMatches({q:state.q, ...q});
  const visible=found.slice(0,state.visibleLimit);
  const area=document.querySelector('#results');if(!area)return;
  const engine=state.searching?'✧ AI is interpreting your dream trip…':state.ai?.engine==='ai'?'✦ AI semantic matching':state.ai?.engine==='keyword'?'Tag-search fallback':'✧ Preview results · press Find my escape to run AI';
@@ -141,13 +165,13 @@ function results(){
  const warnings=Array.isArray(state.ai?.warnings)?state.ai.warnings.map(x=>'<p class="notice">'+escapeHTML(x)+'</p>').join(''):'';
  const notice=state.ai?.notice?'<p class="search-mode">'+escapeHTML(state.ai.notice)+'</p>':'';
  const context='<div class="travel-context-summary"><strong>Trip context:</strong> '+escapeHTML(tripContextLine())+'<span>Month is for planning, not verified climate. Nearby = broad region, not flight time.</span></div>';
- const missing=state.needsClarification?'<div class="clarification-notice"><strong>“'+escapeHTML(state.q.trim())+'” is a great starting point.</strong><span>Choose what matters below so we don’t invent extra preferences.</span></div>':'';
- const cards=visible.map((d,i)=>i===6&&!state.needsClarification?refinePanel()+card(d):card(d)).join('');
+ const missing=state.needsClarification?'<div class="clarification-notice"><strong>Exploring “'+escapeHTML(state.q.trim())+'”</strong><span>No other trip preferences assumed. Optional questions appear after your first matches.</span></div>':'';
+ const groups=groupRecommendations(visible,q);
+ const cards=groups.map((group,i)=>'<section class="result-group" aria-labelledby="group-'+group.id+'"><div class="result-group-heading"><h3 id="group-'+group.id+'">'+escapeHTML(group.label)+'</h3><span class="group-count">'+group.destinations.length+'</span><p>'+escapeHTML(group.description)+'</p></div><div class="results">'+group.destinations.map(card).join('')+'</div></section>'+(i===0?refinePanel():'')).join('');
  const err=state.aiError?'<p class="notice" role="alert">Search error: '+escapeHTML(state.aiError)+' — showing local preview results.</p>':'';
  area.innerHTML='<div class="section-heading"><div><span class="eyebrow" style="color:var(--accent)">FIND YOUR KIND OF SOMEWHERE</span><h2>'+((state.q||state.scenery.size||state.vibe.size)?'Matching escapes':'Explore everywhere')+'</h2><p>Feel inspired by destinations chosen for their atmosphere and experiences.</p></div><span class="count">'+found.length+' of '+state.all.length+' draft destinations</span></div>'+
  '<p class="search-mode" role="status">'+engine+'</p>'+context+missing+interpretation+notice+err+
- (state.needsClarification?refinePanel():'')+
- (state.searching?'<div class="loading-state">Comparing the feeling of your search with 288 destination profiles…</div>':found.length?'<div class="results">'+cards+'</div>'+(found.length>visible.length?'<div class="show-more-wrap"><button class="outline" data-action="show-more">Show '+Math.min(24,found.length-visible.length)+' more destinations ↓</button></div>':''):'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
+ (state.searching?'<div class="loading-state">Comparing the feeling of your search with 288 destination profiles…</div>':found.length?cards+(found.length>visible.length?'<div class="show-more-wrap"><button class="outline" data-action="show-more">Show '+Math.min(24,found.length-visible.length)+' more destinations ↓</button></div>':''):'<div class="empty"><h3>No matching destinations yet</h3><p>Try different words or fewer filters.</p><button class="outline" data-action="clear">Clear filters</button></div>')+
  warnings+(!state.ai&&queryHasWeather(state.q)?'<p class="notice">☀ Weather and seasons are not connected yet. Results cannot guarantee sunshine for your dates.</p>':'')+
  '<p class="notice">✧ Private prototype: destination descriptions and photos are unverified. AI matches meaning, not real-time weather, travel prices or booking availability.</p>';
 }
@@ -188,6 +212,8 @@ function ideasFor(d){
 }
 function planKey(){return state.detail+':'+state.days;}
 function makePlan(d){
+ const researched=recommendActivities(state.activities,d.id,{...currentSearch(),days:state.days});
+ if(researched.length)return createActivityPlan(state.activities,d.id,state.days,currentSearch());
  const ideas=ideasFor(d);
  return Array.from({length:state.days},(_,i)=>({
   label:i===0?'Arrival & first impressions':i===state.days-1?'One last discovery':'A day to explore',
@@ -200,17 +226,24 @@ function plan(d){
 }
 function persist(p){state.plans[planKey()]=p;toStore('wanderly-plans-v1',state.plans);}
 function dayHTML(day,index,total){
- return '<article class="day"><div class="day-header"><span class="day-number">DAY '+(index+1)+'</span><h3>'+escapeHTML(day.label)+'</h3></div>'+
+ const records=planActivityRecords([day],state.activities);
+ return '<article class="day"><div class="day-header"><span class="day-number">DAY '+(index+1)+'</span><input class="day-label" aria-label="Day '+(index+1)+' title" data-day-label="'+index+'" maxlength="120" value="'+escapeHTML(day.label)+'"></div>'+activityCostsHTML(records,{compact:true})+
  day.items.map((item,j)=>{
-  const t=library.find(x=>x[0]===item.template)||library[1];
-  return '<div class="activity"><button class="activity-thumb" data-action="video" aria-label="Preview video placeholder for '+escapeHTML(t[1])+'"><img loading="lazy" alt="Destination image pending" data-photo-activity="'+escapeHTML(state.detail)+'" data-photo-index="'+(index*3+j)+'"></button><div><div class="activity-title">'+escapeHTML(t[1])+'</div><div class="activity-caption">'+escapeHTML(t[2])+'</div></div>'+
-  '<div class="activity-actions">'+
-  '<button class="iconbtn" title="Move up" data-action="up" data-day="'+index+'" data-index="'+j+'" '+(j===0?'disabled':'')+'>↑</button>'+
-  '<button class="iconbtn" title="Move down" data-action="down" data-day="'+index+'" data-index="'+j+'" '+(j===day.items.length-1?'disabled':'')+'>↓</button>'+
-  '<button class="iconbtn" title="Move to next day" data-action="next" data-day="'+index+'" data-index="'+j+'" '+(index===total-1?'disabled':'')+'>→</button>'+
-  '<button class="iconbtn" title="Remove" data-action="remove" data-day="'+index+'" data-index="'+j+'">×</button></div></div>';
+  const activity=state.activities.find(a=>a.id===item.activityId);
+  const template=library.find(x=>x[0]===item.template);
+  const unavailable=!!item.activityId&&!activity;
+  const heading=activity?.name||template?.[1]||(unavailable?'Previously saved activity':'Saved idea');
+  const description=activity?.description||template?.[2]||'This saved item is preserved, but its catalogue record is unavailable.';
+  return '<div class="activity has-evidence"><div><div class="activity-title">'+escapeHTML(heading)+'</div><div class="activity-caption">'+escapeHTML(description)+'</div>'+
+   (activity?activityEvidenceHTML(activity)+activityPriceHTML(activity):'<p class="small-note">'+(unavailable?'Activity record unavailable':'Personal planning idea · attraction not researched')+' · Price unavailable</p>')+
+   '<div class="move-activity"><label for="move-'+index+'-'+j+'">Move to day</label><select id="move-'+index+'-'+j+'">'+Array.from({length:total},(_,i)=>'<option value="'+i+'" '+(i===index?'selected':'')+'>Day '+(i+1)+'</option>').join('')+'</select><button class="outline" data-action="move" data-day="'+index+'" data-index="'+j+'">Move</button></div></div>'+
+   '<div class="activity-actions">'+
+   '<button class="iconbtn" aria-label="Move '+escapeHTML(heading)+' up" title="Move up" data-action="up" data-day="'+index+'" data-index="'+j+'" '+(j===0?'disabled':'')+'>↑</button>'+
+   '<button class="iconbtn" aria-label="Move '+escapeHTML(heading)+' down" title="Move down" data-action="down" data-day="'+index+'" data-index="'+j+'" '+(j===day.items.length-1?'disabled':'')+'>↓</button>'+
+   '<button class="iconbtn" aria-label="Move '+escapeHTML(heading)+' to next day" title="Move to next day" data-action="next" data-day="'+index+'" data-index="'+j+'" '+(index===total-1?'disabled':'')+'>→</button>'+
+   '<button class="iconbtn" aria-label="Remove '+escapeHTML(heading)+'" title="Remove" data-action="remove" data-day="'+index+'" data-index="'+j+'">×</button></div></div>';
  }).join('')+
- '<div class="add-menu"><label class="filter-label" for="add-'+index+'">Add an idea to this day</label><select id="add-'+index+'">'+library.map(x=>'<option value="'+x[0]+'">'+escapeHTML(x[1])+'</option>').join('')+'</select><button class="outline" data-action="add" data-day="'+index+'">+ Add activity</button></div></article>';
+ '<div class="add-menu"><label class="filter-label" for="add-'+index+'">Add a personal planning idea</label><select id="add-'+index+'">'+library.map(x=>'<option value="'+x[0]+'">'+escapeHTML(x[1])+'</option>').join('')+'</select><button class="outline" data-action="add" data-day="'+index+'">+ Add idea</button></div></article>';
 }
 function detail(){
  const d=state.all.find(x=>x.id===state.detail);
@@ -218,9 +251,9 @@ function detail(){
  const current=plan(d);
  root.innerHTML='<button class="back-btn" data-action="back">← Back to '+(state.previous==='saved'?'saved trips':'discover')+'</button>'+
  '<section class="detail-hero" data-photo-hero="'+escapeHTML(d.id)+'"><div class="hero-photo-fallback">Finding destination images…</div><div class="detail-hero-content"><div class="eyebrow">WANDERLY · A DESTINATION TO DREAM ABOUT</div><h1>'+escapeHTML(d.name)+'</h1><p>'+escapeHTML(d.summary)+'</p><div class="tags">'+pills(d)+'</div></div></section>'+
- '<div class="detail-toolbar"><div class="result-meta"><span class="tag">'+escapeHTML(d.country)+'</span><span class="tag">'+state.days+' day inspiration</span><span class="mini-count">Edit the outline as you like</span></div><div class="result-meta"><button class="outline" data-action="save" data-id="'+escapeHTML(d.id)+'">'+(state.saved.has(d.id)?'♥ Saved':'♡ Save')+'</button><button class="outline" data-action="reset">↺ Reset outline</button></div></div>'+
- '<section class="detail-content"><div><div class="panel"><h2>Make this trip yours</h2><p>This is your starting point: a flexible idea board, not a real researched route. Reorder activities, move them between days and add new experiences.</p><div class="demo-banner">⚑ Locations, transfer times and attractions are not verified. Thumbnail play icons are placeholders until videos are connected.</div></div>'+
- '<div class="planner-heading"><h2>Your '+state.days+'-day idea board</h2><span class="small-note">↑↓ Reorder activities</span></div>'+current.map((x,i)=>dayHTML(x,i,current.length)).join('')+
+ '<div class="detail-toolbar"><div class="result-meta"><span class="tag">'+escapeHTML(d.country)+'</span><span class="tag">'+state.days+' day inspiration</span><label class="mini-count" for="tripDuration">Trip length</label><select class="trip-duration" id="tripDuration">'+[5,7,10].map(n=>'<option value="'+n+'" '+(state.days===n?'selected':'')+'>'+n+' days</option>').join('')+'</select></div><div class="result-meta"><button class="outline" data-action="save" data-id="'+escapeHTML(d.id)+'">'+(state.saved.has(d.id)?'♥ Saved':'♡ Save')+'</button><button class="outline" data-action="reset">↺ Reset outline</button></div></div>'+
+ '<section class="detail-content"><div><div class="panel"><h2>Make this trip yours</h2><p>Shape your days with researched experiences and your own planning ideas. Reorder activities, move them to any day and edit each day’s title.</p><div class="demo-banner">Activities carry their own source and review status. Routes, transfers and availability are not planned or guaranteed. Your saved edits stay separate from catalogue reviews.</div></div>'+
+ ''+(state.activitiesError?'<p class="notice">'+escapeHTML(state.activitiesError)+'</p>':'')+recommendedActivitiesHTML(state.activities,d.id,currentSearch(),state.days)+activityCostsHTML(planActivityRecords(current,state.activities))+'<div class="planner-heading"><h2>Your '+state.days+'-day idea board</h2><span class="small-note">↑↓ Reorder activities</span></div>'+current.map((x,i)=>dayHTML(x,i,current.length)).join('')+
  '<p class="save-line">Edits are saved only to this browser when storage is available</p></div>'+
  '<aside class="side-stack"><div class="panel"><h2>Trip moodboard</h2><div class="detail-mosaic">'+moodboard(d)+'</div><p style="font-size:12px">Illustrative photos. These are not yet checked against the actual destination.</p></div>'+
  '<div class="panel"><h2>What draws you here?</h2><div class="tags">'+pills(d)+'</div><p style="font-size:12px">Editorial impressions from the unverified destination catalogue.</p></div>'+
@@ -241,36 +274,69 @@ function open(id){
  render();window.scrollTo(0,0);
 }
 function edit(action,dayIndex,itemIndex){
- const d=state.all.find(x=>x.id===state.detail);if(!d)return;
- const days=plan(d);
- if(!Number.isInteger(dayIndex)||dayIndex<0||dayIndex>=days.length)return;
- const list=days[dayIndex].items;
+ const destination=state.all.find(x=>x.id===state.detail);if(!destination)return;
+ const current=plan(destination);
+ let item;
  if(action==='add'){
-  const id=document.querySelector('#add-'+dayIndex)?.value;
-  if(!library.some(x=>x[0]===id))return;
-  list.push({key:'added-'+Date.now()+'-'+Math.random().toString(36).slice(2),template:id});
- }else{
-  if(!Number.isInteger(itemIndex)||itemIndex<0||itemIndex>=list.length)return;
-  if(action==='remove')list.splice(itemIndex,1);
-  else if(action==='up'&&itemIndex>0)[list[itemIndex-1],list[itemIndex]]=[list[itemIndex],list[itemIndex-1]];
-  else if(action==='down'&&itemIndex<list.length-1)[list[itemIndex+1],list[itemIndex]]=[list[itemIndex],list[itemIndex+1]];
-  else if(action==='next'&&dayIndex+1<days.length){days[dayIndex+1].items.unshift(...list.splice(itemIndex,1));}
-  else return;
+  const template=document.querySelector('#add-'+dayIndex)?.value;
+  if(!library.some(x=>x[0]===template))return;
+  item={key:'added-'+Date.now()+'-'+Math.random().toString(36).slice(2),template};
  }
- persist(days);
- const y=scrollY;detail();scrollTo(0,y);
+ const targetDay=Number(document.querySelector('#move-'+dayIndex+'-'+itemIndex)?.value);
+ const next=editPlan(current,{action,dayIndex,itemIndex,targetDay,item});
+ if(next===current)return;
+ persist(next);const y=scrollY;detail();scrollTo(0,y);
 }
+async function refreshActivities(){
+ try{
+  const response=await fetch('/api/activities');
+  if(!response.ok)throw Error('Activity research could not be loaded. Saved edits are preserved.');
+  const payload=await response.json();
+  if(!Array.isArray(payload.items))throw Error('Activity research is unavailable.');
+  state.activities=payload.items;state.activitiesError='';
+ }catch(error){state.activitiesError=error.message;}
+}
+window.addEventListener('wanderly:activities-updated',async()=>{
+ await refreshActivities();if(state.detail){const y=scrollY;detail();scrollTo(0,y);}
+});
+document.addEventListener('change',event=>{
+ if(event.target?.id==='tripDuration'){
+  const days=Number(event.target.value);if(![5,7,10].includes(days))return;
+  state.days=days;detail();return;
+ }
+ const day=event.target?.dataset?.dayLabel;
+ if(day===undefined||!state.detail)return;
+ const destination=state.all.find(x=>x.id===state.detail);if(!destination)return;
+ const current=plan(destination),index=Number(day);
+ if(!current[index])return;
+ current[index].label=event.target.value.trim().slice(0,120)||'A day to explore';persist(current);
+});
 document.addEventListener('change',event=>{
  const key=event.target?.dataset?.pref;
- if(!['foodPriority','journey','mood'].includes(key))return;
- state[key]=event.target.value;savePrefs();clearAi();
- if(isBroadSearch(state.q)&&!state.all.some(d=>d.name.toLowerCase()===state.q.trim().toLowerCase()))state.needsClarification=true;
- results();
+ if(!['foodPriority','journey','mood','beachPriority'].includes(key))return;
+ const openPanel=event.target.closest('details')?.open;
+ state[key]=event.target.value;refreshContext();
+ if(openPanel){const panel=document.querySelector('#refinementPanel');if(panel)panel.open=true;}
+ const control=document.querySelector('[data-pref="'+key+'"]');control?.focus({preventScroll:true});
 });
+document.addEventListener('toggle',event=>{
+ const panel=event.target;
+ if(panel.id==='refinementPanel'&&panel.isConnected)state.refinementOpen.set(panel.dataset.refinementQuery,panel.open);
+},true);
 document.addEventListener('click',event=>{
  const target=event.target.closest('[data-action]');if(!target)return;
  const action=target.dataset.action;
- if(action==='apply-refinement'){runAiSearch(true);return;}
+ if(action==='add-recommended'){
+  const destination=state.all.find(x=>x.id===state.detail);if(!destination)return;
+  const id=target.dataset.activityId;
+  if(!recommendActivities(state.activities,destination.id,{...currentSearch(),days:state.days}).some(a=>a.id===id))return;
+  const dayIndex=Number(document.querySelector('#activity-day-'+id)?.value);
+  const current=plan(destination);
+  const next=editPlan(current,{action:'add',dayIndex,item:{key:'added-'+Date.now()+'-'+Math.random().toString(36).slice(2),activityId:id}});
+  if(next===current)return;
+  persist(next);const y=scrollY;detail();scrollTo(0,y);notify('Experience added to day '+(dayIndex+1));return;
+ }
+ if(action==='dismiss-refinement'){state.refinementDismissed.add(state.q.trim().toLowerCase());results();return;}
  if(action==='preset'){state.q=target.dataset.value;document.querySelector('#query').value=state.q;clearAi();results();return;}
  if(action==='toggle'){
   const set=state[target.dataset.kind];const value=target.dataset.value;
@@ -296,7 +362,7 @@ document.addEventListener('click',event=>{
   if(confirm('Discard your edits and reset the example itinerary?')){delete state.plans[planKey()];toStore('wanderly-plans-v1',state.plans);detail();notify('Idea board reset.');}
   return;
  }
- if(['up','down','next','remove','add'].includes(action)){edit(action,Number(target.dataset.day),Number(target.dataset.index));}
+ if(['up','down','next','move','remove','add'].includes(action)){edit(action,Number(target.dataset.day),Number(target.dataset.index));}
 });
 document.querySelector('#brand').addEventListener('click',event=>{event.preventDefault();goExplore();});
 document.querySelector('#navExplore').addEventListener('click',goExplore);
@@ -314,6 +380,7 @@ async function start(){
   const data=await response.json();
   if(!Array.isArray(data))throw new Error('Unexpected data format');
   state.all=data;
+  await refreshActivities();
   const params=new URLSearchParams(location.search),id=params.get('destination');
   if(id&&data.some(d=>d.id===id))state.detail=id;
   if(params.get('view')==='saved')state.view='saved';

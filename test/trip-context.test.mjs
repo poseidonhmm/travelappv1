@@ -25,5 +25,5 @@ test('proximity is a coarse transparent preference and food requires a food-led 
  assert.ok(contextBoost(france,req)>contextBoost(japan,req));
  assert.equal(contextBoost(japan,{journey:'nearby',homeRegion:'all'}),0);
  assert.equal(contextBoost(japan,{travelMonth:'2026-10'}),0,'unknown seasonality must not influence ranking');
- assert.ok(contextBoost(japan,{journey:'different',homeRegion:'Europe'})>0);
+ assert.ok(contextBoost(japan,{journey:'different',homeRegion:'Europe',homeCountry:'United Kingdom'})>0);
 });

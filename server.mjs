@@ -6,6 +6,7 @@ import { createAiSearch,InputError,parseSearchRequest } from './lib/ai-search.mj
 import { DEFAULT_EMBEDDING_CACHE } from './lib/embedding-index.mjs';
 import { createFeedbackStore,DEFAULT_FEEDBACK_PATH } from './lib/feedback.mjs';
 import { createPhotoStore,DEFAULT_PHOTO_CACHE } from './lib/photos.mjs';
+import { createActivityStore,DEFAULT_ACTIVITY_REVIEWS_PATH } from './lib/activities.mjs';
 
 const files=new Map([
  ['/', ['public/index.html','text/html; charset=utf-8']],
@@ -17,12 +18,22 @@ const files=new Map([
  ['/photos.js',['public/photos.js','text/javascript; charset=utf-8']],
  ['/photos.css',['public/photos.css','text/css; charset=utf-8']],
  ['/recommend.js',['public/recommend.js','text/javascript; charset=utf-8']],
+ ['/activities.js',['public/activities.js','text/javascript; charset=utf-8']],
+ ['/itinerary.js',['public/itinerary.js','text/javascript; charset=utf-8']],
+ ['/activity-planner.js',['public/activity-planner.js','text/javascript; charset=utf-8']],
+ ['/activity-planner.css',['public/activity-planner.css','text/css; charset=utf-8']],
+ ['/activity-review.js',['public/activity-review.js','text/javascript; charset=utf-8']],
+ ['/activity-review.css',['public/activity-review.css','text/css; charset=utf-8']],
+ ['/discovery.css',['public/discovery.css','text/css; charset=utf-8']],
+ ['/discovery-groups.js',['public/discovery-groups.js','text/javascript; charset=utf-8']],
+ ['/countries.js',['public/countries.js','text/javascript; charset=utf-8']],
  ['/trip-context.js',['public/trip-context.js','text/javascript; charset=utf-8']],
  ['/data/destinations.json',['data/destinations.json','application/json; charset=utf-8']]
 ]);
 const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer'};
 let aiService=null,previousKey=null;
 async function getApiKey(){
+ if(process.env.WANDERLY_AI_DISABLED==='1')return '';
  if(process.env.OPENAI_API_KEY?.trim())return process.env.OPENAI_API_KEY.trim();
  try{
   const env=await readFile(new URL('.env',import.meta.url),'utf8');
@@ -44,11 +55,11 @@ function json(response,status,data,method='GET'){
  response.writeHead(status,{'Content-Type':'application/json; charset=utf-8',...headers});
  response.end(method==='HEAD'?undefined:JSON.stringify(data));
 }
-async function readRequest(request){
+async function readRequest(request,maxBytes=8192){
  let text='';
  for await (const part of request){
   text+=part.toString('utf8');
-  if(Buffer.byteLength(text,'utf8')>8192)throw new InputError('Search request too large.');
+  if(Buffer.byteLength(text,'utf8')>maxBytes)throw new InputError('Request too large.');
  }
  try{return JSON.parse(text);}catch{throw new InputError('Invalid JSON request.');}
 }
@@ -59,8 +70,15 @@ function allowSearch(){
  if(requestTimes.length>=20)return false;
  requestTimes.push(now);return true;
 }
-export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePath=DEFAULT_PHOTO_CACHE,photoFetchImpl=fetch}={}){
- let feedbackStore=null,photoStore=null;
+export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePath=DEFAULT_PHOTO_CACHE,photoFetchImpl=fetch,activityReviewPath=DEFAULT_ACTIVITY_REVIEWS_PATH}={}){
+ let feedbackStore=null,photoStore=null,activityStore=null;
+ async function getActivities(){
+  if(!activityStore){
+   const [records,destinations]=await Promise.all(['data/activities.json','data/destinations.json'].map(path=>readFile(new URL(path,import.meta.url),'utf8').then(JSON.parse)));
+   activityStore=createActivityStore({filePath:activityReviewPath,records,knownDestinationIds:new Set(destinations.map(d=>d.id))});
+  }
+  return activityStore;
+ }
  async function getFeedback(){
   if(!feedbackStore){
    const profiles=JSON.parse(await readFile(new URL('data/destinations.json',import.meta.url),'utf8'));
@@ -85,6 +103,20 @@ export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePa
     if(origin.host!==host||!['http:','https:'].includes(origin.protocol)){
      json(response,403,{error:'Cross-origin requests are not allowed.'});return;
     }
+   }
+   if(['/api/activities','/api/activity-review'].includes(url.pathname)){
+    const store=await getActivities();
+    if(['GET','HEAD'].includes(request.method)){
+     let items=await store.list();
+     const destination=url.searchParams.get('destination');
+     if(destination)items=items.filter(item=>item.destinationId===destination);
+     json(response,200,{items},request.method);return;
+    }
+    if(request.method==='POST'&&url.pathname==='/api/activity-review'){
+     const item=await store.save(await readRequest(request,65536));
+     json(response,200,{saved:true,item});return;
+    }
+    response.writeHead(405,{'Allow':url.pathname==='/api/activities'?'GET, HEAD':'GET, HEAD, POST'});response.end();return;
    }
    if(url.pathname==='/api/photos'){
     if(!['GET','HEAD'].includes(request.method)){
@@ -125,7 +157,7 @@ export function createAppServer({feedbackPath=DEFAULT_FEEDBACK_PATH,photoCachePa
    response.writeHead(200,{'Content-Type':entry[1],...headers});
    response.end(request.method==='HEAD'?undefined:body);
   }catch(error){
-   if(error instanceof InputError||error?.statusCode===400){json(response,400,{error:error.message});return;}
+   if(error instanceof InputError||[400,409].includes(error?.statusCode)){json(response,error.statusCode||400,{error:error.message});return;}
    console.error('Local server error:',error?.message||'unknown error');
    json(response,500,{error:'Unexpected server error.'});
   }
