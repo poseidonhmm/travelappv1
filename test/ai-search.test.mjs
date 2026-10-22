@@ -93,3 +93,19 @@ test('fallback shows safe API code without leaking provider message or key',asyn
  assert.match(result.notice,/credit_balance_exhausted/);
  assert.doesNotMatch(result.notice,/Internal secret dump|my-private-key/);
 });
+
+test('timeout interruption shows a clear retry notice instead of blaming API credits',async()=>{
+ const signalAbort=async(url,{signal})=>{
+  const error=new Error('This operation was aborted');
+  error.name='AbortError';
+  throw error;
+ };
+ const svc=createAiSearch({
+  destinations:destinations.slice(0,3),apiKey:'test-only',fetchImpl:signalAbort,
+  apiTimeoutMs:100
+ });
+ const response=await svc.search(parseSearchRequest({query:'outdoor adventure',region:'all'}));
+ assert.equal(response.engine,'keyword');
+ assert.match(response.notice,/took too long|timed out/i);
+ assert.doesNotMatch(response.notice,/credit balance|missing key/i);
+});
