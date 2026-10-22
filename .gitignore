@@ -7,3 +7,5 @@ data/feedback.local.json
 data/feedback.local.json.tmp-*
 data/photo-cache.local.json
 data/photo-cache.local.json.tmp-*
+data/embeddings.local.json
+data/embeddings.local.json.tmp-*

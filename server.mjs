@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { createAiSearch,InputError,parseSearchRequest } from './lib/ai-search.mjs';
+import { DEFAULT_EMBEDDING_CACHE } from './lib/embedding-index.mjs';
 import { createFeedbackStore,DEFAULT_FEEDBACK_PATH } from './lib/feedback.mjs';
 import { createPhotoStore,DEFAULT_PHOTO_CACHE } from './lib/photos.mjs';
 
@@ -33,7 +34,7 @@ async function getService(){
  const key=await getApiKey();
  if(!aiService||key!==previousKey){
   const destinations=JSON.parse(await readFile(new URL('data/destinations.json',import.meta.url),'utf8'));
-  aiService=createAiSearch({destinations,apiKey:key});
+  aiService=createAiSearch({destinations,apiKey:key,indexCachePath:DEFAULT_EMBEDDING_CACHE});
   previousKey=key;
  }
  return aiService;

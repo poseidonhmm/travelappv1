@@ -4,16 +4,15 @@ The existing mobile-first website now supports real AI-powered natural-language 
 
 ## Steps on your Mac
 
-1. Download the latest GitHub ZIP again, or (if cloned with Git) run: git pull
-2. Get an API key from https://platform.openai.com/api-keys and enable API billing. ChatGPT subscriptions and API billing are separate.
-3. In Terminal, cd into the updated travelappv1-main folder.
-4. Run: cp .env.example .env
-5. Run: open -e .env
-6. Paste the key after OPENAI_API_KEY= in the newly opened file, save it and close the editor.
-7. Run: npm run dev
-8. Open http://localhost:3000 in Chrome. Type a natural-language travel request and click Find my escape.
+If you have already cloned the project to `~/Documents/Wanderly` and stored your OpenAI API key in its local `.env` file:
 
-Never paste your key into chat, Codex messages, GitHub, a browser console or any publicly shared file. The real .env file is ignored by Git, while .env.example deliberately contains no key.
+1. Stop the running server with Control + C.
+2. Run `cd ~/Documents/Wanderly`, then `git pull`, then `npm run dev`.
+3. Open http://localhost:3000 and try your search.
+
+You **do not** need to create another `.env` file, re-enter a working API key, or buy new credits just to apply code updates. Your `.env`, feedback and cached photo data stay in place because Git ignores them.
+
+If setting up a new clone for the first time, get an API key from https://platform.openai.com/api-keys, add your own API billing, and put `OPENAI_API_KEY=...` in a local `.env` file. ChatGPT subscriptions and API billing are separate. Never paste your key into chat or GitHub.
 
 ## How it works
 
@@ -23,7 +22,7 @@ Never paste your key into chat, Codex messages, GitHub, a browser console or any
 4. Region filtering is strict, results are selected only by existing database IDs, and explanations cite the existing draft themes (not imagined attractions).
 5. The website visibly identifies whether it is displaying AI semantic matches or fallback keyword/tag matches.
 
-The full 288-destination embedding catalogue is cached in server memory once per server process (and will be regenerated on a restart). Every subsequent AI query still uses one interpreter call and one query-embedding call. The model requests incur API charges. No live web search or booking API is used.
+Destination embeddings are generated in batches of up to 64, and each completed batch is persisted to `data/embeddings.local.json` on your Mac. On the next restart, unchanged destination embeddings are loaded from this local file without paying to generate them again. Changed profiles are re-embedded individually or in small batches. The private cache file is excluded from Git; back it up before replacing the whole project folder. Initial indexing may take longer than an ordinary search. OpenAI requests now have a 90-second timeout; completed embedding batches are retained even if a later batch fails. Every **new** AI query still uses one intent call and one query-embedding call; identical searches are reused in memory while the server is running. Model requests incur API charges. No live web search or booking API is used.
 
 ## Safeguards and current limits
 
