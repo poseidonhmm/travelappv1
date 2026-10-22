@@ -23,11 +23,23 @@ function snapshot(id,rank){
  const mode=document.querySelector('#results .search-mode')?.textContent||'';
  const engine=mode.includes('AI semantic matching')?'ai':mode.includes('Tag-search fallback')?'keyword':'preview';
  const interpretation=document.querySelector('#results .ai-interpretation')?.textContent?.replace(/^We understood:\s*/,'')||'';
- return {query,region,scenery:selected('scenery'),vibes:selected('vibe'),engine,destinationId:id,rank,interpretation:interpretation.slice(0,300)};
+ let prefs={};
+ try{prefs=JSON.parse(localStorage.getItem('wanderly-search-prefs-v1'))||{};}catch{}
+ const preference=(key,fallback)=>document.querySelector('[data-pref="'+key+'"]')?.value||prefs[key]||fallback;
+ const homeRegion=document.querySelector('#homeRegion')?.value||prefs.homeRegion||'all';
+ const homeCountry=document.querySelector('#homeCountry')?.value||prefs.homeCountry||'';
+ const travelMonth=document.querySelector('#travelMonth')?.value||prefs.travelMonth||'';
+ const foodPriority=preference('foodPriority','any');
+ const journey=preference('journey','any');
+ const mood=preference('mood','any');
+ return {query,region,scenery:selected('scenery'),vibes:selected('vibe'),engine,destinationId:id,rank,
+  interpretation:interpretation.slice(0,300),homeRegion,homeCountry,travelMonth,foodPriority,journey,mood};
 }
 function recordKey(r){
  return JSON.stringify([
-  normalize(r.query),r.region,[...(r.scenery||[])].sort(),[...(r.vibes||[])].sort(),r.engine,r.destinationId
+  normalize(r.query),r.region,[...(r.scenery||[])].sort(),[...(r.vibes||[])].sort(),r.engine,r.destinationId,
+  r.homeRegion||'all',normalize(r.homeCountry||''),r.travelMonth||'',
+  r.foodPriority||'any',r.journey||'any',r.mood||'any'
  ]);
 }
 function existing(context){return state.items.find(x=>recordKey(x)===recordKey(context));}
